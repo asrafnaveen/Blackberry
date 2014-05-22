@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_gravity="left"
+        android:background="@color/DARK_TEXT" >
+
+        <ImageView
+            android:id="@+id/cityIcon"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/cityImageDescr"
+            android:gravity="center_vertical"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/cityData"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/cityIcon" >
+
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cityName"
+                android:textColor="@color/WHITE"
+                android:textSize="14dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cityTagline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cityName"
+                android:layout_centerVertical="true"
+                android:text="Tagline"
+                android:textColor="@color/WHITE"
+                android:textSize="10dip"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/openMenu"
+            android:gravity="center_vertical"
+            android:onClick="menuDialog"
+            android:padding="2dip"
+            android:src="@drawable/ic_action_overflow" />
+
+        <ImageView
+            android:id="@+id/newRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@id/menu"
+            android:contentDescription="@string/newRequest"
+            android:gravity="center_vertical"
+            android:onClick="newRequestActivity"
+            android:padding="2dip"
+            android:src="@drawable/ic_dark_new_request" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshRelativeLayout
+        android:id="@+id/widgetView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <RelativeLayout
+                android:id="@+id/notifyarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/TRANS_GRAY"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/notifimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_orange_notifications" />
+
+                <TextView
+                    android:id="@+id/notifier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/notifimage"
+                    android:text="@string/notifier"
+                    android:textColor="@color/WHITE" >
+                </TextView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/widgetPagerIndicatorLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="8dip" >
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/widgetPager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </android.support.v4.view.ViewPager>
+        </RelativeLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshRelativeLayout>
+
+</LinearLayout>

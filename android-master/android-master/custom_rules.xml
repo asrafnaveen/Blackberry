@@ -1,0 +1,3722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="custom_rules">
+    <xmlproperty file="AndroidManifest.xml" prefix="PublicStuff" collapseAttributes="true"/>
+    <xmlproperty file="res/values/strings.xml" prefix="Strings" collapseAttributes="true" semanticAttributes="true"/>
+    <xmlproperty file="res/layout/main.xml" prefix="Main" collapseAttributes="true"/>
+    <xmlproperty file="res/layout/createaccount.xml" prefix="CreateAccount" collapseAttributes="true"/>
+    <property name="current.package" value="${PublicStuff.manifest.package}" />
+    <property name="build.dir" value="bin/${PublicStuff.manifest.android:versionName}/" />
+    <property name="maps.key" value="00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg" />
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+    	<classpath>
+    		<pathelement location="../android-sdk-macosx/tools/lib/ant-contrib-0.6.jar"/>
+  		</classpath>
+    </taskdef>
+    <property name="gdrive.path" value="../../Google Drive/"/>
+    
+    <target name="-post-build">
+		 <!-- <antcall target="install"/> -->
+    </target>
+    
+    <!-- README 
+    
+    HOW TO CREATE A NEW BUILD
+    
+    1. COPY A TARGET, SUCH AS DORMONT-PA, AND PASTE IT AFTER AN EXISTING </TARGET>
+    2. RENAME THE TARGET NAME TO THE DESIRED SLUG
+    3. CHANGE THE VALUE ATTRIBUTES IN THE <PROPERTY> TAGS TO THE SLUG'S CUSTOM PROPERTIES
+    	ie. for town Springfield, IN with slug springfield-in
+    	<property name="current.target" value="com.publicstuff.dormont_pa" /> 
+    	becomes 
+    	<property name="current.target" value="com.publicstuff.springfield_in" />
+    
+    	(Android package names cannot use dashes, but can use underscores)
+    	
+    4. MODIFY appbuilder.py
+       ie. add   os.system("ant springfield-in")
+       
+    5. For single build, on the commandline run
+       
+       ant springfield-in
+    	
+       For batch build, on the commandline run
+       
+       ./appbuilder.py
+       
+     -->
+     
+
+      <target name="pensacola-fl">
+       	
+        <property name="app.name" value="Pensacola 311" />
+        
+        <property name="slug" value="pensacola-fl" />
+        
+        <property name="current.target" value="com.publicstuff.pensacola_fl" />
+        
+        <property name="space.color" value="#569FD3"/>
+        
+        <property name="space.id" value="27238" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+        
+        
+    </target>
+
+<!--##########################################################################################################################-->    
+    
+    <target name="dormont-pa">
+       	
+        <property name="app.name" value="Dormont Delivers" />
+        
+        <property name="slug" value="dormont-pa" />
+        
+        <property name="current.target" value="com.publicstuff.dormont_pa" />
+        
+        <property name="space.color" value="#162274" />
+        
+        <property name="space.id" value="32359" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+        
+        
+    </target>
+
+<!--##########################################################################################################################-->    
+    
+    <target name="woodstock-ga">
+       	
+        <property name="app.name" value="Connect Woodstock" />
+        
+        <property name="slug" value="woodstock-ga" />
+        
+        <property name="current.target" value="com.publicstuff.woodstock_ga" />
+        
+        <property name="space.color" value="#00460E" />
+        
+        <property name="space.id" value="37721" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+        
+        
+    </target>
+
+
+<!--##########################################################################################################################-->    
+    
+     <target name="philadelphia-pa">
+       	
+        <property name="app.name" value="Philly 311" />
+        
+        <property name="slug" value="philadelphia-pa" />
+        
+        <property name="current.target" value="com.publicstuff.philadelphia" />
+        
+        <property name="space.color" value="#004990" />
+        
+        <property name="space.id" value="27412" />
+        
+       <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+        
+        
+    </target>
+ 
+<!--##########################################################################################################################-->     
+     
+      <target name="durango-co">
+       	
+        <property name="app.name" value="Ask Durango" />
+        
+        <property name="slug" value="durango-co" />
+        
+        <property name="current.target" value="com.publicstuff.durango_co" />
+        
+        <property name="space.color" value="#00448B" />
+        
+        <property name="space.id" value="11435" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        	
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+       
+        
+    </target>
+ 
+<!--##########################################################################################################################-->      
+           
+    <target name="dayton-oh">
+       	
+        <property name="app.name" value="Dayton Delivers" />
+        
+        <property name="slug" value="dayton-oh" />
+        
+        <property name="current.target" value="com.publicstuff.dayton_oh" />
+        
+        <property name="space.color" value="#162274" />
+        
+        <property name="space.id" value="10450" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+       
+        
+    </target>
+
+<!--##########################################################################################################################-->
+
+        <target name="north-miami-beach">
+       	
+        <property name="app.name" value="Fix it NMB" />
+        
+        <property name="slug" value="north-miami-beach" />
+        
+        <property name="current.target" value="com.wassabi.northmiamibeach" />
+        
+        <property name="space.color" value="#0066CC" />
+        
+        <property name="space.id" value="25474" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+       
+        
+    </target>
+    
+ <!--##########################################################################################################################-->
+        
+   <target name="fontana-ca">
+       	
+        <property name="app.name" value="Access Fontana" />
+        
+        <property name="slug" value="fontana-ca" />
+        
+        <property name="current.target" value="com.wassabi.fontana" />
+        
+        <property name="space.color" value="#007AB7" />
+        
+        <property name="space.id" value="13497" />
+        
+       <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+       
+        
+    </target>
+    
+    <!--##########################################################################################################################-->
+        
+    <target name="pataskala">
+       	
+        <property name="app.name" value="Pataskala Publicstuff" />
+        
+        <property name="slug" value="pataskala" />
+        
+        <property name="current.target" value="com.wassabi.pataskala" />
+        
+        <property name="space.color" value="#2F3F32" />
+        
+        <property name="space.id" value="26964" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+       
+        
+    </target>
+    
+   <!--##########################################################################################################################-->
+        
+   <target name="elk-grove">
+       	
+        <property name="app.name" value="Elk Grove Publicstuff" />
+        
+        <property name="slug" value="elk-grove" />
+        
+        <property name="current.target" value="com.wassabi.elkgrove" />
+        
+        <property name="space.color" value="#8F9F4C" />
+        
+        <property name="space.id" value="12204" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+       
+        
+    </target>
+
+<!--##########################################################################################################################-->
+        
+   <target name="chandler-az">
+       	
+        <property name="app.name" value="Chandler PublicStuff" />
+        
+        <property name="slug" value="chandler-az" />
+        
+        <property name="current.target" value="com.wassabi.chandler" />
+        
+        <property name="space.color" value="#E07C11" />
+        
+        <property name="space.id" value="7999" />
+        
+        <echo>Version is ${PublicStuff.manifest.android:versionName}</echo>
+        
+        <echo>Main.xml background color ${Main.RelativeLayout.android:background} is replaced with ${space.color}</echo>
+        <echo>CreateAccount background is ${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background} is replaced with ${space.color}</echo>
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+       
+        
+    </target>
+   
+    <target name="sourcetest">
+        <echo>${src}</echo>
+    </target>
+
+<!--##########################################################################################################################-->    
+    
+    <target name="wassabi">
+       	
+        <property name="app.name" value="PublicStuff" />
+        
+        <property name="slug" value="publicstuff" />
+        
+        <property name="current.target" value="com.wassabi.psmobile" />
+
+        <property name="space.color" value="@color/ORANGE" />
+        
+        <property name="space.id" value="0" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = true" value="IS_CLIENT_APP = false"/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        
+        <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+          <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+        <antcall target="clean"/>
+    </target>
+    
+    <!--##########################################################################################################################-->    
+    
+    <target name="aha">
+       	
+        <property name="app.name" value="Citizen Support Center" />
+        
+        <property name="slug" value="aha" />
+        
+        <property name="current.target" value="com.publicstuff.aha" />
+
+        <property name="space.color" value="#004a91" />
+        
+        <property name="space.id" value="0" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = true" value="IS_CLIENT_APP = false"/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        
+        <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+          <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+        <antcall target="clean"/>
+    </target>
+
+<!--##########################################################################################################################-->
+
+    <target name="wassabi-reset">
+       	
+         <property name="app.name" value="PublicStuff" />
+        
+        <property name="slug" value="publicstuff" />
+        
+        <property name="current.target" value="com.wassabi.psmobile" />
+
+        <property name="space.color" value="@color/ORANGE" />
+        
+        <property name="space.id" value="0" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = true" value="IS_CLIENT_APP = false"/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        
+        <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+        <antcall target="clean"/>
+    </target>
+    
+         <target name="bradenton">
+       	
+        <property name="app.name" value="Bradenton PublicStuff" />
+        
+        <property name="slug" value="bradenton" />
+        
+        <property name="current.target" value="com.wassabi.bradenton" />
+        
+        <property name="space.color" value="#009933" />
+        
+        <property name="space.id" value="5955" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+        
+        
+    </target>
+
+<!--##########################################################################################################################-->    
+     
+     <target name="riverton-ut">
+       	
+        <property name="app.name" value="Riverton PublicStuff" />
+        
+        <property name="slug" value="riverton-ut" />
+        
+        <property name="current.target" value="com.wassabi.riverton" />
+        
+        <property name="space.color" value="#CC8833" />
+        
+        <property name="space.id" value="29551" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+        
+        
+    </target>
+
+<!--##########################################################################################################################-->    
+     <target name="plano-tx">
+       	
+        <property name="app.name" value="Fix It Plano" />
+        
+        <property name="slug" value="plano-tx" />
+        
+        <property name="current.target" value="com.wassabi.planotexas" />
+        
+        <property name="space.color" value="#2E7EC4"/>
+        
+        <property name="space.id" value="27796" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+        
+        
+    </target>
+    
+<!--##########################################################################################################################-->    
+     <target name="asheville">
+       	
+        <property name="app.name" value="Asheville App" />
+        
+        <property name="slug" value="asheville" />
+        
+        <property name="current.target" value="com.publicstuff.asheville" />
+        
+        <property name="space.color" value="#093069"/>
+        
+        <property name="space.id" value="3737" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+        
+        
+    </target>
+    
+    <!--##########################################################################################################################-->    
+     <target name="daly-city">
+       	
+        <property name="app.name" value="Daly City iHelp" />
+        
+        <property name="slug" value="daly-city" />
+        
+        <property name="current.target" value="com.publicstuff.daly_city" />
+        
+        <property name="space.color" value="#00460E"/>
+        
+        <property name="space.id" value="10257" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+        
+        
+    </target>
+    
+     <!--##########################################################################################################################-->    
+     <target name="oceanside-ca">
+       	
+        <property name="app.name" value="Oceanside Publicstuff" />
+        
+        <property name="slug" value="oceanside-ca" />
+        
+        <property name="current.target" value="com.wassabi.oceanside" />
+        
+        <property name="space.color" value="#0488BB"/>
+        
+        <property name="space.id" value="25923" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+        
+        
+    </target>
+    
+     <!--##########################################################################################################################-->    
+     <target name="newport-beach">
+       	
+        <property name="app.name" value="myNB" />
+        
+        <property name="slug" value="newport-beach" />
+        
+        <property name="current.target" value="com.publicstuff.newport_beach" />
+        
+        <property name="space.color" value="#093069"/>
+        
+        <property name="space.id" value="25108" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+        
+        
+    </target>
+    
+    <!--##########################################################################################################################-->    
+    
+    <target name="tallahassee">
+       	
+        <property name="app.name" value="DigiTally" />
+        
+        <property name="slug" value="tallahassee" />
+        
+        <property name="current.target" value="com.publicstuff.tallahassee" />
+        
+        <property name="space.color" value="#00448B"/>
+        
+        <property name="space.id" value="33739" />
+        
+        <property name="previous.target" value="${current.package}" />
+        
+        <echo>Previous target was ${previous.target}</echo>
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <propertyregex 
+            property="previous.target.dir"
+              input="${previous.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+ 			    
+        <mkdir dir="src/${current.target.dir}"/>
+        
+        <move todir="src/${current.target.dir}">
+            <fileset dir="src/${previous.target.dir}"/>
+        </move>
+        
+        <!-- <delete dir="src/${previous.target.dir}"/> -->
+        
+        <replaceregexp
+               match="package .+?;"
+               replace="package ${current.target};"
+               flags="g">
+         		<fileset dir="src/${current.target.dir}">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="AndroidManifest.xml"
+            match="package=&quot;.+?&quot;" 
+            replace="package=&quot;${current.target}&quot;"/>
+        
+        <replaceregexp
+            match="name=&quot;app_name&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;app_name&quot;&gt;${app.name}&lt;/string&gt;"
+            flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	            
+            
+        <replaceregexp
+            match="name=&quot;currmapskey&quot;&gt;.+?&lt;/string&gt;" 
+            replace="name=&quot;currmapskey&quot;&gt;${maps.key}&lt;/string&gt;"
+             flags="g">
+            <fileset dir="res/">
+        		<include name="**/strings.xml"/>
+            </fileset>
+		</replaceregexp>	
+         <echo>Package is now ${current.target}</echo>
+         
+        <replaceregexp
+               match="import.+?\.R(;|\.\*)"
+               replace="import ${current.target}.R\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp
+               match="import ${previous.target}\.(.+?;)"
+               replace="import ${current.target}\.\1"
+               flags="g">
+         		<fileset dir="src">
+        			<include name="**/*.java"/>
+    			</fileset>
+        </replaceregexp>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="CITY_SPACE_ID = .+?;" 
+            replace="CITY_SPACE_ID = ${space.id};"/>
+        
+        <replaceregexp 
+            file="src/bundle/android/PublicStuff.java"
+            match="http://www-dev.publicstuff.com" 
+            replace="https://www.publicstuff.com"
+            flags="g"/>
+            
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.permission.C2D_MESSAGE"
+        	replace="android:name=&quot;${current.target}.permission.C2D_MESSAGE"
+        	flags="g"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="android:name=&quot;.+?\.GCMIntentService"
+        	replace="android:name=&quot;${current.target}.GCMIntentService"
+        	/>
+        
+        <!-- for gcm category -->
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;.+?&quot;"
+        	replace="&lt;!-- gcmcat --&gt;&lt;category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replaceregexp
+        	file="AndroidManifest.xml"
+        	match="category android:name=&quot;${previous.target}&quot;"
+        	replace="category android:name=&quot;${current.target}&quot;"
+        	/>
+        
+        <replace file="res/layout/createaccount.xml" token="${CreateAccount.LinearLayout.RelativeLayout.LinearLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="res/layout/main.xml" token="${Main.RelativeLayout.android:background}" value="${space.color}"/>
+        
+        <replace file="src/bundle/android/PublicStuff.java" token="IS_CLIENT_APP = false" value="IS_CLIENT_APP = true"/>
+        
+         <!-- replace images here -->
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_logo.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/launcher.png" tofile="res/drawable-hdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/launcher.png" tofile="res/drawable-mdpi/launcher.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/launcher.png" tofile="res/drawable-xhdpi/launcher.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-hdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-mdpi/ic_dark_publicstuff_icon.png" />
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_dark_publicstuff_icon.png" tofile="res/drawable-xhdpi/ic_dark_publicstuff_icon.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-hdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-hdpi/ic_light_publicstuff_logo.png" />
+		<copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-mdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-mdpi/ic_light_publicstuff_logo.png" />        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable-xhdpi/ic_light_publicstuff_logo.png" tofile="res/drawable-xhdpi/ic_light_publicstuff_logo.png" />
+        
+        <copy overwrite="true" failonerror="false" file="../../Google Drive/assets/${slug}-${space.id}/drawable/splash.png" tofile="res/drawable/splash.png" />
+         
+         <antcall target="release">
+        </antcall>
+        
+         <copy file="bin/PublicStuff-release.apk" tofile="../../Google Drive/android_builds/PublicStuff-${slug}-${app.name}.apk" />
+         
+        <antcall target="clean"/>
+        
+        
+    </target>
+    
+    <target name="propertyrrrr">
+        
+        <property name="current.target" value="com.wassabi.riverton" />
+        
+        <!-- set package name to folder directory -->
+        <propertyregex 
+            property="current.target.dir"
+              input="${current.target}"
+              regexp="\."
+              replace="/"
+              global="true"
+              casesensitive="false"/>
+        
+        <echo>${current.target.dir}</echo>
+        
+    </target>
+    
+</project>

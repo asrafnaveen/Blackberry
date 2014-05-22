@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ######################### NO TRANSLATION NECESSARY ######################### -->
+<string name="currmapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="mapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="debugmapskey">0ewCooT_fkQ6fRF-XYaZaPNrR6jB_UQNvzPiDXg</string>
+<string name="copyright">2012 PublicStuff</string>
+<string name="app_name">PublicStuff</string>
+
+<!-- ######################### TRANSLATION NECESSARY ######################### -->
+
+<string name="cityName" formatted="false">Cityname, ST</string>
+<string name="cityImageDescr" formatted="false">City Εικόνα</string>
+<string name="arrowDescr" formatted="false">Βέλος</string>
+<string name="stuffText" formatted="false">Σελίδα πράγματά μου</string>
+<string name="exitButtonText" formatted="false">Κάντε κλικ για επιστροφή</string>
+<string name="exitRequestScreenDescr" formatted="false">Έξοδος νέα οθόνη Αίτηση</string>
+<string name="exitProfileScreenDescr" formatted="false">Έξοδος Προφίλ Οθόνης</string>
+<string name="middleButtonDescr" formatted="false">middleTabViewButton</string>
+<string name="select_request_type_title" formatted="false">Επιλέξτε ένα Είδος Αίτηση</string>
+
+<string name="main_no_items" formatted="false">Δεν υπάρχουν αιτήματα για να εμφανίσετε</string>
+<string name="detailsLabel" formatted="false">ΛΕΠΤΟΜΕΡΕΙΕΣ</string>
+<string name="addressLabel" formatted="false">Διεύθυνση</string>
+<string name="addressPlaceholder"/>
+<string name="idLabel" formatted="false">Ταυτότητα</string>
+<string name="idPlaceholder">12345</string>
+<string name="backNavigation" formatted="false">Πίσω</string>
+<string name="cityIcon" formatted="false">Πόλη Εικονίδιο</string>
+<string name="socialMedia" formatted="false">Μοιραστείτε μέσω των social media</string>
+<string name="requestInfo" formatted="false">Πληροφορίες</string>
+<string name="commentsPlaceholder" formatted="false">Σχόλια</string>
+<string name="locationPlaceholder"/>
+<string name="statusLabel" formatted="false">Κατάσταση</string>
+<string name="statusPlaceholder"/>
+<string name="descriptionLabel" formatted="false">Περιγραφή</string>
+<string name="descriptionPlaceholder"/>
+<string name="priorityLabel" formatted="false">Προτεραιότητα</string>
+<string name="priorityPlaceholder"/>
+<string name="categoryLabel" formatted="false">Κατηγορία</string>
+<string name="categoryPlaceholder"/>
+<string name="submittedByLabel" formatted="false">Υποβλήθηκε από</string>
+<string name="submittedByPlaceholder"/>
+<string name="submittedOnLabel" formatted="false">Υποβλήθηκε στις</string>
+<string name="submittedOnPlaceholder"/>
+
+<string name="fav_activity_title" formatted="false">Μετοχή</string>
+<string name="allservice_activity_title" formatted="false">Βρείτε μια υπηρεσία</string>
+
+<string name="nonetwork_msg" formatted="false">Δεν διαθέσιμο δίκτυο</string>
+<string name="loading_please_wait_msg" formatted="false">Φόρτωση, παρακαλώ περιμένετε ...</string>
+
+<string name="username" formatted="false">Όνομα Χρήστη</string>
+<string name="password" formatted="false">Κωδικός</string>
+<string name="login" formatted="false">Σύνδεση</string>
+<string name="cancel" formatted="false">Ακύρωση</string>
+<string name="loging_out" formatted="false">Αποσύνδεση ...</string>
+<string name="confirm" formatted="false">Επιβεβαιώνω</string>
+<string name="delete_msg" formatted="false">Διαγράψτε αυτό το αγαπημένο;</string>
+<string name="send_email" formatted="false">Αποστολή Mail</string>
+<string name="editview_info_text" formatted="false">Προσθήκη ή κατάργηση υπηρεσιών σε αυτήν τη λίστα. Πατήστε το σύμβολο από τη γραμμή δράσης παραπάνω για να προσθέσετε περισσότερες υπηρεσίες. Πατήστε παρατεταμένα μια συγκεκριμένη υπηρεσία να διαγράψετε. Πατήστε το κουμπί Πίσω για να επιστρέψετε στην κανονική προβολή.</string>
+
+<string name="external_memory_for_image" formatted="false">Εξωτερική κάρτα μνήμης θα πρέπει να είναι παρόντες κατά την κοινή χρήση της εικόνας μέσω του ηλεκτρονικού ταχυδρομείου</string>
+<string name="an_error_occured" formatted="false">Παρουσιάστηκε σφάλμα, παρακαλώ δοκιμάστε ξανά αργότερα</string>
+<string name="uploading_please_wait" formatted="false">Ανέβασμα. Παρακαλώ περιμένετε ...</string>
+<string name="connecting_twitpic" formatted="false">Σύνδεση TwitPic ...</string>
+<string name="posting_the_tweet" formatted="false">Απόσπαση το μήνυμα ...</string>
+<string name="successfully_posted" formatted="false">Επιτυχής δημοσιεύτηκε</string>
+<string name="title" formatted="false">Τίτλος</string>
+<string name="description" formatted="false">Περιγραφή</string>
+<string name="image_attached" formatted="false">Attached Image</string>
+<string name="passwordConfirmation" formatted="false">νέα επιβεβαίωση \nκωδικού πρόσβασης</string>
+<string name="titlePlaceholder" formatted="false">Τίτλος</string>
+<string name="notificationTextPlaceholder" formatted="false">Κάποιος απάντησε σε ένα σχόλιο που έκανε σχετικά με αίτηση</string>
+<string name="timeAgoPlaceholder" formatted="false">Πριν από 6 μήνες</string>
+<string name="loading" formatted="false">Αίτηση ...</string>
+ <string name="required">*</string>
+<string name="selectCity" formatted="false">Επιλέξτε μια πόλη DEFAULT</string>
+<string name="attachImage" formatted="false">Επισύναψη μιας εικόνας</string>
+<string name="back" formatted="false">Πίσω</string>
+<string name="createAccount" formatted="false">Δημιουργία λογαριασμού</string>
+<string name="cancelButton" formatted="false">Ακύρωση</string>
+<string name="cityIconDesc" formatted="false">Πόλη Εικονίδιο</string>
+<string name="filterRequests" formatted="false">Φίλτρο αιτήσεις</string>
+<string name="confirmButton" formatted="false">Επιβεβαιώνω</string>
+<string name="findLocation" formatted="false">Βρείτε Τοποθεσία σας</string>
+<string name="mySettings" formatted="false">Οι ρυθμίσεις μου</string>
+<string name="save" formatted="false">Εκτός</string>
+<string name="newRequest" formatted="false">Νέα Αίτηση</string>
+<string name="forgotPassword" formatted="false">Ξεχάσατε τον κωδικό σας</string>
+<string name="loginTitle" formatted="false">Σύνδεση</string>
+<string name="aboutPublicStuff" formatted="false">Σχετικά με PublicStuff</string>
+<string name="myStuff" formatted="false">Τα πράγματά μου</string>
+<string name="openSettings" formatted="false">Ανοίξτε τις Ρυθμίσεις</string>
+<string name="done" formatted="false">Έγινε</string>
+<string name="fieldIsPublic" formatted="false">Οι πληροφορίες που καταχωρούνται εδώ θα είναι ορατές στο κοινό</string>
+<string name="enterAddress" formatted="false">Εισάγετε Διεύθυνση</string>
+<string name="post" formatted="false">ΜΕΤΑ</string>
+<string name="aboutPublicstuff" formatted="false">Εργαζόμαστε για να κάνει τις τοπικές κυβερνήσεις ανοιχτές, προσβάσιμες, και να ανταποκρίνεται.</string>
+<string name="openMenu" formatted="false">Άνοιγμα μενού</string>
+<string name="searchCity" formatted="false">Αναζήτηση για μια πόλη</string>
+<string name="skip" formatted="false">Μετάβαση</string>
+<string name="list" formatted="false">Λίστα</string>
+<string name="gallery" formatted="false">Στοά</string>
+<string name="map" formatted="false">Χάρτης</string>
+<string name="termsConditions"><![CDATA[Terms & Conditions]]></string>
+<string name="email" formatted="false">E-mail</string>
+<string name="aboutForgotPassword" formatted="false">Όταν επαναφέρετε τον κωδικό πρόσβασής σας, θα λάβετε ένα μήνυμα ηλεκτρονικού ταχυδρομείου από PublicStuff σας δίνει οδηγίες για το πώς να δημιουργήσετε ένα νέο κωδικό πρόσβασης. Αφού έχετε κάνει αυτό, μπορείτε να συνδεθείτε με το νέο κωδικό πρόσβασής σας.</string>
+<string name="enterCity" formatted="false">Εισάγετε πόλη</string>
+<string name="myProfile" formatted="false">Το προφίλ μου</string>
+<string name="firstName" formatted="false">Όνομα</string>
+<string name="lastName" formatted="false">Επώνυμο</string>
+<string name="phone" formatted="false">Τηλέφωνο</string>
+<string name="myLocations" formatted="false">Τοποθεσίες μου</string>
+<string name="home" formatted="false">Σπίτι</string>
+<string name="work" formatted="false">Εργασία</string>
+<string name="addressDefault" formatted="false">Αυτές οι διευθύνσεις μπορούν να χρησιμοποιηθούν ως προεπιλεγμένες θέσεις</string>
+<string name="notifications" formatted="false">Ειδοποιήσεις</string>
+<string name="emailMeWhen" formatted="false">Στείλτε e-mail μου, όταν ένα αίτημα που ακολουθούν</string>
+<string name="emailReplies" formatted="false">Στείλτε τις απαντήσεις στις θέσεις μου</string>
+<string name="currentLocation" formatted="false">Τρέχουσα Θέση</string>
+<string name="change" formatted="false">Αλλαγή</string>
+<string name="logOut" formatted="false">Έξοδος</string>
+<string name="oldPassword" formatted="false">Παλιά Κωδικός</string>
+<string name="newPassword" formatted="false">New Password</string>
+<string name="passwordLength" formatted="false">Οι κωδικοί πρόσβασης πρέπει να είναι τουλάχιστον 6 χαρακτήρες</string>
+<string name="sorting" formatted="false">Διαλογή</string>
+<string name="recent" formatted="false">Πρόσφατος</string>
+<string name="citySkyline" formatted="false">Πόλη Skyline</string>
+<string name="mapInstructions" formatted="false">Μετακίνηση χάρτη για να αλλάξετε τη θέση (zoom in για την ακρίβεια)</string>
+<string name="createAccountDesc" formatted="false">Δημιουργήστε έναν λογαριασμό για να παρακολουθείτε, υποστήριξη, και να σχολιάσει σχετικά με τις αιτήσεις στην κοινότητά σας.</string>
+<string name="privacyPolicy" formatted="false">Πολιτική Προστασίας Προσωπικών Δεδομένων</string>
+<string name="aboutPublicstuffLong" formatted="false">Είμαστε μια καινοτόμος εταιρεία λογισμικού CRM που σας βοηθά να πάρετε τα πράγματα σταθερό! Χρησιμοποιώντας δύο κινητά και web πλατφόρμες, έχουμε δημιουργήσει ένα ολοκληρωμένο σύστημα CRM backend που επιτρέπει δήμους, τις εγκαταστάσεις και τα πανεπιστήμια να λαμβάνουν αιτήσεις παροχής υπηρεσιών από τους κατοίκους και τους πελάτες τους σε πραγματικό χρόνο. Έχουμε βοηθήσει τους δήμους να σώσει πάνω από $ 360.000 ετησίως με βελτιωμένα κανάλια επικοινωνίας και την αύξηση της ικανοποίησης των πελατών.</string>
+<string name="forgotPasswordButton" formatted="false">Ξεχάσατε τον κωδικό σας;</string>
+<string name="questionsFeedback" formatted="false">Στείλτε τις ερωτήσεις και τα σχόλια για την</string>
+<string name="emailPublicStuff">tech@publicstuff.com</string>
+
+<string name="about" formatted="false">Περίπου</string>
+<string name="aboutPublicStuffMain" formatted="false">Αίτηση και υποστήριξη θεμάτων στην πόλη σας και να ειδοποιηθείτε όταν είναι σταθερό!</string>
+<string name="status" formatted="false">Κατάσταση</string>
+<string name="open" formatted="false">Ανοιχτό</string>
+<string name="filterBy" formatted="false">Φιλτράρισμα με βάση τον</string>
+<string name="sortBy" formatted="false">Sort By</string>
+<string name="nearby" formatted="false">Πλησίον</string>
+<string name="types" formatted="false">Τύποι</string>
+<string name="allRequestTypes" formatted="false">Όλοι οι τύποι Αίτηση</string>
+<string name="dateRange" formatted="false">Χρονικό Διάστημα</string>
+<string name="startDate" formatted="false">Ημερομηνία έναρξης</string>
+<string name="endDate" formatted="false">Ημερομηνία Λήξης</string>
+<string name="redoSearch" formatted="false">Επανάληψη αναζήτησης εδώ</string>
+<string name="titleCaps" formatted="false">Τίτλος</string>
+<string name="flag" formatted="false">Επισήμανση ως ακατάλληλου</string>
+<string name="calculatingLocation" formatted="false">Υπολογισμός Τοποθεσία</string>
+<string name="requestIsPrivate" formatted="false">Το αίτημα αυτό έχει επισημανθεί ως ιδιωτικά</string>
+<string name="descriptionHint" formatted="false">Περιγραφή (Προαιρετικό)</string>
+<string name="addComment" formatted="false">Προσθέστε ένα σχόλιο</string>
+<string name="send" formatted="false">Αποστολή</string>
+
+<!-- notifier widget -->
+<string name="notifier" formatted="false">Ενημέρωση διαθέσιμα.</string>
+
+<!-- notification screen -->
+<string name="notificationComment" formatted="false">Κάποιος σχολίασε σχετικά με αίτηση που υποβάλλεται</string>
+<string name="notificationReply" formatted="false">Κάποιος απάντησε σε ένα σχόλιο που έκανε σχετικά με αίτηση</string>
+<string name="notificationStatus" formatted="false">Η κατάσταση της αίτησής σας ενημερώθηκε για %s</string>
+
+<!-- citydashboard activity -->
+<string name="aboutapp" formatted="false">Σχετικά %s</string>
+<string name="mystuff" formatted="false">Τα πράγματά μου</string>
+<string name="aboutps" formatted="false">Σχετικά με PublicStuff</string>
+<string name="more" formatted="false">Περισσότερο</string>
+<string name="nearbyRequest" formatted="false">Κοντινά αιτήσεις</string>
+
+<!-- dialogs -->
+<string name="findingLocation" formatted="false">Εύρεση Τοποθεσία ...</string>
+<string name="getRequestList" formatted="false">Να πάρει λίστα αίτημα ...</string>
+<string name="ErrorPastTense" formatted="false">Υπήρξε ένα σφάλμα</string>
+<string name="ErrorInternet" formatted="false">Παρακαλούμε ελέγξτε την σύνδεση διαδικτύου σας και προσπαθήστε ξανά</string>
+<string name="OkButton" formatted="false">Καλά</string>
+<string name="CancelButton" formatted="false">Ακύρωση</string>
+<string name="loadingDialog" formatted="false">Φόρτωση ...</string>
+<string name="loginNow" formatted="false">Σύνδεση</string>
+<string name="pleaseLogin" formatted="false">Παρακαλούμε συνδεθείτε για να ακολουθήσει πόλη σας</string>
+<string name="creatingAccount" formatted="false">Δημιουργία λογαριασμού ...</string>
+<string name="getcustomFields" formatted="false">Να πάρει προσαρμοσμένα πεδία ...</string>
+<string name="bothFields" formatted="false">Και τα δύο πεδία είναι υποχρεωτικά για να συνδεθείτε.</string>
+<string name="loggingIn" formatted="false">Σύνδεση στο ...</string>
+<string name="locationFailGPS" formatted="false">Υπήρξε ένα σφάλμα στην εύρεση της τοποθεσίας σας. Παρακαλούμε ελέγξτε το GPS σας και σύνδεση στο internet.</string>
+<string name="chooseLocation" formatted="false">Επιλέξτε Τοποθεσία</string>
+<string name="tryAgain" formatted="false">Δοκιμάστε πάλι</string>
+<string name="requestTypes" formatted="false">Να πάρει τους τύπους αίτημα ...</string>
+<string name="geoError" formatted="false">Σφάλμα Geolocation</string>
+<string name="googleGeoError" formatted="false">Ο διακομιστής επέστρεψε geolocation Google κακά στοιχεία σχετικά με επιλεγμένη τοποθεσία σας. Παρακαλώ δοκιμάστε την επιλογή της τοποθεσίας σας και πάλι.</string>
+<string name="saveDraft" formatted="false">Αποθήκευση σχέδιο</string>
+<string name="deleteDraft" formatted="false">Διαγραφή Σχέδιο</string>
+<string name="exitSave" formatted="false">Έξοδος χωρίς αποθήκευση</string>
+<string name="resumeDraft" formatted="false">Επιστροφή στην εκπόνηση</string>
+<string name="exitScreen" formatted="false">Έξοδος</string>
+<string name="loginDraft" formatted="false">Θα πρέπει να συνδεθείτε για να αποθηκεύσετε σχέδια</string>
+<string name="titleRequired" formatted="false">Ένας τίτλος που απαιτείται.</string>
+<string name="requestTypeRequired" formatted="false">Ένας τύπος αίτησης.</string>
+<string name="errorLocationConfirm" formatted="false">Υπήρξε ένα σφάλμα κατά την επιβεβαίωση της θέσης σας. Παρακαλώ επιλέξτε μια τοποθεσία, κάνοντας κλικ στο πεδίο διεύθυνσης κάτω.</string>
+<string name="loginRequired" formatted="false">Θα πρέπει να συνδεθείτε για να υποβάλουν αίτηση για %s</string>
+<string name="loadingProfile" formatted="false">Φόρτωση προφίλ σας ...</string>
+<string name="requestDetails" formatted="false">Να πάρει λεπτομέρειες αίτημα ...</string>
+<string name="submitComment" formatted="false">Υποβολή σχολίου ...</string>
+<string name="endDateError" formatted="false">Η ημερομηνία λήξης πρέπει να έρθει μετά από την ημερομηνία έναρξης.</string>
+<string name="startDateSelect" formatted="false">Επιλέξτε Ημερομηνία έναρξης</string>
+<string name="endDateSelect" formatted="false">Επιλέξτε Ημερομηνία Λήξης</string>
+
+<!-- password alerts -->
+<string name="passwordMatch" formatted="false">Νέος κωδικός πρόσβασης και η επιβεβαίωση πρέπει να ταιριάζουν.</string>
+<string name="passwordFormat" formatted="false">Ο κωδικός πρόσβασης πρέπει να είναι τουλάχιστον έξι χαρακτήρες.</string>
+<string name="passwordSecurity" formatted="false">Πρέπει να εισάγετε τον παλιό κωδικό πρόσβασής σας.</string>
+<string name="savingSettings" formatted="false">Αποθήκευση ρυθμίσεων ...</string>
+
+<string name="thankyou" formatted="false">Σας ευχαριστώ</string>
+<string name="passwordUpdated" formatted="false">Ο κωδικός πρόσβασής σας έχει ενημερωθεί</string>
+<string name="oldpasswordbad" formatted="false">Παλιός κωδικός εισαχθεί λανθασμένα</string>
+
+<!-- citieslist activity -->
+<string name="cityList" formatted="false">Να πάρει λίστα της πόλης ...</string>
+<string name="locationFail" formatted="false">Δεν ήταν δυνατή η εύρεση της τοποθεσίας</string>
+<string name="locationFailVerbose" formatted="false">Δεν υπάρχουν θέσεις ταιριάζουν τα κριτήρια της αναζήτησής σας</string>
+<string name="cityData" formatted="false">Να πάρει τα δεδομένα της πόλης ...</string>
+<string name="findCity" formatted="false">Υπήρξε ένα σφάλμα στην εύρεση της τοποθεσίας σας. Παρακαλώ εισάγετε μια πόλη ή επιλέξτε από την παρακάτω λίστα.</string>
+<string name="selectCityTime" formatted="false">Παρακαλώ επιλέξτε μια πόλη</string>
+<string name="selectCityVerbose" formatted="false">Παρακαλώ επιλέξτε μια πόλη από τη λίστα για να συνεχίσετε.</string>
+
+<!-- citydetails activity -->
+<string name="follow" formatted="false">Ακολουθήστε</string>
+<string name="unfollow" formatted="false">Μην παρακολουθείς</string>
+<string name="visitcityweb" formatted="false">Επισκεφθείτε την ιστοσελίδα Πόλη</string>
+<string name="petitioncity" formatted="false">Αναφορά Πόλη</string>
+<string name="petitionCityVerbose" formatted="false">Παρακαλούμε συνδεθείτε αναφοράς της πόλης σας για να χρησιμοποιήσετε PublicStuff</string>
+
+<!-- createaccount activity -->
+
+<string name="errorRequest" formatted="false">Σφάλμα στο αίτημα</string>
+<string name="citydescription" formatted="false">Κάντε %s προεπιλεγμένη πόλη μου</string>
+<string name="accountRequirement" formatted="false">Όλα τα πεδία είναι υποχρεωτικά για να δημιουργήσετε ένα λογαριασμό.</string>
+<string name="passwordCharacters" formatted="false">Ο κωδικός πρόσβασης πρέπει να έχουν περισσότερα από 5 χαρακτήρες</string>
+
+<!-- customfields activity -->
+<string name="requiredField" formatted="false">%s είναι ένα υποχρεωτικό πεδίο</string>
+<string name="requestAddl" formatted="false">%1$s, %2$s θα ήθελα περισσότερες πληροφορίες για τις αιτήσεις με τον τύπο του αιτήματος %3$s.</string>
+<string name="submitrequestto" formatted="false">Θα πρέπει να συνδεθείτε για να υποβάλουν αίτηση για% s</string>
+<string name="submitRequest" formatted="false">Υποβολή αιτήματος ...</string>
+<string name="loadingRequest" formatted="false">Φόρτωση αίτημα ...</string>
+
+<!-- Drafts activity -->
+<string name="myDrafts" formatted="false">Πρόχειρα μου</string>
+<string name="delDraft" formatted="false">Διαγραφή Σχέδιο</string>
+
+<!-- forgot password activity -->
+<string name="enterEmail" formatted="false">Παρακαλώ εισάγετε το email σας.</string>
+<string name="passReset" formatted="false">Επαναφορά κωδικού πρόσβασης ...</string>
+
+<!-- main activity -->
+<string name="unableCity" formatted="false">Δεν είναι δυνατή η αναγνώριση της πόλης</string>
+<string name="refreshps" formatted="false">Ανανέωση Widgets</string>
+<string name="widgetsUpdated" formatted="false">Ενημερώθηκε Widgets</string>
+
+<!-- newrequest activity -->
+<string name="takePhoto" formatted="false">Πάρτε Νέα Φωτογραφία</string>
+<string name="selectPhoto" formatted="false">Επιλέξτε Φωτογραφία</string>
+<string name="deletePhoto" formatted="false">Διαγραφή φωτογραφιών</string>
+<string name="noCamera" formatted="false">Δεν υπάρχουν κάμερες εντοπίστηκαν στη συσκευή σας</string>
+<string name="publicSelector" formatted="false">Δημόσιο</string>
+<string name="privateSelector" formatted="false">Ιδιωτικός</string>
+<string name="setPrivacy" formatted="false">Ορισμός προστασίας προσωπικών δεδομένων</string>
+<string name="publicComment" formatted="false">Όλοι μπορούν να δουν ή να σχολιάσετε</string>
+<string name="privateComment" formatted="false">Μόνο οι εργαζόμενοι της πόλης μπορεί να δει ή να σχολιάσετε</string>
+<string name="forcePrivate" formatted="false">Νέα αιτήματα με τον επιλεγμένο τύπο αίτημα δεν μπορεί παρά να είναι ιδιωτικό.</string>
+
+<!-- newrequestmap activity -->
+<string name="addressUnavailable" formatted="false">Διεύθυνση Μη διαθέσιμο.</string>
+<string name="errorFindingLocation" formatted="false">Σφάλμα κατά την εύρεση της τοποθεσίας σας</string>
+<string name="addressBlankError" formatted="false">Διεύθυνση δεν μπορεί να είναι κενό, παρακαλώ εισάγετε μία ή επιλέξτε μια θέση στον χάρτη</string>
+<string name="findingAddress" formatted="false">Εύρεση Διεύθυνση ...</string>
+<string name="errorGeocodingLoc" formatted="false">Υπήρξε ένα σφάλμα γεωκωδικοποίησης επιλεγμένη τοποθεσία σας. Παρακαλώ δοκιμάστε ξανά.</string>
+<string name="addressVerify" formatted="false">Επαλήθευση Διεύθυνση ...</string>
+
+<!-- requestdetails activity -->
+<string name="pending" formatted="false">Εκκρεμής</string>
+<string name="anonymous" formatted="false">Ανώνυμος</string>
+<string name="followers" formatted="false">Οι οπαδοί</string>
+<string name="comments" formatted="false">ΣΧΟΛΙΑ</string>
+<string name="requestResolved" formatted="false">Το αίτημα έχει επιλυθεί</string>
+<string name="requestError" formatted="false">Υπήρξε ένα σφάλμα κατά την αρχική αίτηση</string>
+<string name="requestNA" formatted="false">Το αίτημα δεν ισχύει πλέον</string>
+<string name="makePubliclyVisible" formatted="false">Να δημοσιοποιεί τις πληροφορίες ορατές</string>
+<string name="reason" formatted="false">Συλλογισμός</string>
+<string name="elaborate" formatted="false">Περίτεχνα</string>
+<string name="closeRequest" formatted="false">Κλείσιμο Αίτηση</string>
+<string name="submit" formatted="false">Υποβολή</string>
+<string name="makePrivate" formatted="false">Κάντε την ζήτηση Ιδιωτικός;</string>
+<string name="makePrivateMessage" formatted="false">Θέλετε να ρυθμίσετε αίτηση υπηρεσίας σας σε ιδιώτες; Αυτό δεν μπορεί να αναιρεθεί.</string>
+
+<string name="statusSubmitted" formatted="false">Υποβλήθηκε</string>
+<string name="statusAcknowledged" formatted="false">Καταξιωμένος</string>
+<string name="statusInProgress" formatted="false">Σε εξέλιξη</string>
+<string name="statusCompleted" formatted="false">Ολοκληρώθηκε</string>
+<string name="statusOther" formatted="false">Άλλος</string>
+
+<string name="yes" formatted="false">Ναί</string>
+<string name="no" formatted="false">Όχι</string>
+<string name="gettingComments" formatted="false">Να πάρει τα σχόλια του αιτήματος ...</string>
+<string name="loginToRequest" formatted="false">Παρακαλούμε συνδεθείτε στο %s ένα αίτημα</string>
+<string name="loginComment" formatted="false">Θα πρέπει να συνδεθείτε για να σχολιάσετε</string>
+
+<string name="socialFacebook" formatted="false">Δημοσίευση στο Facebook</string>
+<string name="socialTwitter" formatted="false">Δημοσίευση στο Twitter</string>
+<string name="socialEmail" formatted="false">Στείλτε ένα e-mail</string>
+<string name="shareRequest" formatted="false">Αίτηση μετοχή</string>
+<string name="addImage" formatted="false">Προσθήκη εικόνας</string>
+<string name="plsEnterComment" formatted="false">Παρακαλώ εισάγετε ένα σχόλιο.</string>
+
+<!-- RequestListFilter Activity -->
+<string name="sortRecent" formatted="false">Πρόσφατος</string>
+<string name="sortPopular" formatted="false">Δημοφιλής</string>
+<string name="statusOpen" formatted="false">Ανοιχτό</string>
+<string name="statusClosed" formatted="false">Κλειστό</string>
+<string name="statusAll" formatted="false">Όλα</string>
+<string name="filterNearby" formatted="false">Πλησίον</string>
+<string name="filterMyRequests" formatted="false">Οι αιτήσεις μου</string>
+<string name="filterFollowedRequests" formatted="false">Ακολούθησε αιτήσεις</string>
+<string name="filterCommentedRequests" formatted="false">Αιτήσεις σχολιασμένες</string>
+<string name="filterVotedRequests" formatted="false">Ψηφίστηκε αιτήσεις</string>
+
+<string name="myNotifications" formatted="false">Ειδοποιήσεις μου</string>
+
+<string name="requestTypeSelect" formatted="false">Επιλέξτε έναν τύπο αίτησης</string>
+
+<!--  UserDetails Activity -->
+<string name="requestRank" formatted="false">Είστε #%1$s σε αιτήματα που υποβάλλονται σε%2$s</string>
+<string name="commentRank" formatted="false">Είστε #%1$s σε παρατηρήσεις που υπέβαλαν στο%2$s</string>
+<string name="following" formatted="false">Εξής</string>
+<string name="upvoted" formatted="false">Upvoted</string>
+<string name="drafts" formatted="false">Πρόχειρα</string>
+<string name="notificationsChoice" formatted="false">Ειδοποιήσεις</string>
+
+<!-- UserSettings Activity -->
+<string name="typeChangeStatus" formatted="false">Αλλαγές κατάστασης</string>
+<string name="typeIsClosed" formatted="false">Είναι Κλειστό</string>
+<string name="typeEmailMe" formatted="false">Μην μου e-mail</string>
+<string name="emailMeRequest" formatted="false">Στείλτε e-mail μου, όταν ένα αίτημα που ακολουθούν</string>
+<string name="logOutWarning" formatted="false">Είστε βέβαιοι ότι θέλετε να αποσυνδεθείτε; Θα χάσετε οποιαδήποτε σχέδια αίτημα που έχετε αποθηκεύσει.</string>
+<string name="usernameWarning" formatted="false">Όνομα Χρήστη δεν μπορεί να είναι κενό.</string>
+<string name="emailWarning" formatted="false">Στείλτε e-mail δεν μπορεί να είναι κενό.</string>
+<string name="settingsSaved" formatted="false">Οι ρυθμίσεις σας έχουν αποθηκευτεί</string>
+<string name="changesStatus" formatted="false">Αλλαγές κατάστασης</string>
+<string name="currentLanguage" formatted="false">Τρέχουσα γλώσσα</string>
+<string name="selectLanguage" formatted="false">Επιλέξτε Γλώσσα</string>
+<string name="changeCity" formatted="false">Αλλαγή πόλης</string>
+
+<!-- Supported Languages -->
+<string name="frenchLanguageCanadian" formatted="false">Γαλλικά (Καναδά)</string>
+<string name="spanishLanguange" formatted="false">Español</string>
+
+<string name="arabicLanguage" formatted="false">Αραβικός</string>
+<string name="germanLanguage" formatted="false">Γερμανός</string>
+<string name="greekLanguage" formatted="false">Ελληνικά</string>
+<string name="englishLanguage" formatted="false">Αγγλικά</string>
+<string name="spanishLanguage" formatted="false">Ισπανικά</string>
+<string name="frenchLanguage" formatted="false">Γάλλος</string>
+<string name="hindiLanguage" formatted="false">Χίντι</string>
+<string name="italianLanguage" formatted="false">Ιταλικά</string>
+<string name="japaneseLanguage" formatted="false">Ιαπωνικά</string>
+<string name="koreanLanguage" formatted="false">Κορεάτης</string>
+<string name="polishLanguage" formatted="false">Πολωνός</string>
+<string name="portugueseLanguage" formatted="false">Πορτογάλος</string>
+<string name="russianLanguage" formatted="false">Ρωσικός</string>
+<string name="serbianLanguage" formatted="false">Σέρβος</string>
+<string name="turkishLanguage" formatted="false">Τουρκικά</string>
+<string name="vietnameseLanguage" formatted="false">Βιετνάμ</string>
+<string name="chineseLanguage" formatted="false">Κινέζικα</string>
+
+<string name="languageUnavailable" formatted="false">Γλώσσα δεν είναι διαθέσιμη σε αυτή τη συσκευή</string>
+<!-- Terms & Conditions -->
+<string name="ts" formatted="false">Όροι &amp; Προϋποθέσεις</string>
+
+</resources>

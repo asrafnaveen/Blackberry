@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+    <!--Top Bar-->
+    <RelativeLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:paddingTop="8dip"
+                    android:paddingBottom="8dip"
+                    android:background="@color/TOP_BAR_BACKGROUND"
+                    android:id="@+id/headerLayout"
+            >
+        <Button android:id="@+id/done"
+                android:layout_width="48dip"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:clickable="true"
+                android:onClick="back"
+                android:scaleType="centerInside"/>
+        <ImageView  android:id="@+id/idBackChevron" android:layout_width="16dip" android:layout_height="fill_parent"
+                    android:src="@drawable/holo_dark1_navigation_previous_item"
+                    android:contentDescription="@string/backNavigation"/>
+        <ImageView  android:id="@+id/cityIcon" android:layout_width="32dip" android:layout_height="32dip"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/cityIcon"
+                    android:layout_toRightOf="@id/idBackChevron"/>
+        <ImageButton android:id="@+id/filterRequest"
+                     android:layout_width="wrap_content"
+                     android:layout_height="fill_parent"
+                     android:textSize="18sp"
+                     android:clickable="true"
+                     android:background="@null"
+                     android:onClick="filterRequest"
+                     android:layout_alignParentRight="true"
+                     android:src="@drawable/holo_dark4_collections_sort_by_size"
+                     android:padding="2dip"
+                     android:contentDescription="@string/filterRequests"/>
+        <ImageButton android:id="@+id/newRequest"
+                     android:layout_width="wrap_content"
+                     android:layout_height="fill_parent"
+                     android:textSize="18sp"
+                     android:clickable="true"
+                     android:background="@null"
+                     android:onClick="newRequest"
+                     android:src="@drawable/ic_dark_new_request"
+                     android:layout_toLeftOf="@id/filterRequest"
+                     android:contentDescription="@string/newRequest"
+                     android:scaleType="centerInside"
+                     android:padding="2dip"/>
+
+    </RelativeLayout>
+    <!--Tab from info to request details-->
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent" android:layout_height="48dip"
+            android:orientation="vertical" android:background="@color/MED_GRAY_BKGROUND">
+        <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:orientation="horizontal" android:padding="4dip">
+            <Button android:id="@+id/requestList"
+                    android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="12dip"   android:layout_weight="1"
+                    android:gravity="center" android:text="@string/list" android:textStyle="bold"
+                    android:textColor="@color/DARK_TEXT" android:background="@null"   android:onClick="showList"
+                    />
+            <View   android:id="@+id/viewSeparator2" android:layout_width="2dip" android:layout_height="fill_parent"
+                    android:background="@color/TOP_BAR_SEPARATOR" android:layout_margin="4dip"/>
+            <Button android:id="@+id/requestGallery"
+                    android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="12dip"
+                    android:gravity="center_vertical|center_horizontal" android:text="@string/gallery" android:textStyle="bold"
+                    android:textColor="@color/DARK_TEXT" android:background="@null"   android:layout_weight="1" android:onClick="showGallery"
+                    />
+            <View   android:id="@+id/viewSeparator3" android:layout_width="2dip" android:layout_height="fill_parent"
+                    android:background="@color/TOP_BAR_SEPARATOR" android:layout_margin="4dip"/>
+            <Button android:id="@+id/requestMap"
+                    android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="12dip"
+                    android:gravity="center_vertical|center_horizontal" android:text="@string/map" android:textStyle="bold"
+                    android:textColor="@color/DARK_TEXT" android:background="@null"   android:layout_weight="1" android:onClick="showMap"
+                    />
+        </LinearLayout>
+        <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_alignParentBottom="true">
+            <View   android:id="@+id/listHighlight" android:layout_width="fill_parent" android:layout_height="2dip"
+                    android:background="@color/ORANGE" android:layout_weight="1"/>
+            <View   android:id="@+id/galleryHighlight" android:layout_width="fill_parent" android:layout_height="2dip"
+                    android:background="@color/ORANGE" android:layout_weight="1" android:visibility="invisible"/>
+            <View   android:id="@+id/mapHighlight" android:layout_width="fill_parent" android:layout_height="2dip"
+                    android:background="@color/ORANGE" android:layout_weight="1" android:visibility="invisible"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <ListView android:layout_height="fill_parent"
+              android:layout_width="fill_parent"
+              android:id="@+id/requestListView"
+              android:background="@color/WHITE"               
+              />
+    <GridView
+              android:layout_height="fill_parent"
+              android:layout_width="fill_parent"
+              android:id="@+id/requestGalleryView"
+              android:background="@color/WHITE"
+              android:visibility="gone"
+              android:verticalSpacing="0dip"
+              android:horizontalSpacing="0dip"
+              android:numColumns="2"
+              android:stretchMode="columnWidth"
+              android:gravity="center"/>
+    <RelativeLayout
+            android:id="@+id/requestMapLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            >
+        <WebView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+        <Button android:id="@+id/refreshMap"
+                android:layout_width="fill_parent" android:layout_height="32dip" android:textSize="12dip"
+                android:gravity="center_vertical|center_horizontal" android:text="@string/redoSearch" android:textStyle="bold"
+                android:onClick="refreshMap"
+                android:visibility="visible" android:layout_alignParentTop="true" android:padding="8dip"/>
+     </RelativeLayout>
+</LinearLayout>

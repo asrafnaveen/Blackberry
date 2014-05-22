@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView android:id="@+id/listTitle"
+              android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize="18dip"
+              android:gravity="center_vertical" android:text="@string/select_request_type_title" android:textStyle="bold"
+            android:padding="8dip" android:textColor="@color/WHITE"
+            android:background="@color/TOP_BAR_BACKGROUND"
+            />
+    <ListView android:layout_height="fill_parent"
+              android:layout_width="fill_parent"
+              android:id="@+id/item_listview"
+              android:background="@color/WHITE"/>
+</LinearLayout>

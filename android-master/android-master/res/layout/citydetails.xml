@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:paddingTop="8dip"
+                    android:paddingBottom="8dip"
+                    android:background="@color/TOP_BAR_BACKGROUND"
+                    android:id="@+id/headerLayout"
+            >
+        <Button android:id="@+id/newRequestDone"
+                android:layout_width="48dip"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:clickable="true"
+                android:onClick="back"
+                android:scaleType="centerInside"/>
+        <ImageView  android:id="@+id/idBackChevron" android:layout_width="16dip" android:layout_height="fill_parent"
+                    android:src="@drawable/holo_dark1_navigation_previous_item"
+                    android:contentDescription="@string/backNavigation"/>
+        <ImageView  android:id="@+id/cityIcon" android:layout_width="32dip" android:layout_height="32dip"
+                     android:scaleType="fitXY"
+                    android:contentDescription="@string/cityIcon"
+                    android:layout_toRightOf="@id/idBackChevron"/>
+        <RelativeLayout android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/cityIcon"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/cityData"
+                        android:paddingLeft="16dip"
+                >
+
+            <TextView
+                    android:id="@+id/cityName"
+                    android:text="@string/cityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/WHITE"
+                    android:textSize="14dip"
+                    android:textStyle="bold"
+                    />
+            <TextView
+                    android:id="@+id/cityTagline"
+                    android:text="Tagline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/WHITE"
+                    android:layout_centerVertical="true"
+                    android:layout_below="@id/cityName"
+                    android:textSize="10dip"
+                    android:textStyle="bold"
+                    />
+        </RelativeLayout>
+
+        <ImageButton  android:id="@+id/newRequest"
+                      android:layout_width="wrap_content"
+                      android:layout_height="fill_parent"
+                      android:src="@drawable/ic_dark_new_request"
+                      android:gravity="center_vertical"
+                      android:layout_centerInParent="true"
+                      android:onClick="newRequestActivity"
+                      android:contentDescription="@string/newRequest"
+                     android:clickable="true"
+                     android:background="@null"
+                     android:layout_alignParentRight="true"
+                     android:scaleType="centerInside"/>
+
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent"
+                                 android:layout_height="wrap_content"
+                                 android:id="@+id/cityDetails">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:orientation="vertical">
+    <ImageView android:layout_height="wrap_content"
+               android:layout_width="fill_parent"
+               android:id="@+id/citySkyline"
+               android:contentDescription="@string/citySkyline"
+               android:src="@drawable/ic_skyline"
+               android:scaleType="centerCrop"/>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:layout_width="fill_parent"
+                      android:layout_height="56dip" android:padding="8dip">
+            <Button
+                    android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:textSize="11dip" android:layout_weight="1"
+                    android:id="@+id/follow" android:onClick="follow" android:text="Follow"/>
+            <Button
+                    android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:textSize="11dip" android:layout_weight="1" android:text="Visit City Website"
+                    android:id="@+id/websitePetition" android:onClick="websitePetition"/>
+        </LinearLayout>
+            <TextView
+                    android:layout_width="fill_parent" android:layout_height="wrap_content"
+                    android:padding="8dip" android:textSize="12dip"
+                    android:textAllCaps="true" android:text="@string/about"
+                    android:id="@+id/cityAboutLabel"/>
+            <View   android:layout_width="fill_parent" android:layout_height="1dip"
+                    android:background="@color/MED_GRAY_BKGROUND" android:layout_weight="1"
+                    android:layout_marginLeft="8dip" android:layout_marginRight="8dip"/>
+            <TextView
+                    android:layout_width="fill_parent" android:layout_height="wrap_content"
+                    android:padding="16dip" android:textSize="12dip"
+                    android:text="@string/aboutPublicstuffLong"
+                    android:id="@+id/cityAbout" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

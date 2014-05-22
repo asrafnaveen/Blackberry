@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerLayout" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:clickable="true"
+                android:onClick="clickRequestType"
+                android:orientation="horizontal"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:weightSum="1.0" >
+
+                <TextView
+                    android:id="@+id/txtRequestType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/spinner_default_holo_light"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/select_request_type_title"
+                    android:onClick="clickRequestType"
+                    android:paddingLeft="8dip"
+                    android:singleLine="true"
+                    android:text="@string/select_request_type_title"
+                    android:textColor="@color/ORANGE"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/txtEditDescription"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dip"
+                        android:layout_marginRight="16dip"
+                        android:background="@drawable/edit_text_holo_light"
+                        android:gravity="top|left"
+                        android:hint="@string/descriptionHint"
+                        android:inputType="textMultiLine"
+                        android:minHeight="48dip"
+                        android:minLines="5"
+                        android:padding="8dip"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/DARK_TEXT"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/MED_GRAY_BKGROUND"
+        android:paddingBottom="8dip"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip"
+        android:paddingTop="8dip" >
+
+        <View
+            android:id="@+id/separator1"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:background="@color/DARK_TEXT" />
+
+        <ImageButton
+            android:id="@+id/requestPrivacy"
+            android:layout_width="32dip"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/separator1"
+            android:background="@null"
+            android:contentDescription="@string/setPrivacy"
+            android:scaleType="centerInside"
+            android:src="@drawable/holo_light10_device_access_not_secure" />
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_toRightOf="@+id/requestPrivacy"
+            android:background="@color/GRAY_TEXT" />
+    </RelativeLayout>
+
+</RelativeLayout>

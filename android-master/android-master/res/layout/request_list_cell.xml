@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent" android:layout_height="64dip"
+android:orientation="horizontal" android:baselineAligned="false">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"  android:layout_weight="1"
+              android:orientation="vertical" android:padding="8dip" android:gravity="center_vertical">
+
+    <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12dip"
+            android:text="username"   android:textStyle="bold"
+            android:id="@+id/requestTitle" android:gravity="left|center_vertical" />
+    <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="10dip"
+            android:text="username"   android:textStyle="bold"
+            android:id="@+id/requestAddress" android:gravity="left|center_vertical" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+        <ImageView
+                android:id="@+id/statusImage" android:layout_width="wrap_content" android:layout_height="fill_parent"
+                android:contentDescription="@string/statusLabel" android:src="@drawable/ic_status_small_1"
+                android:scaleType="centerInside" android:gravity="center_vertical" android:layout_marginRight="8dip"/>
+        <ImageView
+                android:id="@+id/distanceIcon" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:contentDescription="@string/descriptionLabel" android:src="@drawable/holo_light7_location_place"
+                android:scaleType="centerInside" android:gravity="center_vertical" />
+        <TextView
+                android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="10dip"
+                android:text="1"  android:gravity="center_vertical" android:layout_marginRight="8dip"
+                android:id="@+id/distanceText" />
+        <ImageView
+                android:id="@+id/followingIcon" android:layout_width="wrap_content" android:layout_height="fill_parent"
+                android:contentDescription="@string/descriptionLabel" android:src="@drawable/ic_light_following_small"
+                android:scaleType="centerInside" android:gravity="center_vertical" android:layout_marginRight="4dip"/>
+        <TextView
+                android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="10dip"
+                android:text="1"  android:gravity="center_vertical" android:layout_marginRight="8dip"
+                android:id="@+id/followersText" />
+        <ImageView
+                android:id="@+id/commentIcon" android:layout_width="wrap_content" android:layout_height="fill_parent"
+                android:contentDescription="@string/descriptionLabel" android:src="@drawable/ic_light_comment_small"
+                android:scaleType="centerInside" android:gravity="left|center_vertical" android:layout_marginRight="4dip"/>
+        <TextView
+                android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="10dip"
+                android:text="1"  android:gravity="center_vertical"
+                android:id="@+id/commentText" />
+    </LinearLayout>
+</LinearLayout>
+    <RelativeLayout android:layout_width="64dip"
+                    android:layout_height="64dip"
+                   >
+        <ImageView
+                android:id="@+id/requestImage" android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:contentDescription="@string/descriptionLabel"
+                android:scaleType="centerCrop" android:baselineAligned="false"/>
+        <ImageView
+                android:id="@+id/myRequestDogEar" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:contentDescription="@string/myStuff"
+                android:scaleType="center" android:layout_alignParentRight="true" />
+     </RelativeLayout>
+
+</LinearLayout>

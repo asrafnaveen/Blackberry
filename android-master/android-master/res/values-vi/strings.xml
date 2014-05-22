@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ######################### NO TRANSLATION NECESSARY ######################### -->
+<string name="currmapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="mapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="debugmapskey">0ewCooT_fkQ6fRF-XYaZaPNrR6jB_UQNvzPiDXg</string>
+<string name="copyright">2012 PublicStuff</string>
+<string name="app_name">PublicStuff</string>
+
+<!-- ######################### TRANSLATION NECESSARY ######################### -->
+
+<string name="cityName" formatted="false">Cityname, ST</string>
+<string name="cityImageDescr" formatted="false">Thành phố Hình ảnh</string>
+<string name="arrowDescr" formatted="false">Mui tên</string>
+<string name="stuffText" formatted="false">Trang Home</string>
+<string name="exitButtonText" formatted="false">Click To Quay trở lại</string>
+<string name="exitRequestScreenDescr" formatted="false">Thoát khỏi màn hình yêu cầu mới</string>
+<string name="exitProfileScreenDescr" formatted="false">Thoát khỏi màn hình Screen Hồ Sơ</string>
+<string name="middleButtonDescr" formatted="false">middleTabViewButton</string>
+<string name="select_request_type_title" formatted="false">Chọn một loại yêu cầu</string>
+
+<string name="main_no_items" formatted="false">Không có yêu cầu để hiển thị</string>
+<string name="detailsLabel" formatted="false">CHI TIẾT</string>
+<string name="addressLabel" formatted="false">Địa chỉ</string>
+<string name="addressPlaceholder"/>
+<string name="idLabel" formatted="false">ID</string>
+<string name="idPlaceholder">12345</string>
+<string name="backNavigation" formatted="false">Lưng</string>
+<string name="cityIcon" formatted="false">Thành phố Biểu tượng</string>
+<string name="socialMedia" formatted="false">Chia sẻ thông qua các phương tiện truyền thông xã hội</string>
+<string name="requestInfo" formatted="false">Thông tin</string>
+<string name="commentsPlaceholder" formatted="false">Bình luận</string>
+<string name="locationPlaceholder"/>
+<string name="statusLabel" formatted="false">Trạng thái</string>
+<string name="statusPlaceholder"/>
+<string name="descriptionLabel" formatted="false">Mô tả</string>
+<string name="descriptionPlaceholder"/>
+<string name="priorityLabel" formatted="false">Ưu tiên</string>
+<string name="priorityPlaceholder"/>
+<string name="categoryLabel" formatted="false">Thể loại</string>
+<string name="categoryPlaceholder"/>
+<string name="submittedByLabel" formatted="false">Submitted By</string>
+<string name="submittedByPlaceholder"/>
+<string name="submittedOnLabel" formatted="false">Gửi lên ngày</string>
+<string name="submittedOnPlaceholder"/>
+
+<string name="fav_activity_title" formatted="false">Chia</string>
+<string name="allservice_activity_title" formatted="false">Tìm một dịch vụ</string>
+
+<string name="nonetwork_msg" formatted="false">Không có mạng có sẵn</string>
+<string name="loading_please_wait_msg" formatted="false">Đang tải, vui lòng đợi ...</string>
+
+<string name="username" formatted="false">Tên đăng nhập</string>
+<string name="password" formatted="false">Mật khẩu</string>
+<string name="login" formatted="false">Đăng nhập</string>
+<string name="cancel" formatted="false">Hủy bỏ</string>
+<string name="loging_out" formatted="false">Đăng xuất ...</string>
+<string name="confirm" formatted="false">Xác nhận</string>
+<string name="delete_msg" formatted="false">Xoá mục ưa thích?</string>
+<string name="send_email" formatted="false">Gửi Mail</string>
+<string name="editview_info_text" formatted="false">Thêm hoặc Hủy bỏ dịch vụ trong danh sách này. Bấm vào dấu cộng từ thanh Action ở trên để thêm các dịch vụ nhiều hơn nữa. Dài bấm một dịch vụ cụ thể để xóa. Chạm nút quay lại để trở lại bình thường xem.</string>
+
+<string name="external_memory_for_image" formatted="false">Thẻ nhớ ngoài nên có mặt để chia sẻ hình ảnh thông qua email</string>
+<string name="an_error_occured" formatted="false">Đã xảy ra lỗi, hãy thử lại sau</string>
+<string name="uploading_please_wait" formatted="false">Tải lên. Xin chờ ...</string>
+<string name="connecting_twitpic" formatted="false">Kết nối TwitPic ...</string>
+<string name="posting_the_tweet" formatted="false">Đăng các tin nhắn ...</string>
+<string name="successfully_posted" formatted="false">Được đăng thành công</string>
+<string name="title" formatted="false">Tiêu đề</string>
+<string name="description" formatted="false">Mô tả</string>
+<string name="image_attached" formatted="false">Hình ảnh kèm</string>
+<string name="passwordConfirmation" formatted="false">Mật khẩu mới \nConfirmation</string>
+<string name="titlePlaceholder" formatted="false">Tiêu đề</string>
+<string name="notificationTextPlaceholder" formatted="false">Một người nào đó trả lời một lời nhận xét bạn đã thực hiện theo yêu cầu</string>
+<string name="timeAgoPlaceholder" formatted="false">6 tháng trước</string>
+<string name="loading" formatted="false">Yêu cầu ...</string>
+ <string name="required">*</string>
+<string name="selectCity" formatted="false">Chọn một thành phố DEFAULT</string>
+<string name="attachImage" formatted="false">Đính kèm một hình ảnh</string>
+<string name="back" formatted="false">Lưng</string>
+<string name="createAccount" formatted="false">Tạo tài khoản</string>
+<string name="cancelButton" formatted="false">Hủy bỏ</string>
+<string name="cityIconDesc" formatted="false">Thành phố Biểu tượng</string>
+<string name="filterRequests" formatted="false">Yêu cầu lọc</string>
+<string name="confirmButton" formatted="false">Xác nhận</string>
+<string name="findLocation" formatted="false">Tìm vị trí của bạn</string>
+<string name="mySettings" formatted="false">Cài đặt của tôi</string>
+<string name="save" formatted="false">Lưu</string>
+<string name="newRequest" formatted="false">New Yêu cầu</string>
+<string name="forgotPassword" formatted="false">Quên mật khẩu</string>
+<string name="loginTitle" formatted="false">Đăng nhập</string>
+<string name="aboutPublicStuff" formatted="false">Giới PublicStuff</string>
+<string name="myStuff" formatted="false">My Stuff</string>
+<string name="openSettings" formatted="false">Mở Cài đặt</string>
+<string name="done" formatted="false">Thực hiện</string>
+<string name="fieldIsPublic" formatted="false">Thông tin nhập vào đây sẽ được hiển thị cho công chúng</string>
+<string name="enterAddress" formatted="false">Nhập Địa chỉ</string>
+<string name="post" formatted="false">POST</string>
+<string name="aboutPublicstuff" formatted="false">Chúng tôi đang làm việc để làm cho chính quyền địa phương mở, dễ tiếp cận và đáp ứng.</string>
+<string name="openMenu" formatted="false">Mở trình đơn</string>
+<string name="searchCity" formatted="false">Tìm kiếm một thành phố</string>
+<string name="skip" formatted="false">Bỏ qua</string>
+<string name="list" formatted="false">Danh sách</string>
+<string name="gallery" formatted="false">Gallery</string>
+<string name="map" formatted="false">Bản đồ</string>
+<string name="termsConditions"><![CDATA[Terms & Conditions]]></string>
+<string name="email" formatted="false">Email</string>
+<string name="aboutForgotPassword" formatted="false">Khi bạn thiết lập lại mật khẩu của bạn, bạn sẽ nhận được một email từ PublicStuff cho bạn các hướng dẫn về làm thế nào để tạo ra một mật khẩu mới. Một khi bạn đã làm điều đó, cảm thấy tự do đăng nhập bằng mật khẩu mới của bạn.</string>
+<string name="enterCity" formatted="false">Nhập thành phố</string>
+<string name="myProfile" formatted="false">Hồ sơ của tôi</string>
+<string name="firstName" formatted="false">Tên riêng</string>
+<string name="lastName" formatted="false">Tên họ</string>
+<string name="phone" formatted="false">Điện thoại</string>
+<string name="myLocations" formatted="false">Địa điểm của tôi</string>
+<string name="home" formatted="false">Quê hương</string>
+<string name="work" formatted="false">Làm việc</string>
+<string name="addressDefault" formatted="false">Các địa chỉ này có thể được sử dụng như là vị trí mặc định</string>
+<string name="notifications" formatted="false">Thông báo</string>
+<string name="emailMeWhen" formatted="false">Gửi email cho tôi khi một yêu cầu tôi làm theo</string>
+<string name="emailReplies" formatted="false">Email trả lời cho bài viết của tôi</string>
+<string name="currentLocation" formatted="false">Vị trí hiện tại</string>
+<string name="change" formatted="false">Thay đổi</string>
+<string name="logOut" formatted="false">Log Out</string>
+<string name="oldPassword" formatted="false">Old Password</string>
+<string name="newPassword" formatted="false">Mật khẩu mới</string>
+<string name="passwordLength" formatted="false">Mật khẩu phải có ít nhất 6 ký tự</string>
+<string name="sorting" formatted="false">Phân loại</string>
+<string name="recent" formatted="false">Gần đây</string>
+<string name="citySkyline" formatted="false">Thành phố Skyline</string>
+<string name="mapInstructions" formatted="false">Di chuyển bản đồ để thay đổi vị trí (zoom cho độ chính xác)</string>
+<string name="createAccountDesc" formatted="false">Tạo một tài khoản để theo dõi, hỗ trợ, và nhận xét về các yêu cầu trong cộng đồng của bạn.</string>
+<string name="privacyPolicy" formatted="false">Chính sách bảo mật</string>
+<string name="aboutPublicstuffLong" formatted="false">Chúng tôi là một công ty phần mềm CRM sáng tạo giúp bạn có được cố định thứ! Sử dụng cả hai nền tảng điện thoại di động và các trang web, chúng tôi đã tạo ra một hệ thống phụ trợ CRM toàn diện, cho phép các thành phố, các cơ sở và các trường đại học để nhận được các yêu cầu dịch vụ từ các cư dân và khách hàng của họ trong thời gian thực. Chúng tôi đã giúp thành phố tiết kiệm được hơn $ 360.000 mỗi năm với kênh truyền thông được cải thiện và tăng sự hài lòng của khách hàng.</string>
+<string name="forgotPasswordButton" formatted="false">Quên mật khẩu?</string>
+<string name="questionsFeedback" formatted="false">Gửi câu hỏi và phản hồi cho</string>
+<string name="emailPublicStuff">tech@publicstuff.com</string>
+
+<string name="about" formatted="false">Giới thiệu</string>
+<string name="aboutPublicStuffMain" formatted="false">Yêu cầu và hỗ trợ các vấn đề trong thành phố của bạn và nhận được thông báo khi họ đang cố định!</string>
+<string name="status" formatted="false">Trạng thái</string>
+<string name="open" formatted="false">Mở</string>
+<string name="filterBy" formatted="false">Lọc theo</string>
+<string name="sortBy" formatted="false">Sắp xếp theo</string>
+<string name="nearby" formatted="false">Gần đó</string>
+<string name="types" formatted="false">Các loại</string>
+<string name="allRequestTypes" formatted="false">Tất cả các yêu cầu</string>
+<string name="dateRange" formatted="false">Phạm vi Ngày</string>
+<string name="startDate" formatted="false">Ngày bắt đầu</string>
+<string name="endDate" formatted="false">Ngày kết thúc</string>
+<string name="redoSearch" formatted="false">Redo tìm kiếm ở đây</string>
+<string name="titleCaps" formatted="false">Tiêu đề</string>
+<string name="flag" formatted="false">Flag là không thích hợp</string>
+<string name="calculatingLocation" formatted="false">Tính vị trí</string>
+<string name="requestIsPrivate" formatted="false">Yêu cầu này đã được đánh dấu là riêng tư</string>
+<string name="descriptionHint" formatted="false">Mô tả (Tùy chọn)</string>
+<string name="addComment" formatted="false">Thêm một lời nhận xét</string>
+<string name="send" formatted="false">Gửi</string>
+
+<!-- notifier widget -->
+<string name="notifier" formatted="false">Cập nhật sẵn có.</string>
+
+<!-- notification screen -->
+<string name="notificationComment" formatted="false">Ai đó nhận xét trên một yêu cầu mà bạn đã gửi</string>
+<string name="notificationReply" formatted="false">Một người nào đó trả lời một lời nhận xét bạn đã thực hiện theo yêu cầu</string>
+<string name="notificationStatus" formatted="false">Trạng thái của yêu cầu của bạn đã được cập nhật %s</string>
+
+<!-- citydashboard activity -->
+<string name="aboutapp" formatted="false">Về %s</string>
+<string name="mystuff" formatted="false">My Stuff</string>
+<string name="aboutps" formatted="false">Giới PublicStuff</string>
+<string name="more" formatted="false">Hơn</string>
+<string name="nearbyRequest" formatted="false">Gần đó yêu cầu</string>
+
+<!-- dialogs -->
+<string name="findingLocation" formatted="false">Tìm Địa điểm ...</string>
+<string name="getRequestList" formatted="false">Lấy danh sách yêu cầu ...</string>
+<string name="ErrorPastTense" formatted="false">Có một lỗi</string>
+<string name="ErrorInternet" formatted="false">Vui lòng kiểm tra kết nối internet của bạn và thử lại</string>
+<string name="OkButton" formatted="false">OK</string>
+<string name="CancelButton" formatted="false">Hủy bỏ</string>
+<string name="loadingDialog" formatted="false">Loading ...</string>
+<string name="loginNow" formatted="false">Đăng nhập</string>
+<string name="pleaseLogin" formatted="false">Vui lòng đăng nhập để theo thành phố của bạn</string>
+<string name="creatingAccount" formatted="false">Tạo tài khoản ...</string>
+<string name="getcustomFields" formatted="false">Bắt lĩnh vực tùy chỉnh ...</string>
+<string name="bothFields" formatted="false">Cả hai lĩnh vực được yêu cầu để đăng nhập.</string>
+<string name="loggingIn" formatted="false">Đăng nhập ...</string>
+<string name="locationFailGPS" formatted="false">Có lỗi trong việc tìm kiếm vị trí của bạn. Vui lòng kiểm tra GPS của bạn và kết nối internet.</string>
+<string name="chooseLocation" formatted="false">Chọn vị trí</string>
+<string name="tryAgain" formatted="false">Try Again</string>
+<string name="requestTypes" formatted="false">Bắt loại yêu cầu ...</string>
+<string name="geoError" formatted="false">Định vị lỗi</string>
+<string name="googleGeoError" formatted="false">Các máy chủ định vị của Google trả lại dữ liệu xấu về vị trí đã chọn của bạn. Hãy thử lựa chọn vị trí của bạn một lần nữa.</string>
+<string name="saveDraft" formatted="false">Lưu bản nháp</string>
+<string name="deleteDraft" formatted="false">Xóa Dự thảo</string>
+<string name="exitSave" formatted="false">Thoát mà không lưu</string>
+<string name="resumeDraft" formatted="false">Trở lại dự thảo</string>
+<string name="exitScreen" formatted="false">Ra</string>
+<string name="loginDraft" formatted="false">Bạn phải đăng nhập để lưu thư nháp</string>
+<string name="titleRequired" formatted="false">Title A là bắt buộc.</string>
+<string name="requestTypeRequired" formatted="false">Một loại yêu cầu là bắt buộc.</string>
+<string name="errorLocationConfirm" formatted="false">Có một lỗi xác nhận vị trí của bạn. Vui lòng chọn một địa điểm bằng cách nhấp vào trường địa chỉ dưới đây.</string>
+<string name="loginRequired" formatted="false">Bạn phải đăng nhập để gửi yêu cầu đến %s</string>
+<string name="loadingProfile" formatted="false">Đang tải hồ sơ của bạn ...</string>
+<string name="requestDetails" formatted="false">Bắt chi tiết yêu cầu ...</string>
+<string name="submitComment" formatted="false">Trình nhận xét ...</string>
+<string name="endDateError" formatted="false">Ngày kết thúc phải sau ngày bắt đầu.</string>
+<string name="startDateSelect" formatted="false">Chọn Ngày bắt đầu</string>
+<string name="endDateSelect" formatted="false">Chọn Ngày Kết thúc</string>
+
+<!-- password alerts -->
+<string name="passwordMatch" formatted="false">Mật khẩu mới và xác nhận phải phù hợp.</string>
+<string name="passwordFormat" formatted="false">Mật khẩu phải có ít nhất sáu ký tự.</string>
+<string name="passwordSecurity" formatted="false">Bạn phải nhập mật khẩu cũ của bạn.</string>
+<string name="savingSettings" formatted="false">Lưu cài đặt ...</string>
+
+<string name="thankyou" formatted="false">Cảm ơn bạn</string>
+<string name="passwordUpdated" formatted="false">Mật khẩu của bạn đã được cập nhật</string>
+<string name="oldpasswordbad" formatted="false">Mật khẩu cũ nhập không chính xác</string>
+
+<!-- citieslist activity -->
+<string name="cityList" formatted="false">Lấy danh sách thành phố ...</string>
+<string name="locationFail" formatted="false">Không thể tìm thấy vị trí</string>
+<string name="locationFailVerbose" formatted="false">Không có vị trí nào phù hợp với tiêu chí tìm kiếm của bạn</string>
+<string name="cityData" formatted="false">Bắt dữ liệu thành phố ...</string>
+<string name="findCity" formatted="false">Có lỗi trong việc tìm kiếm vị trí của bạn. Xin vui lòng nhập một thành phố hoặc chọn từ danh sách dưới đây.</string>
+<string name="selectCityTime" formatted="false">Vui lòng chọn một thành phố</string>
+<string name="selectCityVerbose" formatted="false">Vui lòng chọn một thành phố trong danh sách để tiếp tục.</string>
+
+<!-- citydetails activity -->
+<string name="follow" formatted="false">Theo</string>
+<string name="unfollow" formatted="false">Unfollow</string>
+<string name="visitcityweb" formatted="false">Thăm Trang Thành phố</string>
+<string name="petitioncity" formatted="false">Kiến nghị Thành phố</string>
+<string name="petitionCityVerbose" formatted="false">Xin vui lòng đăng nhập để kiến ​​nghị thành phố của bạn để sử dụng PublicStuff</string>
+
+<!-- createaccount activity -->
+
+<string name="errorRequest" formatted="false">Lỗi trong yêu cầu</string>
+<string name="citydescription" formatted="false">Thực hiện %s thành phố mặc định của tôi</string>
+<string name="accountRequirement" formatted="false">Tất cả các trường được yêu cầu để tạo ra một tài khoản.</string>
+<string name="passwordCharacters" formatted="false">Mật khẩu phải có nhiều hơn 5 ký tự</string>
+
+<!-- customfields activity -->
+<string name="requiredField" formatted="false">%s là một lĩnh vực yêu cầu</string>
+<string name="requestAddl" formatted="false">%1$s, %2$s muốn thông tin bổ sung cho các yêu cầu với loại yêu cầu %3$s.</string>
+<string name="submitrequestto" formatted="false">Bạn phải đăng nhập để gửi yêu cầu đến %s</string>
+<string name="submitRequest" formatted="false">Gửi yêu cầu ...</string>
+<string name="loadingRequest" formatted="false">Đang tải yêu cầu ...</string>
+
+<!-- Drafts activity -->
+<string name="myDrafts" formatted="false">Nháp của tôi</string>
+<string name="delDraft" formatted="false">Xóa Dự thảo</string>
+
+<!-- forgot password activity -->
+<string name="enterEmail" formatted="false">Xin vui lòng nhập email của bạn.</string>
+<string name="passReset" formatted="false">Đặt lại mật khẩu ...</string>
+
+<!-- main activity -->
+<string name="unableCity" formatted="false">Không thể xác định thành phố</string>
+<string name="refreshps" formatted="false">Refresh Widgets</string>
+<string name="widgetsUpdated" formatted="false">Widgets Cập nhật</string>
+
+<!-- newrequest activity -->
+<string name="takePhoto" formatted="false">Chụp Ảnh mới</string>
+<string name="selectPhoto" formatted="false">Chọn hình ảnh</string>
+<string name="deletePhoto" formatted="false">Xóa hình ảnh</string>
+<string name="noCamera" formatted="false">Không có máy ảnh phát hiện trên thiết bị của bạn</string>
+<string name="publicSelector" formatted="false">Công khai</string>
+<string name="privateSelector" formatted="false">Riêng tư</string>
+<string name="setPrivacy" formatted="false">Thiết lập bảo mật</string>
+<string name="publicComment" formatted="false">Bất cứ ai cũng có thể xem hoặc nhận xét</string>
+<string name="privateComment" formatted="false">Công nhân thành phố chỉ có thể xem hoặc nhận xét</string>
+<string name="forcePrivate" formatted="false">Yêu cầu mới với các loại yêu cầu được lựa chọn chỉ có thể được tư nhân.</string>
+
+<!-- newrequestmap activity -->
+<string name="addressUnavailable" formatted="false">Địa chỉ Không có sẵn.</string>
+<string name="errorFindingLocation" formatted="false">Lỗi khi tìm vị trí của bạn</string>
+<string name="addressBlankError" formatted="false">Địa chỉ không thể để trống, xin vui lòng nhập một hoặc chọn một vị trí trên bản đồ</string>
+<string name="findingAddress" formatted="false">Tìm Địa chỉ ...</string>
+<string name="errorGeocodingLoc" formatted="false">Có một mã hóa địa lý lỗi vị trí đã chọn của bạn. Vui lòng thử lại.</string>
+<string name="addressVerify" formatted="false">Xác minh Địa chỉ ...</string>
+
+<!-- requestdetails activity -->
+<string name="pending" formatted="false">Trong khi chờ</string>
+<string name="anonymous" formatted="false">Vô danh</string>
+<string name="followers" formatted="false">Người theo dõi</string>
+<string name="comments" formatted="false">GÓP Ý</string>
+<string name="requestResolved" formatted="false">Yêu cầu đã được giải quyết</string>
+<string name="requestError" formatted="false">Có một lỗi trong yêu cầu ban đầu</string>
+<string name="requestNA" formatted="false">Yêu cầu là không còn áp dụng</string>
+<string name="makePubliclyVisible" formatted="false">Làm cho thông tin hiển thị công khai</string>
+<string name="reason" formatted="false">Lý luận</string>
+<string name="elaborate" formatted="false">Xây dựng</string>
+<string name="closeRequest" formatted="false">Đóng Yêu cầu</string>
+<string name="submit" formatted="false">Gửi</string>
+<string name="makePrivate" formatted="false">Hãy yêu cầu riêng?</string>
+<string name="makePrivateMessage" formatted="false">Bạn có muốn thiết lập yêu cầu dịch vụ của bạn để tư nhân? Điều này không thể được hoàn tác.</string>
+
+<string name="statusSubmitted" formatted="false">Gửi</string>
+<string name="statusAcknowledged" formatted="false">Thừa nhận</string>
+<string name="statusInProgress" formatted="false">Trong Tiến</string>
+<string name="statusCompleted" formatted="false">Hoàn thành</string>
+<string name="statusOther" formatted="false">Khác</string>
+
+<string name="yes" formatted="false">Vâng</string>
+<string name="no" formatted="false">Không</string>
+<string name="gettingComments" formatted="false">Có ý kiến ​​yêu cầu ...</string>
+<string name="loginToRequest" formatted="false">Bạn có thể đăng nhập %s yêu cầu</string>
+<string name="loginComment" formatted="false">Bạn phải đăng nhập để viết ý kiến</string>
+
+<string name="socialFacebook" formatted="false">Đăng lên Facebook</string>
+<string name="socialTwitter" formatted="false">Đăng lên Twitter</string>
+<string name="socialEmail" formatted="false">Gửi email</string>
+<string name="shareRequest" formatted="false">chia sẻ yêu cầu</string>
+<string name="addImage" formatted="false">Thêm hình ảnh</string>
+<string name="plsEnterComment" formatted="false">Xin vui lòng nhập một lời nhận xét.</string>
+
+<!-- RequestListFilter Activity -->
+<string name="sortRecent" formatted="false">Gần đây</string>
+<string name="sortPopular" formatted="false">Phổ biến</string>
+<string name="statusOpen" formatted="false">Mở</string>
+<string name="statusClosed" formatted="false">Đóng cửa</string>
+<string name="statusAll" formatted="false">Tất cả</string>
+<string name="filterNearby" formatted="false">Gần đó</string>
+<string name="filterMyRequests" formatted="false">Yêu cầu của tôi</string>
+<string name="filterFollowedRequests" formatted="false">Tiếp theo yêu cầu</string>
+<string name="filterCommentedRequests" formatted="false">Nhận xét Yêu cầu</string>
+<string name="filterVotedRequests" formatted="false">Bình chọn yêu cầu</string>
+
+<string name="myNotifications" formatted="false">Thông báo của tôi</string>
+
+<string name="requestTypeSelect" formatted="false">Chọn một loại yêu cầu</string>
+
+<!--  UserDetails Activity -->
+<string name="requestRank" formatted="false">Bạn #%1$s trong các yêu cầu gửi đến%2$s</string>
+<string name="commentRank" formatted="false">Bạn là #%1$s trong ý kiến ​​gửi đến%2$s</string>
+<string name="following" formatted="false">Sau</string>
+<string name="upvoted" formatted="false">Upvoted</string>
+<string name="drafts" formatted="false">Nháp</string>
+<string name="notificationsChoice" formatted="false">Thông báo</string>
+
+<!-- UserSettings Activity -->
+<string name="typeChangeStatus" formatted="false">Thay đổi trạng thái</string>
+<string name="typeIsClosed" formatted="false">Được đóng</string>
+<string name="typeEmailMe" formatted="false">Không gửi email cho tôi</string>
+<string name="emailMeRequest" formatted="false">Gửi email cho tôi khi một yêu cầu tôi làm theo</string>
+<string name="logOutWarning" formatted="false">Bạn có chắc chắn bạn muốn đăng nhập? Bạn sẽ mất bất kỳ dự thảo yêu cầu bạn đã lưu.</string>
+<string name="usernameWarning" formatted="false">Tên người dùng không thể để trống.</string>
+<string name="emailWarning" formatted="false">Email không thể để trống.</string>
+<string name="settingsSaved" formatted="false">Cài đặt của bạn đã được lưu</string>
+<string name="changesStatus" formatted="false">Thay đổi trạng thái</string>
+<string name="currentLanguage" formatted="false">HIỆN NGÔN NGỮ</string>
+<string name="selectLanguage" formatted="false">Chọn ngôn ngữ</string>
+<string name="changeCity" formatted="false">Thay đổi Thành phố</string>
+
+<!-- Supported Languages -->
+<string name="frenchLanguageCanadian" formatted="false">Tiếng Pháp (Canada)</string>
+<string name="spanishLanguange" formatted="false">Español</string>
+
+<string name="arabicLanguage" formatted="false">Tiếng Ả Rập</string>
+<string name="germanLanguage" formatted="false">Đức</string>
+<string name="greekLanguage" formatted="false">Hy Lạp</string>
+<string name="englishLanguage" formatted="false">Anh</string>
+<string name="spanishLanguage" formatted="false">Tây Ban Nha</string>
+<string name="frenchLanguage" formatted="false">Pháp</string>
+<string name="hindiLanguage" formatted="false">Tiếng Hin-ddi</string>
+<string name="italianLanguage" formatted="false">Ý</string>
+<string name="japaneseLanguage" formatted="false">Nhật Bản</string>
+<string name="koreanLanguage" formatted="false">Hàn Quốc</string>
+<string name="polishLanguage" formatted="false">Ba Lan</string>
+<string name="portugueseLanguage" formatted="false">Bồ Đào Nha</string>
+<string name="russianLanguage" formatted="false">Nga</string>
+<string name="serbianLanguage" formatted="false">Serbia</string>
+<string name="turkishLanguage" formatted="false">Thổ Nhĩ Kỳ</string>
+<string name="vietnameseLanguage" formatted="false">Việt</string>
+<string name="chineseLanguage" formatted="false">Trung Quốc</string>
+
+<string name="languageUnavailable" formatted="false">Ngôn ngữ không có sẵn trên thiết bị này</string>
+<!-- Terms & Conditions -->
+<string name="ts" formatted="false">Điều khoản và điều kiện</string>
+
+</resources>

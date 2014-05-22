@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:background="@color/WHITE">
+    <!--Top Bar-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:paddingTop="8dip"
+                    android:paddingBottom="8dip"
+                    android:background="@color/TOP_BAR_BACKGROUND"
+                    android:id="@+id/headerLayout"
+            >
+        <Button android:id="@+id/newRequestDone"
+                android:layout_width="48dip"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:clickable="true"
+                android:onClick="back"
+                android:scaleType="centerInside"/>
+        <ImageView  android:id="@+id/idBackChevron" android:layout_width="16dip" android:layout_height="fill_parent"
+                    android:src="@drawable/holo_dark1_navigation_previous_item"
+                    android:contentDescription="@string/backNavigation"/>
+        <ImageView  android:id="@+id/cityIcon" android:layout_width="32dip" android:layout_height="32dip"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/cityIcon"
+                    android:layout_toRightOf="@id/idBackChevron"/>
+        <TextView android:id="@+id/userDetailsTitle"
+                  android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="18dip"
+                  android:textColor ="@color/WHITE" android:layout_toRightOf="@+id/cityIcon" android:paddingLeft="16dip"
+                  android:gravity="center_vertical" android:text="@string/myStuff" android:textStyle="normal"/>
+        <ImageView
+                android:id="@+id/settings"
+                android:layout_width="32dip"
+                android:layout_height="32dip"
+                android:src="@drawable/holo_dark2_action_settings"
+                android:gravity="center_vertical"
+                android:contentDescription="@string/openSettings"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+                android:layout_alignParentRight="true"
+                android:onClick="settings"
+                android:scaleType="center"
+                />
+
+    </RelativeLayout>
+    <LinearLayout android:layout_height="fill_parent"
+                  android:layout_width="fill_parent"
+                  android:orientation="vertical"
+                  android:padding="8dip">
+        <!--rank-->
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="fill_parent"
+                      android:orientation="horizontal"
+                      android:paddingBottom="8dip">
+            <TextView android:id="@+id/requestRank"
+                      android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="12dip"
+                      android:textColor ="@color/DARK_TEXT" android:layout_weight="1"
+                      android:gravity="center_vertical" android:text="" android:textStyle="normal"/>
+            <TextView android:id="@+id/commentRank"
+                      android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="12dip"
+                      android:textColor ="@color/DARK_TEXT" android:layout_weight="1"
+                      android:gravity="center_vertical" android:text="" android:textStyle="normal"/>
+
+        </LinearLayout>
+        <View   android:layout_width="fill_parent" android:layout_height="2dip"
+                android:background="@color/MED_GRAY_BKGROUND" />
+
+        <ListView android:layout_height="fill_parent"
+                  android:layout_width="fill_parent"
+                  android:id="@+id/userDetailsList"/>
+
+    </LinearLayout>
+</LinearLayout>

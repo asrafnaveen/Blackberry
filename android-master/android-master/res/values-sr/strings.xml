@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ######################### NO TRANSLATION NECESSARY ######################### -->
+<string name="currmapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="mapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="debugmapskey">0ewCooT_fkQ6fRF-XYaZaPNrR6jB_UQNvzPiDXg</string>
+<string name="copyright">2012 PublicStuff</string>
+<string name="app_name">PublicStuff</string>
+
+<!-- ######################### TRANSLATION NECESSARY ######################### -->
+
+<string name="cityName" formatted="false">Цитинаме, СТ</string>
+<string name="cityImageDescr" formatted="false">Град Слика</string>
+<string name="arrowDescr" formatted="false">Стрела</string>
+<string name="stuffText" formatted="false">Моје ствари Страна</string>
+<string name="exitButtonText" formatted="false">Цлицк То Ретурн</string>
+<string name="exitRequestScreenDescr" formatted="false">Екит нови екран Захтев</string>
+<string name="exitProfileScreenDescr" formatted="false">Екит Екран профила екрана</string>
+<string name="middleButtonDescr" formatted="false">миддлеТабВиевБуттон</string>
+<string name="select_request_type_title" formatted="false">Изаберите тип Захтев</string>
+
+<string name="main_no_items" formatted="false">Нема захтева за приказ</string>
+<string name="detailsLabel" formatted="false">ДЕТАЉИ</string>
+<string name="addressLabel" formatted="false">Адреса</string>
+<string name="addressPlaceholder"/>
+<string name="idLabel" formatted="false">ИД</string>
+<string name="idPlaceholder">12345</string>
+<string name="backNavigation" formatted="false">Назад</string>
+<string name="cityIcon" formatted="false">Град Иконица</string>
+<string name="socialMedia" formatted="false">Подели путем друштвених медија</string>
+<string name="requestInfo" formatted="false">Инфо</string>
+<string name="commentsPlaceholder" formatted="false">Коментари</string>
+<string name="locationPlaceholder"/>
+<string name="statusLabel" formatted="false">Статус</string>
+<string name="statusPlaceholder"/>
+<string name="descriptionLabel" formatted="false">Опис</string>
+<string name="descriptionPlaceholder"/>
+<string name="priorityLabel" formatted="false">Приоритет</string>
+<string name="priorityPlaceholder"/>
+<string name="categoryLabel" formatted="false">Категорија</string>
+<string name="categoryPlaceholder"/>
+<string name="submittedByLabel" formatted="false">Субмиттед Би</string>
+<string name="submittedByPlaceholder"/>
+<string name="submittedOnLabel" formatted="false">Постављено</string>
+<string name="submittedOnPlaceholder"/>
+
+<string name="fav_activity_title" formatted="false">Удео</string>
+<string name="allservice_activity_title" formatted="false">Пронађи сервис</string>
+
+<string name="nonetwork_msg" formatted="false">Нема мреже доступан</string>
+<string name="loading_please_wait_msg" formatted="false">Утовар, сачекајте ...</string>
+
+<string name="username" formatted="false">Корисничко име</string>
+<string name="password" formatted="false">Шифра</string>
+<string name="login" formatted="false">Пријава</string>
+<string name="cancel" formatted="false">Отказати</string>
+<string name="loging_out" formatted="false">Одјављивање ...</string>
+<string name="confirm" formatted="false">Потврдити</string>
+<string name="delete_msg" formatted="false">Брисање ово фаворит?</string>
+<string name="send_email" formatted="false">Сенд Маил</string>
+<string name="editview_info_text" formatted="false">Додај или уклони услуге у овој листи. Тапните на знак плус са Акционим траци изнад да додате још услуга. Дуго притисните одређену услугу за брисање. Тапните на дугме за назад да се вратим на нормалан приказ.</string>
+
+<string name="external_memory_for_image" formatted="false">Екстерна меморијска картица би требало да буде присутан за дељење слика путем е-поште</string>
+<string name="an_error_occured" formatted="false">Дошло је до грешке, молимо Вас покушајте поново касније</string>
+<string name="uploading_please_wait" formatted="false">Отпремање. Молимо сачекајте ...</string>
+<string name="connecting_twitpic" formatted="false">Повезивање Твитпиц ...</string>
+<string name="posting_the_tweet" formatted="false">Постављање поруку ...</string>
+<string name="successfully_posted" formatted="false">Успешно постед</string>
+<string name="title" formatted="false">Наслов</string>
+<string name="description" formatted="false">Опис</string>
+<string name="image_attached" formatted="false">Слика Аттацхед</string>
+<string name="passwordConfirmation" formatted="false">Нова лозинка \n Цонфирматион</string>
+<string name="titlePlaceholder" formatted="false">Наслов</string>
+<string name="notificationTextPlaceholder" formatted="false">Неко је одговорио на коментар који сте дали на захтев</string>
+<string name="timeAgoPlaceholder" formatted="false">Пре 6 месеци</string>
+<string name="loading" formatted="false">Захтев ...</string>
+ <string name="required">*</string>
+<string name="selectCity" formatted="false">Изаберите град ДЕФАУЛТ</string>
+<string name="attachImage" formatted="false">Приложите слику</string>
+<string name="back" formatted="false">Назад</string>
+<string name="createAccount" formatted="false">Направи налог</string>
+<string name="cancelButton" formatted="false">Отказати</string>
+<string name="cityIconDesc" formatted="false">Град Иконица</string>
+<string name="filterRequests" formatted="false">Филтер Захтеви</string>
+<string name="confirmButton" formatted="false">Потврдити</string>
+<string name="findLocation" formatted="false">Пронађе вашу локацију</string>
+<string name="mySettings" formatted="false">Моја подешавања</string>
+<string name="save" formatted="false">Уштедети</string>
+<string name="newRequest" formatted="false">Нови захтев</string>
+<string name="forgotPassword" formatted="false">Заборавили сте лозинку</string>
+<string name="loginTitle" formatted="false">Пријава</string>
+<string name="aboutPublicStuff" formatted="false">О ПублицСтуфф</string>
+<string name="myStuff" formatted="false">Ми Стуфф</string>
+<string name="openSettings" formatted="false">Отворене Подешавања</string>
+<string name="done" formatted="false">Урађено</string>
+<string name="fieldIsPublic" formatted="false">Информације ушао овде ће бити видљив јавности</string>
+<string name="enterAddress" formatted="false">Унесите адресу</string>
+<string name="post" formatted="false">ПОСТ</string>
+<string name="aboutPublicstuff" formatted="false">Радимо на томе да би локалне самоуправе отворен, приступачан и одговарајући.</string>
+<string name="openMenu" formatted="false">Отвори мени</string>
+<string name="searchCity" formatted="false">Трагање за град</string>
+<string name="skip" formatted="false">Прескочити</string>
+<string name="list" formatted="false">Списак</string>
+<string name="gallery" formatted="false">Галерија</string>
+<string name="map" formatted="false">Мапа</string>
+<string name="termsConditions"><![CDATA[Terms & Conditions]]></string>
+<string name="email" formatted="false">Е-маил</string>
+<string name="aboutForgotPassword" formatted="false">Када ресетујете своју лозинку, добићете поруку од ПублицСтуфф дајући вам упутства о томе како да креирате нову лозинку. Када сте то урадили, будите слободни да се пријавите са својим новим лозинком.</string>
+<string name="enterCity" formatted="false">Унесите град</string>
+<string name="myProfile" formatted="false">Мој профил</string>
+<string name="firstName" formatted="false">Име</string>
+<string name="lastName" formatted="false">Презиме</string>
+<string name="phone" formatted="false">Телефон</string>
+<string name="myLocations" formatted="false">Моја локација</string>
+<string name="home" formatted="false">Кући</string>
+<string name="work" formatted="false">Посао</string>
+<string name="addressDefault" formatted="false">Ове адресе се могу користити као подразумевана локација</string>
+<string name="notifications" formatted="false">Обавештења</string>
+<string name="emailMeWhen" formatted="false">Емаил ме кад захтев пратим</string>
+<string name="emailReplies" formatted="false">Пошаљите одговоре на моје поруке</string>
+<string name="currentLocation" formatted="false">Тренутна локација</string>
+<string name="change" formatted="false">Променити</string>
+<string name="logOut" formatted="false">Одјава</string>
+<string name="oldPassword" formatted="false">Стара лозинка</string>
+<string name="newPassword" formatted="false">Нова лозинка</string>
+<string name="passwordLength" formatted="false">Лозинке морају бити најмање 6 знакова</string>
+<string name="sorting" formatted="false">Сортирање</string>
+<string name="recent" formatted="false">Скорашњи</string>
+<string name="citySkyline" formatted="false">Град Скилине</string>
+<string name="mapInstructions" formatted="false">Премештање на мапи да бисте променили положај (увећај за прецизност)</string>
+<string name="createAccountDesc" formatted="false">Направи налог за праћење, подршку и коментаришу захтеве у вашој заједници.</string>
+<string name="privacyPolicy" formatted="false">Политика приватности</string>
+<string name="aboutPublicstuffLong" formatted="false">Ми смо иновативна ЦРМ софтверска компанија која помаже да се ФИКСНА ствари! Коришћење обе мобилне и интернет платформи, направили смо свеобухватни бацкенд ЦРМ систем који омогућава општине, установе и универзитети да прима сервисне захтеве од својих становника и корисника у реалном времену. Помогли смо општине уштедети око $ 360.000 годишње, са побољшаним комуникационих канала и повећање задовољства купаца.</string>
+<string name="forgotPasswordButton" formatted="false">Заборавили сте лозинку?</string>
+<string name="questionsFeedback" formatted="false">Пошаљите питања и повратне информације</string>
+<string name="emailPublicStuff">tech@publicstuff.com</string>
+
+<string name="about" formatted="false">Око</string>
+<string name="aboutPublicStuffMain" formatted="false">Захтев и подршка питања у вашем граду и добили обавештење када они фиксни!</string>
+<string name="status" formatted="false">Статус</string>
+<string name="open" formatted="false">Отворено</string>
+<string name="filterBy" formatted="false">Филтрирај по</string>
+<string name="sortBy" formatted="false">Сортирање</string>
+<string name="nearby" formatted="false">Оближњи</string>
+<string name="types" formatted="false">Типови</string>
+<string name="allRequestTypes" formatted="false">Све захтева Типови</string>
+<string name="dateRange" formatted="false">Период</string>
+<string name="startDate" formatted="false">Датум почетка</string>
+<string name="endDate" formatted="false">Датум завршетка</string>
+<string name="redoSearch" formatted="false">Понови претрагу овде</string>
+<string name="titleCaps" formatted="false">Наслов</string>
+<string name="flag" formatted="false">Означи као неприкладно</string>
+<string name="calculatingLocation" formatted="false">Израчунавање Локација</string>
+<string name="requestIsPrivate" formatted="false">Овај захтев је означена као приватна</string>
+<string name="descriptionHint" formatted="false">Опис (опционо)</string>
+<string name="addComment" formatted="false">Додај коментар</string>
+<string name="send" formatted="false">Послати</string>
+
+<!-- notifier widget -->
+<string name="notifier" formatted="false">Упдате на располагању.</string>
+
+<!-- notification screen -->
+<string name="notificationComment" formatted="false">Неко је прокоментарисао захтев који подноси</string>
+<string name="notificationReply" formatted="false">Неко је одговорио на коментар који сте дали на захтев</string>
+<string name="notificationStatus" formatted="false">Статус вашег захтева је ажурирана на %s</string>
+
+<!-- citydashboard activity -->
+<string name="aboutapp" formatted="false">О% с</string>
+<string name="mystuff" formatted="false">Ми Стуфф</string>
+<string name="aboutps" formatted="false">О ПублицСтуфф</string>
+<string name="more" formatted="false">Више</string>
+<string name="nearbyRequest" formatted="false">Оближње Захтеви</string>
+
+<!-- dialogs -->
+<string name="findingLocation" formatted="false">Проналажење локација ...</string>
+<string name="getRequestList" formatted="false">Добијање захтева списак ...</string>
+<string name="ErrorPastTense" formatted="false">Дошло је до грешке</string>
+<string name="ErrorInternet" formatted="false">Молимо проверите везу са Интернетом и покушајте поново</string>
+<string name="OkButton" formatted="false">У реду</string>
+<string name="CancelButton" formatted="false">Отказати</string>
+<string name="loadingDialog" formatted="false">Учитавање ...</string>
+<string name="loginNow" formatted="false">Пријава</string>
+<string name="pleaseLogin" formatted="false">Молим вас пријавите се да пратите свој град</string>
+<string name="creatingAccount" formatted="false">Креирање налога ...</string>
+<string name="getcustomFields" formatted="false">Добијање прилагођених поља ...</string>
+<string name="bothFields" formatted="false">Оба поља су обавезна да се пријавите.</string>
+<string name="loggingIn" formatted="false">Пријављивање ...</string>
+<string name="locationFailGPS" formatted="false">Дошло је до грешке проналажење ваше локације. Молимо вас да проверите ГПС и интернет повезивање.</string>
+<string name="chooseLocation" formatted="false">Изаберите локацију</string>
+<string name="tryAgain" formatted="false">Три Агаин</string>
+<string name="requestTypes" formatted="false">Добијање захтјеве врсте ...</string>
+<string name="geoError" formatted="false">Геолоцатион грешка</string>
+<string name="googleGeoError" formatted="false">Гоогле геолокација сервер вратио лоше податке о изабраној локацији. Покушајте поново бирајући локацију.</string>
+<string name="saveDraft" formatted="false">Сачувај нацрт</string>
+<string name="deleteDraft" formatted="false">Брисање нацрт</string>
+<string name="exitSave" formatted="false">Екит без чувања</string>
+<string name="resumeDraft" formatted="false">Назад на изради</string>
+<string name="exitScreen" formatted="false">Излаз</string>
+<string name="loginDraft" formatted="false">Морате бити пријављени да бисте сачували нацрте</string>
+<string name="titleRequired" formatted="false">Наслов је обавезан.</string>
+<string name="requestTypeRequired" formatted="false">Захтев типа је потребно.</string>
+<string name="errorLocationConfirm" formatted="false">Дошло је до грешке потврђује своју локацију. Изаберите локацију кликом на адресно поље испод.</string>
+<string name="loginRequired" formatted="false">Морате бити пријављени да поднесу захтев за %с</string>
+<string name="loadingProfile" formatted="false">Учитавање профила ...</string>
+<string name="requestDetails" formatted="false">Добијање тражим детаље ...</string>
+<string name="submitComment" formatted="false">Подношење коментар ...</string>
+<string name="endDateError" formatted="false">Крајњи датум мора доћи после датума почетка.</string>
+<string name="startDateSelect" formatted="false">Изаберите Старт Дате</string>
+<string name="endDateSelect" formatted="false">Изаберите датум завршетка</string>
+
+<!-- password alerts -->
+<string name="passwordMatch" formatted="false">Нова лозинка и потврда мора да одговара.</string>
+<string name="passwordFormat" formatted="false">Лозинка мора бити најмање шест знакова.</string>
+<string name="passwordSecurity" formatted="false">Морате да унесете своју стару лозинку.</string>
+<string name="savingSettings" formatted="false">Чување подешавања ...</string>
+
+<string name="thankyou" formatted="false">Хвала</string>
+<string name="passwordUpdated" formatted="false">Ваша лозинка је ажурирана</string>
+<string name="oldpasswordbad" formatted="false">Стара лозинка унели погрешно</string>
+
+<!-- citieslist activity -->
+<string name="cityList" formatted="false">Добијање град списак ...</string>
+<string name="locationFail" formatted="false">Није могуће пронаћи локацију</string>
+<string name="locationFailVerbose" formatted="false">Нема локација одговара вашим критеријумима претраге</string>
+<string name="cityData" formatted="false">Добијање градске податке ...</string>
+<string name="findCity" formatted="false">Дошло је до грешке проналажење ваше локације. Унесите град или изаберите са листе испод.</string>
+<string name="selectCityTime" formatted="false">Изаберите град</string>
+<string name="selectCityVerbose" formatted="false">Изаберите град са листе да бисте наставили.</string>
+
+<!-- citydetails activity -->
+<string name="follow" formatted="false">Следити</string>
+<string name="unfollow" formatted="false">Унфоллов</string>
+<string name="visitcityweb" formatted="false">Посетите сајт Града</string>
+<string name="petitioncity" formatted="false">Петиција Град</string>
+<string name="petitionCityVerbose" formatted="false">Молимо пријавите на петицију свој град да користи ПублицСтуфф</string>
+
+<!-- createaccount activity -->
+
+<string name="errorRequest" formatted="false">Грешка у захтеву</string>
+<string name="citydescription" formatted="false">Направите %s мој град стандардна</string>
+<string name="accountRequirement" formatted="false">Сва поља су обавезна да креирате налог.</string>
+<string name="passwordCharacters" formatted="false">Лозинка мора да има више од 5 знакова</string>
+
+<!-- customfields activity -->
+<string name="requiredField" formatted="false">%s је обавезно поље</string>
+<string name="requestAddl" formatted="false">%1$s, %2$s желите додатне информације за захтеве са захтева тип %3$s.</string>
+<string name="submitrequestto" formatted="false">Морате бити пријављени да поднесу захтев за% с</string>
+<string name="submitRequest" formatted="false">Подношење захтева ...</string>
+<string name="loadingRequest" formatted="false">Учитавање захтев ...</string>
+
+<!-- Drafts activity -->
+<string name="myDrafts" formatted="false">Моји Нацрти</string>
+<string name="delDraft" formatted="false">Брисање нацрт</string>
+
+<!-- forgot password activity -->
+<string name="enterEmail" formatted="false">Молимо унесите вашу е-поште.</string>
+<string name="passReset" formatted="false">Ресетовање лозинке ...</string>
+
+<!-- main activity -->
+<string name="unableCity" formatted="false">Није да идентификује град</string>
+<string name="refreshps" formatted="false">Освежи Видгетс</string>
+<string name="widgetsUpdated" formatted="false">Виџети ажурирано</string>
+
+<!-- newrequest activity -->
+<string name="takePhoto" formatted="false">Узмите нову фотографију</string>
+<string name="selectPhoto" formatted="false">Избор фотографије</string>
+<string name="deletePhoto" formatted="false">Брисање фотографије</string>
+<string name="noCamera" formatted="false">Нема камера откривене на вашем уређају</string>
+<string name="publicSelector" formatted="false">Јавност</string>
+<string name="privateSelector" formatted="false">Приватан</string>
+<string name="setPrivacy" formatted="false">Сет Приваци</string>
+<string name="publicComment" formatted="false">Свако може да види или коментар</string>
+<string name="privateComment" formatted="false">Само градски радници могу да виде или коментар</string>
+<string name="forcePrivate" formatted="false">Нови захтеви са изабраном врстом захтева може бити само приватна.</string>
+
+<!-- newrequestmap activity -->
+<string name="addressUnavailable" formatted="false">Адреса Недоступно.</string>
+<string name="errorFindingLocation" formatted="false">Грешка проналажење локације</string>
+<string name="addressBlankError" formatted="false">Адреса не може да буде празно, унесите једну или изабрати локацију на мапи</string>
+<string name="findingAddress" formatted="false">Проналажење адреса ...</string>
+<string name="errorGeocodingLoc" formatted="false">Дошло је до грешке Геокодирање ваш изабрани локација. Покушајте поново.</string>
+<string name="addressVerify" formatted="false">Провера адреса ...</string>
+
+<!-- requestdetails activity -->
+<string name="pending" formatted="false">Нерешен</string>
+<string name="anonymous" formatted="false">Анониман</string>
+<string name="followers" formatted="false">Читаоци</string>
+<string name="comments" formatted="false">КОМЕНТАРИ</string>
+<string name="requestResolved" formatted="false">Захтев је решен</string>
+<string name="requestError" formatted="false">Дошло је до грешке у оригиналном захтеву</string>
+<string name="requestNA" formatted="false">Захтев није више примењива</string>
+<string name="makePubliclyVisible" formatted="false">Нека ова информација јавно видљиве</string>
+<string name="reason" formatted="false">Расуђивање</string>
+<string name="elaborate" formatted="false">Разрадити</string>
+<string name="closeRequest" formatted="false">Затвори захтев</string>
+<string name="submit" formatted="false">Поднети</string>
+<string name="makePrivate" formatted="false">Направите Захтев Приватни?</string>
+<string name="makePrivateMessage" formatted="false">Да ли желите да подесите сервисни захтев приватно? Ово се не може опозвати.</string>
+
+<string name="statusSubmitted" formatted="false">Поднет</string>
+<string name="statusAcknowledged" formatted="false">Потврдјено</string>
+<string name="statusInProgress" formatted="false">У току</string>
+<string name="statusCompleted" formatted="false">Завршен</string>
+<string name="statusOther" formatted="false">Други</string>
+
+<string name="yes" formatted="false">Да</string>
+<string name="no" formatted="false">Не</string>
+<string name="gettingComments" formatted="false">Добијање тражим коментаре ...</string>
+<string name="loginToRequest" formatted="false">Молимо пријавите се на %с захтев</string>
+<string name="loginComment" formatted="false">Морате бити пријављени да би оставили коментар</string>
+
+<string name="socialFacebook" formatted="false">Пост то Фацебоок</string>
+<string name="socialTwitter" formatted="false">Пост то Твиттер</string>
+<string name="socialEmail" formatted="false">Пошаљи емаил</string>
+<string name="shareRequest" formatted="false">Учешће Захтев</string>
+<string name="addImage" formatted="false">Додај слику</string>
+<string name="plsEnterComment" formatted="false">Молимо Вас да унесете коментар.</string>
+
+<!-- RequestListFilter Activity -->
+<string name="sortRecent" formatted="false">Скорашњи</string>
+<string name="sortPopular" formatted="false">Популаран</string>
+<string name="statusOpen" formatted="false">Отворено</string>
+<string name="statusClosed" formatted="false">Затворено</string>
+<string name="statusAll" formatted="false">Све</string>
+<string name="filterNearby" formatted="false">Оближњи</string>
+<string name="filterMyRequests" formatted="false">Моји Захтеви</string>
+<string name="filterFollowedRequests" formatted="false">Уследило Захтеви</string>
+<string name="filterCommentedRequests" formatted="false">Коментарисано Захтеви</string>
+<string name="filterVotedRequests" formatted="false">Гласао Захтеви</string>
+
+<string name="myNotifications" formatted="false">Моји Обавештења</string>
+
+<string name="requestTypeSelect" formatted="false">Изаберите тип захтев</string>
+
+<!--  UserDetails Activity -->
+<string name="requestRank" formatted="false">Ти си #%1$с у захтевима поднетим на %2$с</string>
+<string name="commentRank" formatted="false">Ти си #%1$с у коментарима поднетих%2$с</string>
+<string name="following" formatted="false">Следећи</string>
+<string name="upvoted" formatted="false">Упвотед</string>
+<string name="drafts" formatted="false">Нацрти</string>
+<string name="notificationsChoice" formatted="false">Обавештења</string>
+
+<!-- UserSettings Activity -->
+<string name="typeChangeStatus" formatted="false">Промене статус</string>
+<string name="typeIsClosed" formatted="false">Је затворена</string>
+<string name="typeEmailMe" formatted="false">Не ми е-маил</string>
+<string name="emailMeRequest" formatted="false">Емаил ме кад захтев пратим</string>
+<string name="logOutWarning" formatted="false">Да ли сте сигурни да желите да се одјавите? Ви ћете изгубити све нацрте захтев сте сачували.</string>
+<string name="usernameWarning" formatted="false">Корисничко име не може да буде празно.</string>
+<string name="emailWarning" formatted="false">Емаил не може да буде празно.</string>
+<string name="settingsSaved" formatted="false">Ваша подешавања су сачувана</string>
+<string name="changesStatus" formatted="false">Промене статус</string>
+<string name="currentLanguage" formatted="false">СТРУЈА ЈЕЗИК</string>
+<string name="selectLanguage" formatted="false">Изаберите језик</string>
+<string name="changeCity" formatted="false">Промена Град</string>
+
+<!-- Supported Languages -->
+<string name="frenchLanguageCanadian" formatted="false">Француски (Канада)</string>
+<string name="spanishLanguange" formatted="false">Српски</string>
+
+<string name="arabicLanguage" formatted="false">Арапски</string>
+<string name="germanLanguage" formatted="false">Немачки</string>
+<string name="greekLanguage" formatted="false">Грк</string>
+<string name="englishLanguage" formatted="false">Енглески</string>
+<string name="spanishLanguage" formatted="false">Шпански</string>
+<string name="frenchLanguage" formatted="false">Французи</string>
+<string name="hindiLanguage" formatted="false">Хинди</string>
+<string name="italianLanguage" formatted="false">Италијан</string>
+<string name="japaneseLanguage" formatted="false">Јапански</string>
+<string name="koreanLanguage" formatted="false">Корејски</string>
+<string name="polishLanguage" formatted="false">Пољски</string>
+<string name="portugueseLanguage" formatted="false">Португалски</string>
+<string name="russianLanguage" formatted="false">Руски</string>
+<string name="serbianLanguage" formatted="false">Српски</string>
+<string name="turkishLanguage" formatted="false">Турски</string>
+<string name="vietnameseLanguage" formatted="false">Вијетнамски</string>
+<string name="chineseLanguage" formatted="false">Кинески</string>
+
+<string name="languageUnavailable" formatted="false">Језик није доступна на овом уређају</string>
+<!-- Terms & Conditions -->
+<string name="ts" formatted="false">Услови</string>
+
+</resources>

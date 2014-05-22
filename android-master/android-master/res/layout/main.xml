@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:id="@+id/splashbg"
+              android:background="@color/ORANGE">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:paddingBottom="16dip"
+                  android:paddingLeft="8dip"
+                  android:paddingRight="8dip"
+                  android:orientation="vertical"
+                  android:id="@+id/selectCityLayout"
+            >
+        <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14dip"
+                android:textColor ="@color/WHITE"
+                android:gravity="center_vertical" android:text="@string/selectCity" android:textStyle="normal"
+                android:paddingBottom="8dip"/>
+        <View   android:layout_height="1dp" android:layout_width="fill_parent" android:background="@color/WHITE"/>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                >
+            <ImageView
+                    android:id="@+id/location"
+                    android:layout_width="48dip"
+                    android:layout_height="48dip"
+                    android:background="@null"
+                    android:src="@drawable/holo_dark7_location_place"
+                    android:contentDescription="@string/findLocation"
+                    android:scaleType="centerInside"
+                    />
+            <Button android:id="@+id/currCity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:onClick="selectCurrCity"
+                    android:text="CityName, ST"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="48dip"
+                    android:textColor="@color/WHITE"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+        </RelativeLayout>
+        <View   android:layout_height="1dp" android:layout_width="fill_parent" android:background="@color/WHITE"/>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                >
+            <ImageView
+                    android:id="@+id/search"
+                    android:layout_width="48dip"
+                    android:layout_height="48dip"
+                    android:background="@null"
+                    android:src="@drawable/holo_dark2_action_search"
+                    android:contentDescription="@string/searchCity"
+                    android:scaleType="centerInside"
+                    />
+            <Button android:id="@+id/searchCity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:onClick="searchCity"
+                    android:text="@string/searchCity"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="48dip"
+                    android:textColor="@color/WHITE"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+        </RelativeLayout>
+        <View   android:layout_height="1dp" android:layout_width="fill_parent" android:background="@color/WHITE"/>
+
+
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:paddingLeft="8dip"
+                  android:paddingRight="8dip"
+                  android:orientation="vertical"
+                  android:gravity="center"
+                  android:id="@+id/infoLayout"
+                  android:layout_above="@id/selectCityLayout"
+            >
+        <ImageView
+                android:id="@+id/locationOther"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/ic_dark_publicstuff_logo"
+                android:scaleType="centerInside"
+                android:layout_margin="16dip"
+                />
+        <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="16dip"
+                android:textColor ="@color/WHITE"
+                android:gravity="center_horizontal" android:text="@string/aboutPublicStuffMain" android:textStyle="normal"
+                android:paddingBottom="8dip"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

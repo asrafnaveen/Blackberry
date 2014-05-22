@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wassabi.psmobile"
+    android:configChanges="orientation|keyboardHidden"
+    android:versionCode="246"
+    android:versionName="2.2.5.4" >
+
+    <!--
+    FOR PRODUCTION VERSION
+    
+    1. INCREMENT VERSIONCODE
+    2. INCREMENT VERSIONNAME
+    3. RES>VALUES>STRINGS.XML CHANGE THE DEBUG MAP KEY BACK TO PRODUCTION
+    4. SET BASE URL TO NON DEV  "http://www.publicstuff.com/api/2.0/"
+    5. in PublicStuff.java is_client_app = false
+    6. in PublicStuff.java city_space_id = 0
+    -->
+	
+	<!--
+     ADDITIONAL STEPS FOR WHITE LABEL VERSION 
+     
+     1. Edit RES>VALUES>STRINGS.XML to change app_name field
+     2. change package names com.publicstuff.[slug] ie. .dormant-pa  in AndroidManifest.xml
+     3. refactor package name change across project
+     4. in PublicStuff.java is_client_app = true
+     5. in PublicStuff.java city_space_id = space_id of the client's space
+     6. in res/layout/main.xml update background color from ORANGE to branded color
+     7. in res/layout/createaccount.xml update background color from ORANGE to branded color
+     8. replace images:
+     	- update launcher.png
+     	- update ic_dark_publicstuff_logo.png
+     	- update ic_dark_publicstuff_icon.png
+     	- update ic_light_publicstuff_logo.png
+    -->
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="13" />
+    
+    <uses-feature
+  android:glEsVersion="0x00020000"
+  android:required="true"/>
+        
+        <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+        
+       
+    <uses-permission android:name="android.permission.INTERNET" />
+ <!-- required -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- <uses-permission android:name="android.permission.CAMERA"/> not required -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+ <!-- not required -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+ <!-- not required 
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" /> -->
+ <!-- not required -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+ <!-- not required 
+    <uses-permission android:name="android.permission.CONTROL_LOCATION_UPDATES" /> -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <!-- <uses-permission android:name="android.permission.VIBRATE"/> --> 
+  
+	<!-- GCM requires a Google account. -->
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<!-- Keeps the processor from sleeping when a message is received. -->
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+   <!-- <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    
+    --> 
+    
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	
+    <permission android:name="com.wassabi.psmobile.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="com.wassabi.psmobile.permission.C2D_MESSAGE" /> 
+	
+
+    <supports-screens
+        android:anyDensity="true"
+        android:configChanges="orientation|keyboardHidden"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="bundle.android.PublicStuffApplication"
+        android:icon="@drawable/launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MainTheme" >
+        <activity
+            android:name="bundle.android.views.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="bundle.android.views.CityDashboardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"  >
+        </activity>
+        <activity
+            android:name="bundle.android.views.NewRequestActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="bundle.android.views.RequestTypeListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.NewRequestMapActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.CustomFieldsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="bundle.android.views.RequestDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.RequestDetailsMapActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.RequestListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.RequestListFilterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.CitiesListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.CreateAccountActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="bundle.android.views.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="bundle.android.views.ForgotPasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="bundle.android.views.CityDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.WebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.UserDetailsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.NotificationsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.DraftsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.UserSettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.ChangePasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="bundle.android.views.AboutPublicStuffActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.TermsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.PrivacyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="bundle.android.views.widget.RequestWidgetProvider"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="fullSensor" 
+            android:windowSoftInputMode="stateHidden" />
+        
+        <activity android:name="com.addthis.ui.activities.ATAllServiceActivity" />
+        <activity android:name="com.addthis.ui.activities.ATFavoriteServiceActivity" />
+        <activity android:name="com.addthis.ui.activities.ATShareActivity" />
+        <activity android:name="com.addthis.ui.activities.ATActivityGroup" />
+
+        
+        
+        
+
+        <service
+            android:name="bundle.android.service.LocationListenerAgent"
+            android:enabled="true" />  
+        <service android:name="com.wassabi.psmobile.GCMIntentService" />
+        
+        <service android:enabled="true" android:name="bundle.android.service.PassiveService" />
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!-- gcmcat --><category android:name="com.wassabi.psmobile" />
+            </intent-filter>
+        </receiver>
+        <!-- 
+        <receiver 
+            android:name="bundle.android.views.widget.RequestWidgetProvider" 
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/requestwidget" />
+        </receiver>
+        -->
+        
+        <service android:name="WidgetService"
+             android:permission="android.permission.BIND_REMOTEVIEWS" />
+     
+    </application>
+
+</manifest>

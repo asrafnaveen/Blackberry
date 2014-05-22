@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ######################### NO TRANSLATION NECESSARY ######################### -->
+<string name="currmapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="mapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="debugmapskey">0ewCooT_fkQ6fRF-XYaZaPNrR6jB_UQNvzPiDXg</string>
+<string name="copyright">2012 PublicStuff</string>
+<string name="app_name">PublicStuff</string>
+
+<!-- ######################### TRANSLATION NECESSARY ######################### -->
+
+<string name="cityName" formatted="false">市町村名は、ST</string>
+<string name="cityImageDescr" formatted="false">都市イメージ</string>
+<string name="arrowDescr" formatted="false">矢印</string>
+<string name="stuffText" formatted="false">私のモノページ</string>
+<string name="exitButtonText" formatted="false">戻るには、をクリックします</string>
+<string name="exitRequestScreenDescr" formatted="false">新しい要求画面を終了</string>
+<string name="exitProfileScreenDescr" formatted="false">プロファイル画面画面を終了</string>
+<string name="middleButtonDescr" formatted="false">middleTabViewButton</string>
+<string name="select_request_type_title" formatted="false">要求タイプを選択してください</string>
+
+<string name="main_no_items" formatted="false">表示するには、何の要求もない</string>
+<string name="detailsLabel" formatted="false">詳細</string>
+<string name="addressLabel" formatted="false">アドレス</string>
+<string name="addressPlaceholder"/>
+<string name="idLabel" formatted="false">番号</string>
+<string name="idPlaceholder">12345</string>
+<string name="backNavigation" formatted="false">バック</string>
+<string name="cityIcon" formatted="false">シティアイコン</string>
+<string name="socialMedia" formatted="false">ソーシャルメディアを介して共有</string>
+<string name="requestInfo" formatted="false">情報</string>
+<string name="commentsPlaceholder" formatted="false">注釈</string>
+<string name="locationPlaceholder"/>
+<string name="statusLabel" formatted="false">ステータス</string>
+<string name="statusPlaceholder"/>
+<string name="descriptionLabel" formatted="false">説明</string>
+<string name="descriptionPlaceholder"/>
+<string name="priorityLabel" formatted="false">優先順位</string>
+<string name="priorityPlaceholder"/>
+<string name="categoryLabel" formatted="false">カテゴリ</string>
+<string name="categoryPlaceholder"/>
+<string name="submittedByLabel" formatted="false">から提出された</string>
+<string name="submittedByPlaceholder"/>
+<string name="submittedOnLabel" formatted="false">に提出</string>
+<string name="submittedOnPlaceholder"/>
+
+<string name="fav_activity_title" formatted="false">シェア</string>
+<string name="allservice_activity_title" formatted="false">サービスを探す</string>
+
+<string name="nonetwork_msg" formatted="false">は利用できませんネットワーク</string>
+<string name="loading_please_wait_msg" formatted="false">読み込み中、しばらくお待ちください...</string>
+
+<string name="username" formatted="false">ユーザー名</string>
+<string name="password" formatted="false">パスワード</string>
+<string name="login" formatted="false">ログイン</string>
+<string name="cancel" formatted="false">キャンセル</string>
+<string name="loging_out" formatted="false">ログアウト...</string>
+<string name="confirm" formatted="false">確認する</string>
+<string name="delete_msg" formatted="false">このお気に入りを削除しますか？</string>
+<string name="send_email" formatted="false">メールを送信</string>
+<string name="editview_info_text" formatted="false">このリストにサービスを追加または削除します。より多くのサービスを追加するには、上記のアクションバーからプラス記号をタップします。ロング削除する特定のサービスを押してください。通常の表示に戻るには[戻る]ボタンをタップします。</string>
+
+<string name="external_memory_for_image" formatted="false">外部メモリカードは、電子メールを介して画像を共有するために存在しなければなりません</string>
+<string name="an_error_occured" formatted="false">エラーが発生し、後でもう一度やり直してください。</string>
+<string name="uploading_please_wait" formatted="false">アップロード。しばらくお待ちください...</string>
+<string name="connecting_twitpic" formatted="false">TwitPicとの接続...</string>
+<string name="posting_the_tweet" formatted="false">メッセージを投稿しています...</string>
+<string name="successfully_posted" formatted="false">正常に送信されました</string>
+<string name="title" formatted="false">タイトル</string>
+<string name="description" formatted="false">説明</string>
+<string name="image_attached" formatted="false">添付画像</string>
+<string name="passwordConfirmation" formatted="false">新パスワード\n確認</string>
+<string name="titlePlaceholder" formatted="false">タイトル</string>
+<string name="notificationTextPlaceholder" formatted="false">誰かがリクエストに応じてあなたが作ったコメントに返信しました</string>
+<string name="timeAgoPlaceholder" formatted="false">6ヶ月前</string>
+<string name="loading" formatted="false">要求している...</string>
+ <string name="required">*</string>
+<string name="selectCity" formatted="false">DEFAULTの都市を選択</string>
+<string name="attachImage" formatted="false">画像を添付</string>
+<string name="back" formatted="false">バック</string>
+<string name="createAccount" formatted="false">アカウントを作成する</string>
+<string name="cancelButton" formatted="false">キャンセル</string>
+<string name="cityIconDesc" formatted="false">シティアイコン</string>
+<string name="filterRequests" formatted="false">フィルタ要求</string>
+<string name="confirmButton" formatted="false">確認する</string>
+<string name="findLocation" formatted="false">あなたの場所を見つける</string>
+<string name="mySettings" formatted="false">私の設定</string>
+<string name="save" formatted="false">保存</string>
+<string name="newRequest" formatted="false">新しいRequest</string>
+<string name="forgotPassword" formatted="false">パスワードを忘れた方</string>
+<string name="loginTitle" formatted="false">ログイン</string>
+<string name="aboutPublicStuff" formatted="false">PublicStuffについて</string>
+<string name="myStuff" formatted="false">マイページ</string>
+<string name="openSettings" formatted="false">オープン設定</string>
+<string name="done" formatted="false">完了</string>
+<string name="fieldIsPublic" formatted="false">ここで入力した情報は、パブリックに表示できるようになります</string>
+<string name="enterAddress" formatted="false">住所を入力してください</string>
+<string name="post" formatted="false">POST</string>
+<string name="aboutPublicstuff" formatted="false">私たちは、自治体が、オープンアクセス、および応答性を高めるよう努力しております。</string>
+<string name="openMenu" formatted="false">メニューを開く</string>
+<string name="searchCity" formatted="false">都市を検索ボックスで探してください</string>
+<string name="skip" formatted="false">スキップ</string>
+<string name="list" formatted="false">リスト</string>
+<string name="gallery" formatted="false">ギャラリー</string>
+<string name="map" formatted="false">マップ</string>
+<string name="termsConditions"><![CDATA[Terms & Conditions]]></string>
+<string name="email" formatted="false">メール</string>
+<string name="aboutForgotPassword" formatted="false">あなたのパスワードをリセットするときは、あなたに新しいパスワードを作成する方法についての指示を与えるPublicStuffから電子メールを取得します。それがわかれば、あなたの新しいパスワードでログインして自由に感じることを行っている。</string>
+<string name="enterCity" formatted="false">町に入る</string>
+<string name="myProfile" formatted="false">私のプロフィール</string>
+<string name="firstName" formatted="false">ファーストネーム</string>
+<string name="lastName" formatted="false">姓</string>
+<string name="phone" formatted="false">電話</string>
+<string name="myLocations" formatted="false">私の場所</string>
+<string name="home" formatted="false">ホーム</string>
+<string name="work" formatted="false">働く</string>
+<string name="addressDefault" formatted="false">これらのアドレスは、デフォルトの場所として使用することができます</string>
+<string name="notifications" formatted="false">通知</string>
+<string name="emailMeWhen" formatted="false">私がたどったときに要求を私にメールで知らせる</string>
+<string name="emailReplies" formatted="false">私の記事をメールで返信</string>
+<string name="currentLocation" formatted="false">現在の場所</string>
+<string name="change" formatted="false">変更</string>
+<string name="logOut" formatted="false">ログアウト</string>
+<string name="oldPassword" formatted="false">古いパスワード</string>
+<string name="newPassword" formatted="false">新パスワード</string>
+<string name="passwordLength" formatted="false">パスワードは少なくとも6文字でなければなりません</string>
+<string name="sorting" formatted="false">ソーティング</string>
+<string name="recent" formatted="false">最近の</string>
+<string name="citySkyline" formatted="false">市スカイライン</string>
+<string name="mapInstructions" formatted="false">位置を変更するには、マップを移動する（精度で拡大）</string>
+<string name="createAccountDesc" formatted="false">追跡するために、アカウントを作成しサポートしており、地域社会の要請にコメント。</string>
+<string name="privacyPolicy" formatted="false">個人情報保護方針</string>
+<string name="aboutPublicstuffLong" formatted="false">私たちはあなたのものの固定を得るために役立つ革新的なCRMソフトウェアの会社です！モバイルとWebの両方のプラットフォームで使用して、我々は自治体、施設、大学はリアルタイムで、住民や顧客からのサービス要求を受け取ることができるように包括的なバックエンドのCRMシステムを作成しました。私たちは、自治体が改良された通信チャネルと顧客満足度の向上で年間36万ドルに上書き保存に役立っています。</string>
+<string name="forgotPasswordButton" formatted="false">パスワードをお忘れですか？</string>
+<string name="questionsFeedback" formatted="false">質問やフィードバックに送る</string>
+<string name="emailPublicStuff">tech@publicstuff.com</string>
+
+<string name="about" formatted="false">約</string>
+<string name="aboutPublicStuffMain" formatted="false">要求やサポートの問題あなたの街で、それらが固定しているときに通知を受ける！</string>
+<string name="status" formatted="false">ステータス</string>
+<string name="open" formatted="false">開く</string>
+<string name="filterBy" formatted="false">による絞り込み</string>
+<string name="sortBy" formatted="false">並べ替え</string>
+<string name="nearby" formatted="false">近隣の</string>
+<string name="types" formatted="false">種類</string>
+<string name="allRequestTypes" formatted="false">すべてのリクエストタイプ</string>
+<string name="dateRange" formatted="false">日付範囲</string>
+<string name="startDate" formatted="false">開始日</string>
+<string name="endDate" formatted="false">終了日</string>
+<string name="redoSearch" formatted="false">ここで検索をやり直す</string>
+<string name="titleCaps" formatted="false">タイトル</string>
+<string name="flag" formatted="false">不適切として報告</string>
+<string name="calculatingLocation" formatted="false">位置を計算する</string>
+<string name="requestIsPrivate" formatted="false">この要求は、プライベートとしてマークされています</string>
+<string name="descriptionHint" formatted="false">説明（オプション）</string>
+<string name="addComment" formatted="false">コメントを追加します</string>
+<string name="send" formatted="false">送信</string>
+
+<!-- notifier widget -->
+<string name="notifier" formatted="false">アップデート公開。</string>
+
+<!-- notification screen -->
+<string name="notificationComment" formatted="false">誰かがあなたが送信した要求についてコメント</string>
+<string name="notificationReply" formatted="false">誰かがリクエストに応じてあなたが作ったコメントに返信しました</string>
+<string name="notificationStatus" formatted="false">あなたの要求の状態を％sに更新されました</string>
+
+<!-- citydashboard activity -->
+<string name="aboutapp" formatted="false">約％sの</string>
+<string name="mystuff" formatted="false">マイページ</string>
+<string name="aboutps" formatted="false">PublicStuffについて</string>
+<string name="more" formatted="false">もっと</string>
+<string name="nearbyRequest" formatted="false">となりのリクエスト</string>
+
+<!-- dialogs -->
+<string name="findingLocation" formatted="false">場所を見つける...</string>
+<string name="getRequestList" formatted="false">リクエストのリストを取得中...</string>
+<string name="ErrorPastTense" formatted="false">エラーが発生しました</string>
+<string name="ErrorInternet" formatted="false">あなたのインターネット接続を確認してから、もう一度やり直してください</string>
+<string name="OkButton" formatted="false">[OK]を</string>
+<string name="CancelButton" formatted="false">キャンセル</string>
+<string name="loadingDialog" formatted="false">読み込んでいます...</string>
+<string name="loginNow" formatted="false">ログイン</string>
+<string name="pleaseLogin" formatted="false">あなたの街をフォローするには、ログインしてください</string>
+<string name="creatingAccount" formatted="false">アカウントを作成しています...</string>
+<string name="getcustomFields" formatted="false">カスタムフィールドを取得しています...</string>
+<string name="bothFields" formatted="false">両方のフィールドは、ログインする必要があります。</string>
+<string name="loggingIn" formatted="false">にログイン...</string>
+<string name="locationFailGPS" formatted="false">あなたの場所を見つけるのにエラーが発生しました。あなたのGPSとインターネット接続を確認してください。</string>
+<string name="chooseLocation" formatted="false">場所を選択</string>
+<string name="tryAgain" formatted="false">再試行する</string>
+<string name="requestTypes" formatted="false">要求タイプを取得しています...</string>
+<string name="geoError" formatted="false">ジオロケーションのエラー</string>
+<string name="googleGeoError" formatted="false">Googleのジオロケーション·サーバは、選択した場所についての不正なデータを返しました。再びあなたの場所を選択してみてください。</string>
+<string name="saveDraft" formatted="false">下書きを保存</string>
+<string name="deleteDraft" formatted="false">下書きを削除する</string>
+<string name="exitSave" formatted="false">保存せずに終了</string>
+<string name="resumeDraft" formatted="false">バックドラフトへ</string>
+<string name="exitScreen" formatted="false">終了する</string>
+<string name="loginDraft" formatted="false">あなたは、下書きを保存するには、ログインする必要があります</string>
+<string name="titleRequired" formatted="false">タイトルは必須です。</string>
+<string name="requestTypeRequired" formatted="false">要求タイプが必要です。</string>
+<string name="errorLocationConfirm" formatted="false">あなたの場所を確認し、エラーが発生しました。下記のアドレスフィールドをクリックして場所を選択してください。</string>
+<string name="loginRequired" formatted="false">あなたは、％sにリクエストを投稿するにはログインが必要です。</string>
+<string name="loadingProfile" formatted="false">あなたのプロフィールを読み込んでいます...</string>
+<string name="requestDetails" formatted="false">要求の詳細を取得中...</string>
+<string name="submitComment" formatted="false">コメントを送信しています...</string>
+<string name="endDateError" formatted="false">終了日は開始日より後に来なければなりません。</string>
+<string name="startDateSelect" formatted="false">開始日を選択してください</string>
+<string name="endDateSelect" formatted="false">終了日を選択してください</string>
+
+<!-- password alerts -->
+<string name="passwordMatch" formatted="false">新規パスワードと確認が一致している必要があります。</string>
+<string name="passwordFormat" formatted="false">パスワードは少なくとも6文字でなければなりません。</string>
+<string name="passwordSecurity" formatted="false">古いパスワードを入力する必要があります。</string>
+<string name="savingSettings" formatted="false">保存設定...</string>
+
+<string name="thankyou" formatted="false">ありがとう</string>
+<string name="passwordUpdated" formatted="false">あなたのパスワードが更新されました</string>
+<string name="oldpasswordbad" formatted="false">古いパスワードが間違って入力され</string>
+
+<!-- citieslist activity -->
+<string name="cityList" formatted="false">都市のリストを取得中...</string>
+<string name="locationFail" formatted="false">場所が見つかりませんでした</string>
+<string name="locationFailVerbose" formatted="false">いいえ場所は、検索条件と一致しました</string>
+<string name="cityData" formatted="false">都市データを取得しています...</string>
+<string name="findCity" formatted="false">あなたの場所を見つけるのにエラーが発生しました。都市を入力するか、下の一覧から選択してください。</string>
+<string name="selectCityTime" formatted="false">都市をお選びください。</string>
+<string name="selectCityVerbose" formatted="false">続行するには、リスト内の都市をお選びください。</string>
+
+<!-- citydetails activity -->
+<string name="follow" formatted="false">フォロー</string>
+<string name="unfollow" formatted="false">フォロー</string>
+<string name="visitcityweb" formatted="false">市ホームページをご覧ください</string>
+<string name="petitioncity" formatted="false">市に陳情</string>
+<string name="petitionCityVerbose" formatted="false">PublicStuffを使用するように、あなたの街を請願するには、ログインしてください</string>
+
+<!-- createaccount activity -->
+
+<string name="errorRequest" formatted="false">リクエストでエラーが発生しました</string>
+<string name="citydescription" formatted="false">%sは私のデフォルト都市作る</string>
+<string name="accountRequirement" formatted="false">すべてのフィールドは、アカウントを作成する必要があります。</string>
+<string name="passwordCharacters" formatted="false">パスワードは5つ以上の文字を持っている必要があります</string>
+
+<!-- customfields activity -->
+<string name="requiredField" formatted="false">%sは必須フィールドです</string>
+<string name="requestAddl" formatted="false">%1$s, %2$s が要求タイプ％3$sの要求の追加情報をご希望の方は$。%3$s</string>
+<string name="submitrequestto" formatted="false">あなたは、％sにリクエストを投稿するにはログインが必要です。</string>
+<string name="submitRequest" formatted="false">要求を送信しています...</string>
+<string name="loadingRequest" formatted="false">リクエストを読み込んでいます...</string>
+
+<!-- Drafts activity -->
+<string name="myDrafts" formatted="false">私の下書き</string>
+<string name="delDraft" formatted="false">下書きを削除する</string>
+
+<!-- forgot password activity -->
+<string name="enterEmail" formatted="false">あなたのメールアドレスを入力してください。</string>
+<string name="passReset" formatted="false">パスワードのリセット...</string>
+
+<!-- main activity -->
+<string name="unableCity" formatted="false">都市を識別することができません</string>
+<string name="refreshps" formatted="false">リフレッシュウィジェット</string>
+<string name="widgetsUpdated" formatted="false">更新されたウィジェット</string>
+
+<!-- newrequest activity -->
+<string name="takePhoto" formatted="false">新しい写真を撮る</string>
+<string name="selectPhoto" formatted="false">写真を選択</string>
+<string name="deletePhoto" formatted="false">写真を削除</string>
+<string name="noCamera" formatted="false">お使いのデバイス上で検出されないカメラがありません</string>
+<string name="publicSelector" formatted="false">公共</string>
+<string name="privateSelector" formatted="false">プライベート</string>
+<string name="setPrivacy" formatted="false">プライバシーを設定</string>
+<string name="publicComment" formatted="false">誰もが閲覧したり、コメントすることができます</string>
+<string name="privateComment" formatted="false">唯一の都市労働者が表示したり、コメントすることができます</string>
+<string name="forcePrivate" formatted="false">選択したリクエストタイプを使用して、新しい要求はのみ非公開にすることもできます。</string>
+
+<!-- newrequestmap activity -->
+<string name="addressUnavailable" formatted="false">アドレスをunavailable。</string>
+<string name="errorFindingLocation" formatted="false">あなたの場所を見つけるのエラー</string>
+<string name="addressBlankError" formatted="false">アドレスは空白にすることはできません、1を入力するか、地図上の場所を選択してください</string>
+<string name="findingAddress" formatted="false">検索する住所...</string>
+<string name="errorGeocodingLoc" formatted="false">エラージオあなたの選択した場所がありました。もう一度やり直してください。</string>
+<string name="addressVerify" formatted="false">確認アドレス...</string>
+
+<!-- requestdetails activity -->
+<string name="pending" formatted="false">ペンディング</string>
+<string name="anonymous" formatted="false">匿名の</string>
+<string name="followers" formatted="false">フォローしている</string>
+<string name="comments" formatted="false">コメント</string>
+<string name="requestResolved" formatted="false">要求が解決されました</string>
+<string name="requestError" formatted="false">元の要求でエラーが発生しました</string>
+<string name="requestNA" formatted="false">リクエストは適用もはや</string>
+<string name="makePubliclyVisible" formatted="false">この情報は公に見えるよう</string>
+<string name="reason" formatted="false">推論</string>
+<string name="elaborate" formatted="false">手の込んだ</string>
+<string name="closeRequest" formatted="false">クローズリクエスト</string>
+<string name="submit" formatted="false">提出する</string>
+<string name="makePrivate" formatted="false">リクエストはプライベートにしますか？</string>
+<string name="makePrivateMessage" formatted="false">あなたはプライベートにサービスリクエストを設定しますか？これは、元に戻すことはできません。</string>
+
+<string name="statusSubmitted" formatted="false">提出</string>
+<string name="statusAcknowledged" formatted="false">認め</string>
+<string name="statusInProgress" formatted="false">進行中</string>
+<string name="statusCompleted" formatted="false">完成した</string>
+<string name="statusOther" formatted="false">その他</string>
+
+<string name="yes" formatted="false">はい</string>
+<string name="no" formatted="false">ノー</string>
+<string name="gettingComments" formatted="false">リクエストのコメントを取得しています...</string>
+<string name="loginToRequest" formatted="false">％sの要求にはログインしてください</string>
+<string name="loginComment" formatted="false">あなたがコメントするにはログインする必要があります</string>
+
+<string name="socialFacebook" formatted="false">Facebookに投稿</string>
+<string name="socialTwitter" formatted="false">Twitterに投稿</string>
+<string name="socialEmail" formatted="false">メールを送信</string>
+<string name="shareRequest" formatted="false">共有リクエスト</string>
+<string name="addImage" formatted="false">画像を追加</string>
+<string name="plsEnterComment" formatted="false">コメントを入力してください。</string>
+
+<!-- RequestListFilter Activity -->
+<string name="sortRecent" formatted="false">最近の</string>
+<string name="sortPopular" formatted="false">人気のある</string>
+<string name="statusOpen" formatted="false">開く</string>
+<string name="statusClosed" formatted="false">閉店</string>
+<string name="statusAll" formatted="false">すべて</string>
+<string name="filterNearby" formatted="false">近隣の</string>
+<string name="filterMyRequests" formatted="false">マイリクエスト</string>
+<string name="filterFollowedRequests" formatted="false">続いてリクエスト</string>
+<string name="filterCommentedRequests" formatted="false">リクエストのコメント</string>
+<string name="filterVotedRequests" formatted="false">投票リクエスト</string>
+
+<string name="myNotifications" formatted="false">私の通知</string>
+
+<string name="requestTypeSelect" formatted="false">要求の種類を選択します</string>
+
+<!--  UserDetails Activity -->
+<string name="requestRank" formatted="false">あなたは、％2$sに送信されたリクエストで第％1$sです</string>
+<string name="commentRank" formatted="false">あなたは、％2$sに提出されたコメントの＃％1$sです</string>
+<string name="following" formatted="false">以下</string>
+<string name="upvoted" formatted="false">Upvoted</string>
+<string name="drafts" formatted="false">チェッカー</string>
+<string name="notificationsChoice" formatted="false">通知</string>
+
+<!-- UserSettings Activity -->
+<string name="typeChangeStatus" formatted="false">ステータスの変更</string>
+<string name="typeIsClosed" formatted="false">クローズされている</string>
+<string name="typeEmailMe" formatted="false">私にメールを送らないで</string>
+<string name="emailMeRequest" formatted="false">私がたどったときに要求を私にメールで知らせる</string>
+<string name="logOutWarning" formatted="false">いったんログアウトしてもよろしいですか？あなたが保存したすべての要求の下書きを失うことになる。</string>
+<string name="usernameWarning" formatted="false">ユーザー名は空にできません。</string>
+<string name="emailWarning" formatted="false">メールは空にできません。</string>
+<string name="settingsSaved" formatted="false">設定が保存されました</string>
+<string name="changesStatus" formatted="false">ステータスの変更</string>
+<string name="currentLanguage" formatted="false">現在使用中の言語</string>
+<string name="selectLanguage" formatted="false">言語を選択</string>
+<string name="changeCity" formatted="false">都市を変更</string>
+
+<!-- Supported Languages -->
+<string name="frenchLanguageCanadian" formatted="false">フランス語（カナダ）</string>
+<string name="spanishLanguange" formatted="false">スペイン語</string>
+
+<string name="arabicLanguage" formatted="false">アラビア語</string>
+<string name="germanLanguage" formatted="false">ドイツ語</string>
+<string name="greekLanguage" formatted="false">ギリシャ語</string>
+<string name="englishLanguage" formatted="false">英語</string>
+<string name="spanishLanguage" formatted="false">スペイン語</string>
+<string name="frenchLanguage" formatted="false">フランス語</string>
+<string name="hindiLanguage" formatted="false">ヒンディー語</string>
+<string name="italianLanguage" formatted="false">イタリア語</string>
+<string name="japaneseLanguage" formatted="false">日本人</string>
+<string name="koreanLanguage" formatted="false">韓国語</string>
+<string name="polishLanguage" formatted="false">ポーランド語</string>
+<string name="portugueseLanguage" formatted="false">ポルトガル語</string>
+<string name="russianLanguage" formatted="false">ロシア</string>
+<string name="serbianLanguage" formatted="false">セルビア語</string>
+<string name="turkishLanguage" formatted="false">トルコ語</string>
+<string name="vietnameseLanguage" formatted="false">ベトナム人</string>
+<string name="chineseLanguage" formatted="false">中国人</string>
+
+<string name="languageUnavailable" formatted="false">このデバイスでは利用できない言語</string>
+<!-- Terms & Conditions -->
+<string name="ts" formatted="false">利用規約</string>
+
+</resources>

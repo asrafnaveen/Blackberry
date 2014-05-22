@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ######################### NO TRANSLATION NECESSARY ######################### -->
+<string name="currmapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="mapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="debugmapskey">0ewCooT_fkQ6fRF-XYaZaPNrR6jB_UQNvzPiDXg</string>
+<string name="copyright">2012 PublicStuff</string>
+<string name="app_name">PublicStuff</string>
+
+<!-- ######################### TRANSLATION NECESSARY ######################### -->
+
+<string name="cityName" formatted="false">CityName, ST</string>
+<string name="cityImageDescr" formatted="false">Город изображения</string>
+<string name="arrowDescr" formatted="false">Стрелка</string>
+<string name="stuffText" formatted="false">My Stuff страницу</string>
+<string name="exitButtonText" formatted="false">Нажмите, чтобы вернуться</string>
+<string name="exitRequestScreenDescr" formatted="false">Выход нового экрана запрос</string>
+<string name="exitProfileScreenDescr" formatted="false">Выход Экран профиля экран</string>
+<string name="middleButtonDescr" formatted="false">middleTabViewButton</string>
+<string name="select_request_type_title" formatted="false">Выберите тип запроса</string>
+
+<string name="main_no_items" formatted="false">Не просит, чтобы отобразить</string>
+<string name="detailsLabel" formatted="false">ПОДРОБНОСТИ</string>
+<string name="addressLabel" formatted="false">Адрес</string>
+<string name="addressPlaceholder"/>
+<string name="idLabel" formatted="false">ID</string>
+<string name="idPlaceholder">12345</string>
+<string name="backNavigation" formatted="false">Назад</string>
+<string name="cityIcon" formatted="false">Город иконка</string>
+<string name="socialMedia" formatted="false">Поделиться с помощью социальных медиа</string>
+<string name="requestInfo" formatted="false">Информация</string>
+<string name="commentsPlaceholder" formatted="false">Комментарии</string>
+<string name="locationPlaceholder"/>
+<string name="statusLabel" formatted="false">Статус</string>
+<string name="statusPlaceholder"/>
+<string name="descriptionLabel" formatted="false">Описание</string>
+<string name="descriptionPlaceholder"/>
+<string name="priorityLabel" formatted="false">Приоритет</string>
+<string name="priorityPlaceholder"/>
+<string name="categoryLabel" formatted="false">Категория</string>
+<string name="categoryPlaceholder"/>
+<string name="submittedByLabel" formatted="false">Загружено</string>
+<string name="submittedByPlaceholder"/>
+<string name="submittedOnLabel" formatted="false">Добавлен</string>
+<string name="submittedOnPlaceholder"/>
+
+<string name="fav_activity_title" formatted="false">Доля</string>
+<string name="allservice_activity_title" formatted="false">Найти услугу</string>
+
+<string name="nonetwork_msg" formatted="false">Нет доступной сети</string>
+<string name="loading_please_wait_msg" formatted="false">Погрузка, пожалуйста, подождите ...</string>
+
+<string name="username" formatted="false">Имя пользователя</string>
+<string name="password" formatted="false">Пароль</string>
+<string name="login" formatted="false">Войти</string>
+<string name="cancel" formatted="false">Отменить</string>
+<string name="loging_out" formatted="false">Выход из ...</string>
+<string name="confirm" formatted="false">Подтверждать</string>
+<string name="delete_msg" formatted="false">Удалить это любимая?</string>
+<string name="send_email" formatted="false">Отправить почту</string>
+<string name="editview_info_text" formatted="false">Добавить или удалить услуг в этом списке. Нажмите на знак плюс от действий бар выше, чтобы добавить больше услуг. Длительное нажатие определенной услуги удалить. Нажмите кнопку Назад, чтобы вернуться к нормальному виду.</string>
+
+<string name="external_memory_for_image" formatted="false">Внешняя карта памяти должна присутствовать для совместного использования изображений по электронной почте</string>
+<string name="an_error_occured" formatted="false">Произошла ошибка, повторите попытку позже</string>
+<string name="uploading_please_wait" formatted="false">Загрузка. Пожалуйста, подождите ...</string>
+<string name="connecting_twitpic" formatted="false">Подключение TwitPic ...</string>
+<string name="posting_the_tweet" formatted="false">Ваши сообщения ...</string>
+<string name="successfully_posted" formatted="false">Успешно размещен</string>
+<string name="title" formatted="false">Название</string>
+<string name="description" formatted="false">Описание</string>
+<string name="image_attached" formatted="false">Изображение Прикрепленное</string>
+<string name="passwordConfirmation" formatted="false">Новый пароль \nподтверждение</string>
+<string name="titlePlaceholder" formatted="false">Название</string>
+<string name="notificationTextPlaceholder" formatted="false">Кто-то ответил на комментарий Вы сделали по запросу</string>
+<string name="timeAgoPlaceholder" formatted="false">6 месяцев назад</string>
+<string name="loading" formatted="false">Запрос ...</string>
+ <string name="required">*</string>
+<string name="selectCity" formatted="false">Выберите стандартное значение, CITY</string>
+<string name="attachImage" formatted="false">Присоединить изображения</string>
+<string name="back" formatted="false">Назад</string>
+<string name="createAccount" formatted="false">Создать учетную запись</string>
+<string name="cancelButton" formatted="false">Отменить</string>
+<string name="cityIconDesc" formatted="false">Город иконка</string>
+<string name="filterRequests" formatted="false">Фильтр просит</string>
+<string name="confirmButton" formatted="false">Подтверждать</string>
+<string name="findLocation" formatted="false">Найти Местонахождение</string>
+<string name="mySettings" formatted="false">Мои настройки</string>
+<string name="save" formatted="false">Экономить</string>
+<string name="newRequest" formatted="false">Новый запрос</string>
+<string name="forgotPassword" formatted="false">Забыли пароль?</string>
+<string name="loginTitle" formatted="false">Войти</string>
+<string name="aboutPublicStuff" formatted="false">О PublicStuff</string>
+<string name="myStuff" formatted="false">My Stuff</string>
+<string name="openSettings" formatted="false">Открыть Настройки</string>
+<string name="done" formatted="false">Сделанный</string>
+<string name="fieldIsPublic" formatted="false">Информация, введенная здесь, будет видимым для публики</string>
+<string name="enterAddress" formatted="false">Введите адрес</string>
+<string name="post" formatted="false">POST</string>
+<string name="aboutPublicstuff" formatted="false">Мы работаем над тем, чтобы местные органы власти открытыми, доступными, и отзывчивым.</string>
+<string name="openMenu" formatted="false">Открыть меню</string>
+<string name="searchCity" formatted="false">Поиск по городу</string>
+<string name="skip" formatted="false">Пропускать</string>
+<string name="list" formatted="false">Список</string>
+<string name="gallery" formatted="false">Галерея</string>
+<string name="map" formatted="false">Карта</string>
+<string name="termsConditions"><![CDATA[Terms & Conditions]]></string>
+<string name="email" formatted="false">E-mail</string>
+<string name="aboutForgotPassword" formatted="false">При сбросе пароля, вы получите электронное письмо от PublicStuff дает вам инструкции о том, как создать новый пароль. После того как вы сделали это, вы можете войти с новым паролем.</string>
+<string name="enterCity" formatted="false">Введите город</string>
+<string name="myProfile" formatted="false">Мой профиль</string>
+<string name="firstName" formatted="false">Имя</string>
+<string name="lastName" formatted="false">Фамилия</string>
+<string name="phone" formatted="false">Телефон</string>
+<string name="myLocations" formatted="false">Мои Места</string>
+<string name="home" formatted="false">Дома</string>
+<string name="work" formatted="false">Работать</string>
+<string name="addressDefault" formatted="false">Эти адреса могут быть использованы в качестве местоположения по умолчанию</string>
+<string name="notifications" formatted="false">Уведомления</string>
+<string name="emailMeWhen" formatted="false">Напишите мне, когда я следую запросу</string>
+<string name="emailReplies" formatted="false">Email ответы на мои сообщения</string>
+<string name="currentLocation" formatted="false">Текущее местоположение</string>
+<string name="change" formatted="false">Менять</string>
+<string name="logOut" formatted="false">Выйти</string>
+<string name="oldPassword" formatted="false">Старый пароль</string>
+<string name="newPassword" formatted="false">Новый пароль</string>
+<string name="passwordLength" formatted="false">Пароль должен содержать не менее 6 символов</string>
+<string name="sorting" formatted="false">Сортировка</string>
+<string name="recent" formatted="false">Последний</string>
+<string name="citySkyline" formatted="false">City Skyline</string>
+<string name="mapInstructions" formatted="false">Переместить карту, чтобы изменить положение (увеличение на точность)</string>
+<string name="createAccountDesc" formatted="false">Создать учетную запись для отслеживания, поддержки и комментировать запросы в вашем сообществе.</string>
+<string name="privacyPolicy" formatted="false">Политика конфиденциальности</string>
+<string name="aboutPublicstuffLong" formatted="false">Мы являемся инновационной компанией программное обеспечение CRM, которая поможет вам получить материал фиксированной! Использование мобильных и веб-платформы, мы создали комплексную систему CRM бэкэнда, который позволяет муниципалитетов, учреждений и университетов получают запросы от своих жителей и клиентами в режиме реального времени. Мы помогали муниципалитетам сэкономить более 360.000 долларов в год с улучшенными каналов связи и повышение удовлетворенности клиентов.</string>
+<string name="forgotPasswordButton" formatted="false">Забыли пароль?</string>
+<string name="questionsFeedback" formatted="false">Вопросы и обратная связь</string>
+<string name="emailPublicStuff">tech@publicstuff.com</string>
+
+<string name="about" formatted="false">О</string>
+<string name="aboutPublicStuffMain" formatted="false">Запрос и вопросы поддержки в Вашем городе и получить уведомление, когда они зафиксированы!</string>
+<string name="status" formatted="false">Статус</string>
+<string name="open" formatted="false">Открыто</string>
+<string name="filterBy" formatted="false">Фильтр по</string>
+<string name="sortBy" formatted="false">Сортировать по</string>
+<string name="nearby" formatted="false">Близлежащий</string>
+<string name="types" formatted="false">Виды</string>
+<string name="allRequestTypes" formatted="false">Все Типы запросов</string>
+<string name="dateRange" formatted="false">Диапазон дат</string>
+<string name="startDate" formatted="false">Дата начала</string>
+<string name="endDate" formatted="false">Дата окончания</string>
+<string name="redoSearch" formatted="false">Повторить поиск</string>
+<string name="titleCaps" formatted="false">Название</string>
+<string name="flag" formatted="false">Отметить как неуместное</string>
+<string name="calculatingLocation" formatted="false">Расчет Местонахождение</string>
+<string name="requestIsPrivate" formatted="false">Эта просьба была отмечена как частные</string>
+<string name="descriptionHint" formatted="false">Описание (необязательно)</string>
+<string name="addComment" formatted="false">Добавить комментарий</string>
+<string name="send" formatted="false">Послать</string>
+
+<!-- notifier widget -->
+<string name="notifier" formatted="false">Обновление доступно.</string>
+
+<!-- notification screen -->
+<string name="notificationComment" formatted="false">Кто-то прокомментировал запрос, который вы представили</string>
+<string name="notificationReply" formatted="false">Кто-то ответил на комментарий Вы сделали по запросу</string>
+<string name="notificationStatus" formatted="false">Статус вашего запроса была обновлена ​​до %S</string>
+
+<!-- citydashboard activity -->
+<string name="aboutapp" formatted="false">О% с</string>
+<string name="mystuff" formatted="false">My Stuff</string>
+<string name="aboutps" formatted="false">О PublicStuff</string>
+<string name="more" formatted="false">Больше</string>
+<string name="nearbyRequest" formatted="false">Поблизости просит</string>
+
+<!-- dialogs -->
+<string name="findingLocation" formatted="false">Определение местоположения ...</string>
+<string name="getRequestList" formatted="false">Получение запроса список ...</string>
+<string name="ErrorPastTense" formatted="false">Существовал ошибка</string>
+<string name="ErrorInternet" formatted="false">Пожалуйста, проверьте ваше интернет-соединение и попробуйте еще раз</string>
+<string name="OkButton" formatted="false">Хорошо</string>
+<string name="CancelButton" formatted="false">Отменить</string>
+<string name="loadingDialog" formatted="false">Загрузка ...</string>
+<string name="loginNow" formatted="false">Войти</string>
+<string name="pleaseLogin" formatted="false">Пожалуйста, войдите, чтобы следовать вашим городом</string>
+<string name="creatingAccount" formatted="false">Создание учетной записи ...</string>
+<string name="getcustomFields" formatted="false">Получение пользовательских полей ...</string>
+<string name="bothFields" formatted="false">Оба поля, необходимые для входа в систему.</string>
+<string name="loggingIn" formatted="false">Вход в систему ...</string>
+<string name="locationFailGPS" formatted="false">Существовал ошибка определения вашего местонахождения. Пожалуйста, ознакомьтесь с GPS и подключение к Интернету.</string>
+<string name="chooseLocation" formatted="false">Выберите город</string>
+<string name="tryAgain" formatted="false">Попробуйте еще раз</string>
+<string name="requestTypes" formatted="false">Получение запроса типа ...</string>
+<string name="geoError" formatted="false">Geolocation ошибке</string>
+<string name="googleGeoError" formatted="false">Сервер Google геолокации вернулся плохие данные о выбранном местоположении. Пожалуйста, попробуйте выбрать ваше местоположение снова.</string>
+<string name="saveDraft" formatted="false">Сохранить проект</string>
+<string name="deleteDraft" formatted="false">Удалить проект</string>
+<string name="exitSave" formatted="false">Выход без сохранения</string>
+<string name="resumeDraft" formatted="false">Вернуться к проекту</string>
+<string name="exitScreen" formatted="false">Выход</string>
+<string name="loginDraft" formatted="false">Вы должны войти в систему, чтобы сохранять черновики</string>
+<string name="titleRequired" formatted="false">Название не требуется.</string>
+<string name="requestTypeRequired" formatted="false">Тип запроса не требуется.</string>
+<string name="errorLocationConfirm" formatted="false">Существовал ошибка подтверждающие ваше местоположение. Пожалуйста, выберите место, перейдя по адресу поле ниже.</string>
+<string name="loginRequired" formatted="false">Вы должны войти в систему, чтобы отправить запрос в %S</string>
+<string name="loadingProfile" formatted="false">Загрузка профиля ...</string>
+<string name="requestDetails" formatted="false">Получение запросу Подробнее ...</string>
+<string name="submitComment" formatted="false">Посылаем комментарий ...</string>
+<string name="endDateError" formatted="false">Дата окончания должна прийти после даты начала.</string>
+<string name="startDateSelect" formatted="false">Выберите дату начала</string>
+<string name="endDateSelect" formatted="false">Выберите даты окончания</string>
+
+<!-- password alerts -->
+<string name="passwordMatch" formatted="false">Новый пароль и подтверждение должны совпадать.</string>
+<string name="passwordFormat" formatted="false">Пароль должен содержать не менее шести символов.</string>
+<string name="passwordSecurity" formatted="false">Вы должны ввести ваш старый пароль.</string>
+<string name="savingSettings" formatted="false">Сохранение настроек ...</string>
+
+<string name="thankyou" formatted="false">Спасибо</string>
+<string name="passwordUpdated" formatted="false">Ваш пароль был обновлен</string>
+<string name="oldpasswordbad" formatted="false">Старый пароль введен неверно</string>
+
+<!-- citieslist activity -->
+<string name="cityList" formatted="false">Получение списка городов ...</string>
+<string name="locationFail" formatted="false">Не удалось найти местоположение</string>
+<string name="locationFailVerbose" formatted="false">Нет мест, соответствующих вашему запросу поиск</string>
+<string name="cityData" formatted="false">Получение данных городе ...</string>
+<string name="findCity" formatted="false">Существовал ошибка определения вашего местонахождения. Пожалуйста, введите город или выберите из списка ниже.</string>
+<string name="selectCityTime" formatted="false">Пожалуйста, выберите город</string>
+<string name="selectCityVerbose" formatted="false">Пожалуйста, выберите город в списке, чтобы продолжить.</string>
+
+<!-- citydetails activity -->
+<string name="follow" formatted="false">Следить</string>
+<string name="unfollow" formatted="false">Отписаться</string>
+<string name="visitcityweb" formatted="false">Посетите сайт города</string>
+<string name="petitioncity" formatted="false">Петиция города</string>
+<string name="petitionCityVerbose" formatted="false">Пожалуйста, войдите, чтобы ходатайствовать ваш город, чтобы использовать PublicStuff</string>
+
+<!-- createaccount activity -->
+
+<string name="errorRequest" formatted="false">Ошибка в запросе</string>
+<string name="citydescription" formatted="false">Сделайте %s мой город умолчанию</string>
+<string name="accountRequirement" formatted="false">Все поля обязательны для создания учетной записи.</string>
+<string name="passwordCharacters" formatted="false">Пароль должен иметь более 5 символов</string>
+
+<!-- customfields activity -->
+<string name="requiredField" formatted="false">%s обязательное поле</string>
+<string name="requestAddl" formatted="false">%1$s, %2$s хотели бы получить дополнительную информацию для запросов с типом запроса %3$s.</string>
+<string name="submitrequestto" formatted="false">Вы должны войти в систему, чтобы отправить запрос в% S</string>
+<string name="submitRequest" formatted="false">Отправка запроса ...</string>
+<string name="loadingRequest" formatted="false">Загрузка запрос ...</string>
+
+<!-- Drafts activity -->
+<string name="myDrafts" formatted="false">Мои проекты</string>
+<string name="delDraft" formatted="false">Удалить проект</string>
+
+<!-- forgot password activity -->
+<string name="enterEmail" formatted="false">Пожалуйста, введите адрес электронной почты.</string>
+<string name="passReset" formatted="false">Сброс пароля ...</string>
+
+<!-- main activity -->
+<string name="unableCity" formatted="false">Невозможно определить город</string>
+<string name="refreshps" formatted="false">Обновить Виджеты</string>
+<string name="widgetsUpdated" formatted="false">Виджеты Обновлено</string>
+
+<!-- newrequest activity -->
+<string name="takePhoto" formatted="false">Возьмите Нью-фото</string>
+<string name="selectPhoto" formatted="false">Выберите фото</string>
+<string name="deletePhoto" formatted="false">Удалить фото</string>
+<string name="noCamera" formatted="false">Есть никаких камер обнаружен на вашем устройстве</string>
+<string name="publicSelector" formatted="false">Общественность</string>
+<string name="privateSelector" formatted="false">Частный</string>
+<string name="setPrivacy" formatted="false">Установить Конфиденциальность</string>
+<string name="publicComment" formatted="false">Любой пользователь может просмотреть и комментарии</string>
+<string name="privateComment" formatted="false">Только рабочие городе можно просмотреть или комментарий</string>
+<string name="forcePrivate" formatted="false">Новые запросы с выбранным типом запроса может быть только частной.</string>
+
+<!-- newrequestmap activity -->
+<string name="addressUnavailable" formatted="false">Адрес недоступен.</string>
+<string name="errorFindingLocation" formatted="false">Ошибка определения вашего местонахождения</string>
+<string name="addressBlankError" formatted="false">Адрес не может быть пустым, пожалуйста, введите одно или выбрать местоположение на карте</string>
+<string name="findingAddress" formatted="false">Поиск адресов ...</string>
+<string name="errorGeocodingLoc" formatted="false">Существовал ошибка геокодирования выбранном месте. Пожалуйста, попробуйте еще раз.</string>
+<string name="addressVerify" formatted="false">Проверка адресов ...</string>
+
+<!-- requestdetails activity -->
+<string name="pending" formatted="false">В ожидании</string>
+<string name="anonymous" formatted="false">Анонимный</string>
+<string name="followers" formatted="false">Последователи</string>
+<string name="comments" formatted="false">КОММЕНТАРИИ</string>
+<string name="requestResolved" formatted="false">Запрос был решен</string>
+<string name="requestError" formatted="false">Существовал ошибка в исходный запрос</string>
+<string name="requestNA" formatted="false">Просьба больше не применяется</string>
+<string name="makePubliclyVisible" formatted="false">Сделать эту информацию публично видимых</string>
+<string name="reason" formatted="false">Рассуждение</string>
+<string name="elaborate" formatted="false">Разрабатывать</string>
+<string name="closeRequest" formatted="false">Закрыть Запрос</string>
+<string name="submit" formatted="false">Представлять</string>
+<string name="makePrivate" formatted="false">Сделать запрос Private?</string>
+<string name="makePrivateMessage" formatted="false">Вы хотите, чтобы установить запрос в частных? Это не может быть отменено.</string>
+
+<string name="statusSubmitted" formatted="false">Представленный</string>
+<string name="statusAcknowledged" formatted="false">Признанный</string>
+<string name="statusInProgress" formatted="false">В ходе</string>
+<string name="statusCompleted" formatted="false">Завершенный</string>
+<string name="statusOther" formatted="false">Другой</string>
+
+<string name="yes" formatted="false">Да</string>
+<string name="no" formatted="false">Нет</string>
+<string name="gettingComments" formatted="false">Получение запроса комментариев ...</string>
+<string name="loginToRequest" formatted="false">Пожалуйста, войдите, чтобы %с просьбой</string>
+<string name="loginComment" formatted="false">Вы должны войти, чтобы комментировать</string>
+
+<string name="socialFacebook" formatted="false">Написать в Facebook</string>
+<string name="socialTwitter" formatted="false">Написать в Twitter</string>
+<string name="socialEmail" formatted="false">Отправить письмо</string>
+<string name="shareRequest" formatted="false">Доля запрос</string>
+<string name="addImage" formatted="false">Добавить изображение</string>
+<string name="plsEnterComment" formatted="false">Пожалуйста, введите комментарий.</string>
+
+<!-- RequestListFilter Activity -->
+<string name="sortRecent" formatted="false">Последний</string>
+<string name="sortPopular" formatted="false">Популярный</string>
+<string name="statusOpen" formatted="false">Открыто</string>
+<string name="statusClosed" formatted="false">Закрыто</string>
+<string name="statusAll" formatted="false">Все</string>
+<string name="filterNearby" formatted="false">Близлежащий</string>
+<string name="filterMyRequests" formatted="false">Мои запросы</string>
+<string name="filterFollowedRequests" formatted="false">Далее следуют запросы</string>
+<string name="filterCommentedRequests" formatted="false">Комментарии просит</string>
+<string name="filterVotedRequests" formatted="false">Проголосовали просит</string>
+
+<string name="myNotifications" formatted="false">Моя Уведомления</string>
+
+<string name="requestTypeSelect" formatted="false">Выберите тип запроса</string>
+
+<!--  UserDetails Activity -->
+<string name="requestRank" formatted="false">Вы #%1$S в просьб, представленных в %2$S</string>
+<string name="commentRank" formatted="false">Вы #%1$S в комментариях, представленных в %2$S</string>
+<string name="following" formatted="false">После</string>
+<string name="upvoted" formatted="false">Upvoted</string>
+<string name="drafts" formatted="false">Шашки</string>
+<string name="notificationsChoice" formatted="false">Уведомления</string>
+
+<!-- UserSettings Activity -->
+<string name="typeChangeStatus" formatted="false">Изменение статуса</string>
+<string name="typeIsClosed" formatted="false">Закрыто</string>
+<string name="typeEmailMe" formatted="false">Не пишите мне</string>
+<string name="emailMeRequest" formatted="false">Напишите мне, когда я следую запросу</string>
+<string name="logOutWarning" formatted="false">Вы уверены, что хотите выйти? Вы потеряете все просьбы сохраненных черновиков.</string>
+<string name="usernameWarning" formatted="false">Имя пользователя не может быть пустым.</string>
+<string name="emailWarning" formatted="false">E-mail не может быть пустым.</string>
+<string name="settingsSaved" formatted="false">Ваши настройки были сохранены</string>
+<string name="changesStatus" formatted="false">Изменение статуса</string>
+<string name="currentLanguage" formatted="false">Текущий язык</string>
+<string name="selectLanguage" formatted="false">Выбор языка</string>
+<string name="changeCity" formatted="false">Изменить город</string>
+
+<!-- Supported Languages -->
+<string name="frenchLanguageCanadian" formatted="false">Французский (Канада)</string>
+<string name="spanishLanguange" formatted="false">Español</string>
+
+<string name="arabicLanguage" formatted="false">Арабский</string>
+<string name="germanLanguage" formatted="false">Немецкий</string>
+<string name="greekLanguage" formatted="false">Греческий</string>
+<string name="englishLanguage" formatted="false">Английский</string>
+<string name="spanishLanguage" formatted="false">Испанский</string>
+<string name="frenchLanguage" formatted="false">Французский</string>
+<string name="hindiLanguage" formatted="false">Хинди</string>
+<string name="italianLanguage" formatted="false">Итальянский</string>
+<string name="japaneseLanguage" formatted="false">Японский</string>
+<string name="koreanLanguage" formatted="false">Корейский</string>
+<string name="polishLanguage" formatted="false">Польский</string>
+<string name="portugueseLanguage" formatted="false">Португальский</string>
+<string name="russianLanguage" formatted="false">Русский</string>
+<string name="serbianLanguage" formatted="false">Сербский</string>
+<string name="turkishLanguage" formatted="false">Турецкий</string>
+<string name="vietnameseLanguage" formatted="false">Вьетнамский</string>
+<string name="chineseLanguage" formatted="false">Китайский</string>
+
+<string name="languageUnavailable" formatted="false">Язык не доступны на этом устройстве</string>
+<!-- Terms & Conditions -->
+<string name="ts" formatted="false">Условия и условия</string>
+
+</resources>

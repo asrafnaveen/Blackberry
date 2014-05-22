@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ######################### NO TRANSLATION NECESSARY ######################### -->
+<string name="currmapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="mapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="debugmapskey">0ewCooT_fkQ6fRF-XYaZaPNrR6jB_UQNvzPiDXg</string>
+<string name="copyright">2012 PublicStuff</string>
+<string name="app_name">PublicStuff</string>
+
+<!-- ######################### TRANSLATION NECESSARY ######################### -->
+
+<string name="cityName" formatted="false">城市名，ST</string>
+<string name="cityImageDescr" formatted="false">城市形象的塑造</string>
+<string name="arrowDescr" formatted="false">箭头</string>
+<string name="stuffText" formatted="false">我的资料页</string>
+<string name="exitButtonText" formatted="false">点击返回</string>
+<string name="exitRequestScreenDescr" formatted="false">退出的新要求屏幕</string>
+<string name="exitProfileScreenDescr" formatted="false">退出简介屏幕屏幕</string>
+<string name="middleButtonDescr" formatted="false">middleTabViewButton</string>
+<string name="select_request_type_title" formatted="false">选择请求类型</string>
+
+<string name="main_no_items" formatted="false">没有要显示的请求</string>
+<string name="detailsLabel" formatted="false">联系方式</string>
+<string name="addressLabel" formatted="false">地址</string>
+<string name="addressPlaceholder"/>
+<string name="idLabel" formatted="false">ID</string>
+<string name="idPlaceholder">12345</string>
+<string name="backNavigation" formatted="false">背面</string>
+<string name="cityIcon" formatted="false">城市图标</string>
+<string name="socialMedia" formatted="false">通过社会媒体分享</string>
+<string name="requestInfo" formatted="false">信息</string>
+<string name="commentsPlaceholder" formatted="false">评论</string>
+<string name="locationPlaceholder"/>
+<string name="statusLabel" formatted="false">状态</string>
+<string name="statusPlaceholder"/>
+<string name="descriptionLabel" formatted="false">描述</string>
+<string name="descriptionPlaceholder"/>
+<string name="priorityLabel" formatted="false">优先</string>
+<string name="priorityPlaceholder"/>
+<string name="categoryLabel" formatted="false">类别</string>
+<string name="categoryPlaceholder"/>
+<string name="submittedByLabel" formatted="false">提交人</string>
+<string name="submittedByPlaceholder"/>
+<string name="submittedOnLabel" formatted="false">提交于</string>
+<string name="submittedOnPlaceholder"/>
+
+<string name="fav_activity_title" formatted="false">共享</string>
+<string name="allservice_activity_title" formatted="false">查找服务</string>
+
+<string name="nonetwork_msg" formatted="false">没有网络可用</string>
+<string name="loading_please_wait_msg" formatted="false">载入中，请稍候...</string>
+
+<string name="username" formatted="false">用户名</string>
+<string name="password" formatted="false">密码</string>
+<string name="login" formatted="false">注册</string>
+<string name="cancel" formatted="false">取消</string>
+<string name="loging_out" formatted="false">注销...</string>
+<string name="confirm" formatted="false">确认</string>
+<string name="delete_msg" formatted="false">删除这个喜爱的呢？</string>
+<string name="send_email" formatted="false">发送邮件</string>
+<string name="editview_info_text" formatted="false">在此列表中的“添加或删除服务。从“操作”栏上面点击加号添加更多的服务。长按删除一个特定的服务。点击“后退”按钮，返回到普通视图。</string>
+
+<string name="external_memory_for_image" formatted="false">外置存储卡应该是通过电子邮件共享图像</string>
+<string name="an_error_occured" formatted="false">发生错误，请稍后再试。</string>
+<string name="uploading_please_wait" formatted="false">上传。请稍候...</string>
+<string name="connecting_twitpic" formatted="false">连接的TwitPic ...</string>
+<string name="posting_the_tweet" formatted="false">发布的消息...</string>
+<string name="successfully_posted" formatted="false">发布成功</string>
+<string name="title" formatted="false">标题</string>
+<string name="description" formatted="false">描述</string>
+<string name="image_attached" formatted="false">图片附件</string>
+<string name="passwordConfirmation" formatted="false">新密码\n 确认</string>
+<string name="titlePlaceholder" formatted="false">标题</string>
+<string name="notificationTextPlaceholder" formatted="false">有人回答评论的要求，</string>
+<string name="timeAgoPlaceholder" formatted="false">6个月前</string>
+<string name="loading" formatted="false">要求...</string>
+ <string name="required">*</string>
+<string name="selectCity" formatted="false">选择一个默认的城市</string>
+<string name="attachImage" formatted="false">将图像</string>
+<string name="back" formatted="false">背面</string>
+<string name="createAccount" formatted="false">创建帐户</string>
+<string name="cancelButton" formatted="false">取消</string>
+<string name="cityIconDesc" formatted="false">城市图标</string>
+<string name="filterRequests" formatted="false">过滤请求</string>
+<string name="confirmButton" formatted="false">确认</string>
+<string name="findLocation" formatted="false">找到你的位置</string>
+<string name="mySettings" formatted="false">我的设置</string>
+<string name="save" formatted="false">保存</string>
+<string name="newRequest" formatted="false">新的申请</string>
+<string name="forgotPassword" formatted="false">忘记密码</string>
+<string name="loginTitle" formatted="false">注册</string>
+<string name="aboutPublicStuff" formatted="false">关于PublicStuff</string>
+<string name="myStuff" formatted="false">我的东西</string>
+<string name="openSettings" formatted="false">打开设置</string>
+<string name="done" formatted="false">完成</string>
+<string name="fieldIsPublic" formatted="false">这里输入的信息将会向公众可见</string>
+<string name="enterAddress" formatted="false">输入地址</string>
+<string name="post" formatted="false">发表</string>
+<string name="aboutPublicstuff" formatted="false">我们正在努力使地方政府开放，可访问和响应。</string>
+<string name="openMenu" formatted="false">打开菜单</string>
+<string name="searchCity" formatted="false">搜索城市</string>
+<string name="skip" formatted="false">跳跃</string>
+<string name="list" formatted="false">表</string>
+<string name="gallery" formatted="false">画廊</string>
+<string name="map" formatted="false">地图</string>
+<string name="termsConditions"><![CDATA[Terms & Conditions]]></string>
+<string name="email" formatted="false">电子邮件</string>
+<string name="aboutForgotPassword" formatted="false">当您重设密码时，您会收到一封电子邮件，从PublicStuff给你说明如何创建一个新的密码。一旦你这样做了，随时与您的新密码登录。</string>
+<string name="enterCity" formatted="false">输入城市名</string>
+<string name="myProfile" formatted="false">我的个人资料</string>
+<string name="firstName" formatted="false">名字</string>
+<string name="lastName" formatted="false">姓</string>
+<string name="phone" formatted="false">电话</string>
+<string name="myLocations" formatted="false">我的位置</string>
+<string name="home" formatted="false">家</string>
+<string name="work" formatted="false">工作</string>
+<string name="addressDefault" formatted="false">这些地址可以被用来作为默认位置</string>
+<string name="notifications" formatted="false">通知</string>
+<string name="emailMeWhen" formatted="false">我按照我的请求时，</string>
+<string name="emailReplies" formatted="false">电子邮件回复我的帖子</string>
+<string name="currentLocation" formatted="false">您现在的位置</string>
+<string name="change" formatted="false">改变</string>
+<string name="logOut" formatted="false">注销</string>
+<string name="oldPassword" formatted="false">旧密码</string>
+<string name="newPassword" formatted="false">新密码</string>
+<string name="passwordLength" formatted="false">密码必须至少6个字符</string>
+<string name="sorting" formatted="false">排序</string>
+<string name="recent" formatted="false">最近</string>
+<string name="citySkyline" formatted="false">城市天际线</string>
+<string name="mapInstructions" formatted="false">将地图移动到改变位置（放大的精密）</string>
+<string name="createAccountDesc" formatted="false">创建一个帐户，跟踪，支持，并请求在您的社区发表评论。</string>
+<string name="privacyPolicy" formatted="false">隐私权政策</string>
+<string name="aboutPublicstuffLong" formatted="false">我们是一个创新的CRM软件公司，帮助你得到的东西固定！同时使用手机和网络平台，我们建立了一个全面的后台CRM系统，让直辖市，设施和大学从他们的居民和客户实时接收服务请求。我们已经帮助，直辖市每年节省超过3600​​00美元，改善沟通渠道，提高客户满意度。</string>
+<string name="forgotPasswordButton" formatted="false">忘记密码？</string>
+<string name="questionsFeedback" formatted="false">如有疑问，并反馈到</string>
+<string name="emailPublicStuff">tech@publicstuff.com</string>
+
+<string name="about" formatted="false">关于</string>
+<string name="aboutPublicStuffMain" formatted="false">请求和支持问题，在您的城市时得到通知，他们是固定的！</string>
+<string name="status" formatted="false">状态</string>
+<string name="open" formatted="false">打开</string>
+<string name="filterBy" formatted="false">筛选条件</string>
+<string name="sortBy" formatted="false">排序方式：</string>
+<string name="nearby" formatted="false">附近</string>
+<string name="types" formatted="false">类型</string>
+<string name="allRequestTypes" formatted="false">所有请求类型</string>
+<string name="dateRange" formatted="false">日期范围</string>
+<string name="startDate" formatted="false">开始日期</string>
+<string name="endDate" formatted="false">结束日期</string>
+<string name="redoSearch" formatted="false">重做搜索</string>
+<string name="titleCaps" formatted="false">标题</string>
+<string name="flag" formatted="false">举报不当内容</string>
+<string name="calculatingLocation" formatted="false">计算位置</string>
+<string name="requestIsPrivate" formatted="false">该请求已被标记为私人</string>
+<string name="descriptionHint" formatted="false">说明（可选）</string>
+<string name="addComment" formatted="false">添加评论</string>
+<string name="send" formatted="false">发送</string>
+
+<!-- notifier widget -->
+<string name="notifier" formatted="false">可用的更新。</string>
+
+<!-- notification screen -->
+<string name="notificationComment" formatted="false">有人评论你提交的请求，</string>
+<string name="notificationReply" formatted="false">有人回答评论的要求，</string>
+<string name="notificationStatus" formatted="false">您的申请状态更新到％s</string>
+
+<!-- citydashboard activity -->
+<string name="aboutapp" formatted="false">关于％s</string>
+<string name="mystuff" formatted="false">我的东西</string>
+<string name="aboutps" formatted="false">关于PublicStuff</string>
+<string name="more" formatted="false">更多</string>
+<string name="nearbyRequest" formatted="false">附近的请求</string>
+
+<!-- dialogs -->
+<string name="findingLocation" formatted="false">寻找位置...</string>
+<string name="getRequestList" formatted="false">获取请求列表...</string>
+<string name="ErrorPastTense" formatted="false">有一个错误</string>
+<string name="ErrorInternet" formatted="false">请检查您的网络连接，然后再试一次</string>
+<string name="OkButton" formatted="false">行</string>
+<string name="CancelButton" formatted="false">取消</string>
+<string name="loadingDialog" formatted="false">载入中...</string>
+<string name="loginNow" formatted="false">注册</string>
+<string name="pleaseLogin" formatted="false">请登录遵循你的城市</string>
+<string name="creatingAccount" formatted="false">创建帐户...</string>
+<string name="getcustomFields" formatted="false">获取自定义字段...</string>
+<string name="bothFields" formatted="false">这两个领域都需要登录。</string>
+<string name="loggingIn" formatted="false">登录中...</string>
+<string name="locationFailGPS" formatted="false">有一个错误，找到您的位置。请检查您的GPS和互联网连接。</string>
+<string name="chooseLocation" formatted="false">选择位置</string>
+<string name="tryAgain" formatted="false">再试一次</string>
+<string name="requestTypes" formatted="false">获取请求类型...</string>
+<string name="geoError" formatted="false">地理定位错误</string>
+<string name="googleGeoError" formatted="false">谷歌地理定位服务器返回错误的数据对您选择的位置。请再次尝试选择您所在的位置。</string>
+<string name="saveDraft" formatted="false">保存草稿</string>
+<string name="deleteDraft" formatted="false">删除草案</string>
+<string name="exitSave" formatted="false">不保存退出</string>
+<string name="resumeDraft" formatted="false">回到起草</string>
+<string name="exitScreen" formatted="false">出口</string>
+<string name="loginDraft" formatted="false">您必须先登录才能保存草稿</string>
+<string name="titleRequired" formatted="false">一个标题是必需的。</string>
+<string name="requestTypeRequired" formatted="false">请求类型是必需的。</string>
+<string name="errorLocationConfirm" formatted="false">确认您所在的位置是一个错误。请通过点击下面的地址字段中选择一个位置。</string>
+<string name="loginRequired" formatted="false">您必须先登录才能提交请求到％s</string>
+<string name="loadingProfile" formatted="false">正在载入更新...</string>
+<string name="requestDetails" formatted="false">获取请求的详细信息...</string>
+<string name="submitComment" formatted="false">提交评论...</string>
+<string name="endDateError" formatted="false">结束日期必须在开始日期之后。</string>
+<string name="startDateSelect" formatted="false">选择“开始日期”</string>
+<string name="endDateSelect" formatted="false">选择结束日期</string>
+
+<!-- password alerts -->
+<string name="passwordMatch" formatted="false">新密码和确认密码必须一致。</string>
+<string name="passwordFormat" formatted="false">密码必须至少6个字符。</string>
+<string name="passwordSecurity" formatted="false">您必须输入旧密码。</string>
+<string name="savingSettings" formatted="false">保存设置...</string>
+
+<string name="thankyou" formatted="false">谢谢</string>
+<string name="passwordUpdated" formatted="false">您的密码已更新</string>
+<string name="oldpasswordbad" formatted="false">输入旧密码不正确</string>
+
+<!-- citieslist activity -->
+<string name="cityList" formatted="false">获得城市名单...</string>
+<string name="locationFail" formatted="false">找不到位置</string>
+<string name="locationFailVerbose" formatted="false">无位置符合您搜索条件</string>
+<string name="cityData" formatted="false">获得城市数据...</string>
+<string name="findCity" formatted="false">有一个错误，找到您的位置。请输入城市或从下面的列表中选择。</string>
+<string name="selectCityTime" formatted="false">请选择一个城市</string>
+<string name="selectCityVerbose" formatted="false">请在列表中选择一个城市继续。</string>
+
+<!-- citydetails activity -->
+<string name="follow" formatted="false">遵循</string>
+<string name="unfollow" formatted="false">追随</string>
+<string name="visitcityweb" formatted="false">参观城市网站</string>
+<string name="petitioncity" formatted="false">信访城</string>
+<string name="petitionCityVerbose" formatted="false">请登录你的城市提出申请使用PublicStuff</string>
+
+<!-- createaccount activity -->
+
+<string name="errorRequest" formatted="false">在请求错误</string>
+<string name="citydescription" formatted="false">%s我的默认城市</string>
+<string name="accountRequirement" formatted="false">所有的领域都需要创建一个帐户。</string>
+<string name="passwordCharacters" formatted="false">密码必须超过5个字符</string>
+
+<!-- customfields activity -->
+<string name="requiredField" formatted="false">%s 是一个必填字段</string>
+<string name="requestAddl" formatted="false">%1$s, %2$s 可以得到更多的信息的请求类型％3$s的请求。%1$s</string>
+<string name="submitrequestto" formatted="false">您必须先登录才能提交请求到％s</string>
+<string name="submitRequest" formatted="false">提交的请求......</string>
+<string name="loadingRequest" formatted="false">载入的请求......</string>
+
+<!-- Drafts activity -->
+<string name="myDrafts" formatted="false">我的草稿</string>
+<string name="delDraft" formatted="false">删除草案</string>
+
+<!-- forgot password activity -->
+<string name="enterEmail" formatted="false">请输入您的电子邮件。</string>
+<string name="passReset" formatted="false">重设密码...</string>
+
+<!-- main activity -->
+<string name="unableCity" formatted="false">无法识别的城市</string>
+<string name="refreshps" formatted="false">刷新小工具</string>
+<string name="widgetsUpdated" formatted="false">窗口小部件更新</string>
+
+<!-- newrequest activity -->
+<string name="takePhoto" formatted="false">新照片</string>
+<string name="selectPhoto" formatted="false">选择照片</string>
+<string name="deletePhoto" formatted="false">删除照片</string>
+<string name="noCamera" formatted="false">有没有相机检测到您的设备上</string>
+<string name="publicSelector" formatted="false">公众</string>
+<string name="privateSelector" formatted="false">私人</string>
+<string name="setPrivacy" formatted="false">设置隐私</string>
+<string name="publicComment" formatted="false">任何人都可以查看或发表评论</string>
+<string name="privateComment" formatted="false">只有城市工人可以查看或发表评论</string>
+<string name="forcePrivate" formatted="false">新的请求与所选择的请求类型只能是私有的。</string>
+
+<!-- newrequestmap activity -->
+<string name="addressUnavailable" formatted="false">地址不可用。</string>
+<string name="errorFindingLocation" formatted="false">发现错误的位置</string>
+<string name="addressBlankError" formatted="false">地址不能为空，请输入一个或选择在地图上的位置</string>
+<string name="findingAddress" formatted="false">搜索地址...</string>
+<string name="errorGeocodingLoc" formatted="false">有一个错误的地理编码选定的位置。请再试一次。</string>
+<string name="addressVerify" formatted="false">验证地址...</string>
+
+<!-- requestdetails activity -->
+<string name="pending" formatted="false">有待</string>
+<string name="anonymous" formatted="false">匿名</string>
+<string name="followers" formatted="false">关注</string>
+<string name="comments" formatted="false">评论</string>
+<string name="requestResolved" formatted="false">请求已解决</string>
+<string name="requestError" formatted="false">在原始请求中有一个错误</string>
+<string name="requestNA" formatted="false">请求不再适用</string>
+<string name="makePubliclyVisible" formatted="false">信息公开可见</string>
+<string name="reason" formatted="false">推理</string>
+<string name="elaborate" formatted="false">阐述</string>
+<string name="closeRequest" formatted="false">关闭请求</string>
+<string name="submit" formatted="false">提交</string>
+<string name="makePrivate" formatted="false">请请求民营？</string>
+<string name="makePrivateMessage" formatted="false">你要设置你的服务请求，私人吗？这是不能撤消。</string>
+
+<string name="statusSubmitted" formatted="false">提交</string>
+<string name="statusAcknowledged" formatted="false">已确认</string>
+<string name="statusInProgress" formatted="false">在进展</string>
+<string name="statusCompleted" formatted="false">已完成</string>
+<string name="statusOther" formatted="false">其他</string>
+
+<string name="yes" formatted="false">是</string>
+<string name="no" formatted="false">没有</string>
+<string name="gettingComments" formatted="false">获得征求意见...</string>
+<string name="loginToRequest" formatted="false">请登录到％s的请求</string>
+<string name="loginComment" formatted="false">您必须登录后发表评论</string>
+
+<string name="socialFacebook" formatted="false">发布到Facebook</string>
+<string name="socialTwitter" formatted="false">发布到Twitter</string>
+<string name="socialEmail" formatted="false">发送电​​子邮件</string>
+<string name="shareRequest" formatted="false">共享请求</string>
+<string name="addImage" formatted="false">添加图片</string>
+<string name="plsEnterComment" formatted="false">请输入注释。</string>
+
+<!-- RequestListFilter Activity -->
+<string name="sortRecent" formatted="false">最近</string>
+<string name="sortPopular" formatted="false">流行</string>
+<string name="statusOpen" formatted="false">打开</string>
+<string name="statusClosed" formatted="false">关闭</string>
+<string name="statusAll" formatted="false">所有</string>
+<string name="filterNearby" formatted="false">附近</string>
+<string name="filterMyRequests" formatted="false">我的请求</string>
+<string name="filterFollowedRequests" formatted="false">其次要求</string>
+<string name="filterCommentedRequests" formatted="false">评论要求</string>
+<string name="filterVotedRequests" formatted="false">投票要求</string>
+
+<string name="myNotifications" formatted="false">我的通知</string>
+
+<string name="requestTypeSelect" formatted="false">选择请求类型</string>
+
+<!--  UserDetails Activity -->
+<string name="requestRank" formatted="false">你是＃％1$s的请求提交到％2$S</string>
+<string name="commentRank" formatted="false">＃％1$s的意见提交到％2$S</string>
+<string name="following" formatted="false">以下</string>
+<string name="upvoted" formatted="false">Upvoted</string>
+<string name="drafts" formatted="false">草稿</string>
+<string name="notificationsChoice" formatted="false">通知</string>
+
+<!-- UserSettings Activity -->
+<string name="typeChangeStatus" formatted="false">改变状态</string>
+<string name="typeIsClosed" formatted="false">关闭</string>
+<string name="typeEmailMe" formatted="false">不要给我发电子邮件</string>
+<string name="emailMeRequest" formatted="false">我按照我的请求时，</string>
+<string name="logOutWarning" formatted="false">您确定要注销吗？您将丢失所有的请求已储存的草稿。</string>
+<string name="usernameWarning" formatted="false">用户名不能为空。</string>
+<string name="emailWarning" formatted="false">电子邮件不能为空。</string>
+<string name="settingsSaved" formatted="false">您的设置已保存</string>
+<string name="changesStatus" formatted="false">改变状态</string>
+<string name="currentLanguage" formatted="false">当前语言</string>
+<string name="selectLanguage" formatted="false">选择语言</string>
+<string name="changeCity" formatted="false">切换城市</string>
+
+<!-- Supported Languages -->
+<string name="frenchLanguageCanadian" formatted="false">法语（加拿大）</string>
+<string name="spanishLanguange" formatted="false">西班牙语</string>
+
+<string name="arabicLanguage" formatted="false">阿拉伯语</string>
+<string name="germanLanguage" formatted="false">德国的</string>
+<string name="greekLanguage" formatted="false">希腊的</string>
+<string name="englishLanguage" formatted="false">英语</string>
+<string name="spanishLanguage" formatted="false">西班牙的</string>
+<string name="frenchLanguage" formatted="false">法国人</string>
+<string name="hindiLanguage" formatted="false">印地文</string>
+<string name="italianLanguage" formatted="false">意大利的</string>
+<string name="japaneseLanguage" formatted="false">日本</string>
+<string name="koreanLanguage" formatted="false">韩国</string>
+<string name="polishLanguage" formatted="false">波兰语</string>
+<string name="portugueseLanguage" formatted="false">葡萄牙</string>
+<string name="russianLanguage" formatted="false">俄</string>
+<string name="serbianLanguage" formatted="false">塞尔维亚</string>
+<string name="turkishLanguage" formatted="false">土耳其</string>
+<string name="vietnameseLanguage" formatted="false">越南的</string>
+<string name="chineseLanguage" formatted="false">中国的</string>
+
+<string name="languageUnavailable" formatted="false">语言上没有此设备</string>
+<!-- Terms & Conditions -->
+<string name="ts" formatted="false">条款及条件</string>
+
+</resources>

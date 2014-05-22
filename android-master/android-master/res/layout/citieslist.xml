@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:paddingTop="8dip"
+                    android:paddingBottom="8dip"
+                    android:background="@color/TOP_BAR_BACKGROUND"
+            >
+        <Button android:id="@+id/done"
+                android:layout_width="48dip"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:clickable="true"
+                android:onClick="back"
+                android:scaleType="centerInside"/>
+        <ImageView  android:id="@+id/idBackChevron" android:layout_width="16dip" android:layout_height="fill_parent"
+                    android:src="@drawable/holo_dark1_navigation_previous_item"
+                    android:contentDescription="@string/back"/>
+        <ImageView  android:id="@+id/idCityIcon" android:layout_width="wrap_content" android:layout_height="fill_parent"
+                    android:src="@drawable/ic_dark_publicstuff_icon"
+                    android:contentDescription="@string/cityIconDesc"
+                    android:paddingRight="16dip"
+                    android:paddingLeft="16dip"/>
+        <TextView android:id="@+id/findLocationTitle"
+                  android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="18dip"
+                  android:textColor ="@color/WHITE" android:layout_toRightOf="@+id/idCityIcon"
+                  android:gravity="center_vertical" android:text="@string/findLocation" android:textStyle="normal"/>
+        <RelativeLayout  android:layout_width="wrap_content"
+                         android:layout_height="fill_parent"
+                         android:layout_alignParentRight="true">
+            <View   android:id="@+id/viewSeparator" android:layout_width="2dip" android:layout_height="fill_parent"
+                    android:background="@color/TOP_BAR_SEPARATOR"/>
+            <ImageView
+                    android:id="@+id/citySubmitAccept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@null"
+                    android:src="@drawable/holo_dark1_navigation_accept"
+                    android:contentDescription="@string/findLocation"
+                    android:scaleType="centerInside"
+                    android:layout_toRightOf="@id/viewSeparator"
+                    />
+            <Button android:id="@+id/citySubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:textColor ="@color/WHITE"
+                    android:text="@string/done"
+                    android:background="@null"
+                    android:onClick="clickSubmit"
+                    android:layout_toRightOf="@id/viewSeparator"
+                    android:paddingLeft="32dip"
+                    android:paddingRight="16dip"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/TAB_BACKGROUND">
+        <ImageButton
+                android:id="@+id/currLocation"
+                android:layout_width="48dip"
+                android:layout_height="48dip"
+                android:onClick="findLocation"
+                android:src="@drawable/holo_light10_device_access_location_found"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/findLocation"
+                />
+        <EditText
+                android:id="@+id/editCity"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:hint="@string/enterCity"
+                android:paddingLeft="8dip"
+                android:ellipsize="end"
+                android:background="@drawable/edit_text_holo_light"
+                />
+    </LinearLayout>
+    <ListView android:layout_height="fill_parent"
+              android:layout_width="fill_parent"
+              android:id="@+id/cityListView"
+              android:background="@color/WHITE" />
+</LinearLayout>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ######################### NO TRANSLATION NECESSARY ######################### -->
+<string name="currmapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="mapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="debugmapskey">0ewCooT_fkQ6fRF-XYaZaPNrR6jB_UQNvzPiDXg</string>
+<string name="copyright">2012 PublicStuff</string>
+<string name="app_name">PublicStuff</string>
+
+<!-- ######################### TRANSLATION NECESSARY ######################### -->
+
+<string name="cityName" formatted="false">Cityname, ST</string>
+<string name="cityImageDescr" formatted="false">도시 이미지</string>
+<string name="arrowDescr" formatted="false">화살</string>
+<string name="stuffText" formatted="false">여러분의 페이지</string>
+<string name="exitButtonText" formatted="false">돌아가려면 클릭하십시오</string>
+<string name="exitRequestScreenDescr" formatted="false">새로운 요청 화면을 종료</string>
+<string name="exitProfileScreenDescr" formatted="false">프로필 화면 화면을 종료</string>
+<string name="middleButtonDescr" formatted="false">middleTabViewButton</string>
+<string name="select_request_type_title" formatted="false">요청 유형을 선택</string>
+
+<string name="main_no_items" formatted="false">표시 할 요청도</string>
+<string name="detailsLabel" formatted="false">세부</string>
+<string name="addressLabel" formatted="false">주소</string>
+<string name="addressPlaceholder"/>
+<string name="idLabel" formatted="false">신분증</string>
+<string name="idPlaceholder">12345</string>
+<string name="backNavigation" formatted="false">뒤로</string>
+<string name="cityIcon" formatted="false">시 아이콘</string>
+<string name="socialMedia" formatted="false">소셜 미디어를 통해 공유</string>
+<string name="requestInfo" formatted="false">정보</string>
+<string name="commentsPlaceholder" formatted="false">코멘트</string>
+<string name="locationPlaceholder"/>
+<string name="statusLabel" formatted="false">지위</string>
+<string name="statusPlaceholder"/>
+<string name="descriptionLabel" formatted="false">기술</string>
+<string name="descriptionPlaceholder"/>
+<string name="priorityLabel" formatted="false">우선</string>
+<string name="priorityPlaceholder"/>
+<string name="categoryLabel" formatted="false">범주</string>
+<string name="categoryPlaceholder"/>
+<string name="submittedByLabel" formatted="false">제출</string>
+<string name="submittedByPlaceholder"/>
+<string name="submittedOnLabel" formatted="false">에 제출</string>
+<string name="submittedOnPlaceholder"/>
+
+<string name="fav_activity_title" formatted="false">몫</string>
+<string name="allservice_activity_title" formatted="false">서비스를 찾기</string>
+
+<string name="nonetwork_msg" formatted="false">사용할 수있는 네트워크 없음</string>
+<string name="loading_please_wait_msg" formatted="false">로드 중 ... 잠시만 기다려주십시오</string>
+
+<string name="username" formatted="false">사용자 이름</string>
+<string name="password" formatted="false">암호</string>
+<string name="login" formatted="false">로그인</string>
+<string name="cancel" formatted="false">취소</string>
+<string name="loging_out" formatted="false">로그 아웃 ...</string>
+<string name="confirm" formatted="false">확인</string>
+<string name="delete_msg" formatted="false">해당 즐겨 찾기를 삭제 하시겠습니까?</string>
+<string name="send_email" formatted="false">메일 보내기</string>
+<string name="editview_info_text" formatted="false">이 목록에서 서비스를 추가 또는 제거합니다. 더 많은 서비스를 추가 할 수 위의 작업 표시 줄에서 더하기 기호를 누릅니다. 긴 삭제할 특정 서비스를 누르십시오. 일반보기로 돌아갑니다 뒤로 버튼을 누르세요.</string>
+
+<string name="external_memory_for_image" formatted="false">외부 메모리 카드는 이메일을 통해 이미지를 공유 존재한다</string>
+<string name="an_error_occured" formatted="false">오류가 발생했습니다 잠시 후 다시 시도해주세요</string>
+<string name="uploading_please_wait" formatted="false">업로드. 잠시 기다려주세요 ...</string>
+<string name="connecting_twitpic" formatted="false">TwitPic 연결 ...</string>
+<string name="posting_the_tweet" formatted="false">메시지를 게시 ...</string>
+<string name="successfully_posted" formatted="false">성공적으로 게시</string>
+<string name="title" formatted="false">이름</string>
+<string name="description" formatted="false">기술</string>
+<string name="image_attached" formatted="false">첨부 이미지</string>
+<string name="passwordConfirmation" formatted="false">새 암호 \n확인</string>
+<string name="titlePlaceholder" formatted="false">이름</string>
+<string name="notificationTextPlaceholder" formatted="false">누군가가 요청 당신이 만든 메모에 대해 답글을 달았습니다</string>
+<string name="timeAgoPlaceholder" formatted="false">6 개월 전</string>
+<string name="loading" formatted="false">요청 ...</string>
+ <string name="required">*</string>
+<string name="selectCity" formatted="false">기본 도시를 선택하세요</string>
+<string name="attachImage" formatted="false">이미지를 첨부</string>
+<string name="back" formatted="false">뒤로</string>
+<string name="createAccount" formatted="false">계정 만들기</string>
+<string name="cancelButton" formatted="false">취소</string>
+<string name="cityIconDesc" formatted="false">시 아이콘</string>
+<string name="filterRequests" formatted="false">필터 요청</string>
+<string name="confirmButton" formatted="false">확인</string>
+<string name="findLocation" formatted="false">당신의 위치 찾기</string>
+<string name="mySettings" formatted="false">내 설정</string>
+<string name="save" formatted="false">저장</string>
+<string name="newRequest" formatted="false">새 요청</string>
+<string name="forgotPassword" formatted="false">비밀번호를 잊으셨습니까</string>
+<string name="loginTitle" formatted="false">로그인</string>
+<string name="aboutPublicStuff" formatted="false">PublicStuff 정보</string>
+<string name="myStuff" formatted="false">여러분의</string>
+<string name="openSettings" formatted="false">열기 설정</string>
+<string name="done" formatted="false">끝난</string>
+<string name="fieldIsPublic" formatted="false">여기에 입력 한 정보는 공공에게 공개됩니다</string>
+<string name="enterAddress" formatted="false">주소를 입력합니다</string>
+<string name="post" formatted="false">POST</string>
+<string name="aboutPublicstuff" formatted="false">우리는 지방 정부가, 오픈 액세스, 그리고 대응하기 위해 노력하고 있습니다.</string>
+<string name="openMenu" formatted="false">열기 메뉴</string>
+<string name="searchCity" formatted="false">도시 검색</string>
+<string name="skip" formatted="false">건너 뛰기</string>
+<string name="list" formatted="false">명부</string>
+<string name="gallery" formatted="false">갱도</string>
+<string name="map" formatted="false">지도</string>
+<string name="termsConditions"><![CDATA[Terms & Conditions]]></string>
+<string name="email" formatted="false">이메일</string>
+<string name="aboutForgotPassword" formatted="false">귀하가 귀하의 비밀번호를 재설정 할 때, 당신은 당신에게 새 암호를 생성하는 방법에 대한 지침을 제공 PublicStuff에서 이메일이 발송됩니다. 일단 당신은 새로운 비밀번호로 로그인 해 주시기 그런 짓을했습니다.</string>
+<string name="enterCity" formatted="false">도시를 입력하세요</string>
+<string name="myProfile" formatted="false">내 프로필</string>
+<string name="firstName" formatted="false">이름</string>
+<string name="lastName" formatted="false">성</string>
+<string name="phone" formatted="false">전화</string>
+<string name="myLocations" formatted="false">내 위치</string>
+<string name="home" formatted="false">집</string>
+<string name="work" formatted="false">일</string>
+<string name="addressDefault" formatted="false">이 주소는 기본 위치로 사용할 수 있습니다</string>
+<string name="notifications" formatted="false">알림</string>
+<string name="emailMeWhen" formatted="false">제가 수행 할 때 요청 이메일로</string>
+<string name="emailReplies" formatted="false">내 게시물에 대한 답글을 이메일로 보내기</string>
+<string name="currentLocation" formatted="false">현재 위치</string>
+<string name="change" formatted="false">변화</string>
+<string name="logOut" formatted="false">로그 아웃</string>
+<string name="oldPassword" formatted="false">이전 암호</string>
+<string name="newPassword" formatted="false">새 암호</string>
+<string name="passwordLength" formatted="false">비밀번호는 6 자 이상이어야합니다</string>
+<string name="sorting" formatted="false">정렬</string>
+<string name="recent" formatted="false">최근</string>
+<string name="citySkyline" formatted="false">도시의 스카이 라인</string>
+<string name="mapInstructions" formatted="false">위치를 변경하기 위해지도를 이동 (정밀 확대)</string>
+<string name="createAccountDesc" formatted="false">, 추적 지원 계​​정 만들기 및 지역 사회의 요청에 댓글을 달아보세요.</string>
+<string name="privacyPolicy" formatted="false">개인 정보 보호 정책</string>
+<string name="aboutPublicstuffLong" formatted="false">우리는 당신이 물건 고정을 얻을 수 있도록 도와 혁신적인 CRM 소프트웨어 회사입니다! 모두 모바일과 웹 플랫폼 사용, 우리는 시정촌, 시설 및 대학 실시간으로 주민과 고객의 서비스 요청을 수신 할 수있는 포괄적 인 백엔드 CRM 시스템을 만들었습니다. 우리는 시정촌 개선 통신 채널과 증가 고객 만족과 매년 이상 360,000달러을 저장 도움이.</string>
+<string name="forgotPasswordButton" formatted="false">비밀번호를 잊으셨습니까?</string>
+<string name="questionsFeedback" formatted="false">질문과 의견에 보내기</string>
+<string name="emailPublicStuff">tech@publicstuff.com</string>
+
+<string name="about" formatted="false">약</string>
+<string name="aboutPublicStuffMain" formatted="false">요청 및 지원 도시의 문제와 그 문제가 해결되면 알림을받을!</string>
+<string name="status" formatted="false">지위</string>
+<string name="open" formatted="false">열기</string>
+<string name="filterBy" formatted="false">에 의해 필터</string>
+<string name="sortBy" formatted="false">정렬 기준</string>
+<string name="nearby" formatted="false">가까이에</string>
+<string name="types" formatted="false">유형</string>
+<string name="allRequestTypes" formatted="false">모든 요청 유형</string>
+<string name="dateRange" formatted="false">날짜 범위</string>
+<string name="startDate" formatted="false">시작 날짜</string>
+<string name="endDate" formatted="false">종료 날짜</string>
+<string name="redoSearch" formatted="false">여기에 검색 다시 실행</string>
+<string name="titleCaps" formatted="false">이름</string>
+<string name="flag" formatted="false">부적절한 콘텐츠로 신고</string>
+<string name="calculatingLocation" formatted="false">위치 계산</string>
+<string name="requestIsPrivate" formatted="false">요청이 비공개로 표시되었습니다</string>
+<string name="descriptionHint" formatted="false">설명 (선택 사항)</string>
+<string name="addComment" formatted="false">코멘트를 추가</string>
+<string name="send" formatted="false">보내다</string>
+
+<!-- notifier widget -->
+<string name="notifier" formatted="false">사용 가능한 업데이트합니다.</string>
+
+<!-- notification screen -->
+<string name="notificationComment" formatted="false">당신은 누군가에게 제출 요청에 댓글을 달았습니다</string>
+<string name="notificationReply" formatted="false">누군가가 요청 당신이 만든 메모에 대해 답글을 달았습니다</string>
+<string name="notificationStatus" formatted="false">요청의 상태는  %s에 업데이트되었습니다</string>
+
+<!-- citydashboard activity -->
+<string name="aboutapp" formatted="false">에 대한  %s의</string>
+<string name="mystuff" formatted="false">여러분의</string>
+<string name="aboutps" formatted="false">PublicStuff 정보</string>
+<string name="more" formatted="false">더</string>
+<string name="nearbyRequest" formatted="false">주변 요청</string>
+
+<!-- dialogs -->
+<string name="findingLocation" formatted="false">위치를 찾는 중 ...</string>
+<string name="getRequestList" formatted="false">요청 목록을 가져 오는 중 ...</string>
+<string name="ErrorPastTense" formatted="false">오류가 발생했습니다</string>
+<string name="ErrorInternet" formatted="false">인터넷 연결을 확인하고 다시 시도하십시오</string>
+<string name="OkButton" formatted="false">OK</string>
+<string name="CancelButton" formatted="false">취소</string>
+<string name="loadingDialog" formatted="false">로드 중입니다 ...</string>
+<string name="loginNow" formatted="false">로그인</string>
+<string name="pleaseLogin" formatted="false">도시를 수행하려면 로그인하세요</string>
+<string name="creatingAccount" formatted="false">계정을 만드는 중 ...</string>
+<string name="getcustomFields" formatted="false">사용자 정의 필드를 가져 오는 중 ...</string>
+<string name="bothFields" formatted="false">두 필드는 로그인이 필요합니다.</string>
+<string name="loggingIn" formatted="false">로그인 ...</string>
+<string name="locationFailGPS" formatted="false">위치를 찾는 동안 오류가 발생했습니다. 당신의 GPS 및 인터넷 연결을 확인하시기 바랍니다.</string>
+<string name="chooseLocation" formatted="false">위치를 선택하십시오</string>
+<string name="tryAgain" formatted="false">다시 시도</string>
+<string name="requestTypes" formatted="false">요청 유형을 가져 오는 중 ...</string>
+<string name="geoError" formatted="false">위치 정보 오류</string>
+<string name="googleGeoError" formatted="false">구글 위치 정보 서버는 선택한 위치에 대한 잘못된 데이터를 반환했습니다. 다시 위치를 선택하시기 바랍니다.</string>
+<string name="saveDraft" formatted="false">임시 보관함에 저장</string>
+<string name="deleteDraft" formatted="false">초안 삭제</string>
+<string name="exitSave" formatted="false">저장하지 않고 종료</string>
+<string name="resumeDraft" formatted="false">임시 보관함으로 돌아 가기</string>
+<string name="exitScreen" formatted="false">출구</string>
+<string name="loginDraft" formatted="false">당신은 임시 저장하려면 로그인해야합니다</string>
+<string name="titleRequired" formatted="false">제목이 필요합니다.</string>
+<string name="requestTypeRequired" formatted="false">요청 유형이 필요합니다.</string>
+<string name="errorLocationConfirm" formatted="false">사용자의 위치를​​ 확인하는 동안 오류가 발생했습니다. 아래의 주소 필드를 클릭하여 위치를 선택하십시오.</string>
+<string name="loginRequired" formatted="false">당신은 %s 에 요청을 제출하려면 로그인해야합니다</string>
+<string name="loadingProfile" formatted="false">프로필을로드하는 중 ...</string>
+<string name="requestDetails" formatted="false">요청 세부 정보를 가져 오는 중 ...</string>
+<string name="submitComment" formatted="false">코멘트를 제출하는 중 ...</string>
+<string name="endDateError" formatted="false">종료일은 시작일 이후 올해야합니다.</string>
+<string name="startDateSelect" formatted="false">시작 날짜 선택</string>
+<string name="endDateSelect" formatted="false">종료 날짜를 선택합니다</string>
+
+<!-- password alerts -->
+<string name="passwordMatch" formatted="false">새로운 비밀번호와 비밀번호 확인이 일치해야합니다.</string>
+<string name="passwordFormat" formatted="false">비밀번호에는 적어도 6 자이어야합니다.</string>
+<string name="passwordSecurity" formatted="false">당신은 이전 암호를 입력해야합니다.</string>
+<string name="savingSettings" formatted="false">설정을 저장하는 중 ...</string>
+
+<string name="thankyou" formatted="false">감사합니다</string>
+<string name="passwordUpdated" formatted="false">귀하의 비밀번호가 업데이트되었습니다</string>
+<string name="oldpasswordbad" formatted="false">이전 비밀번호가 잘못 입력</string>
+
+<!-- citieslist activity -->
+<string name="cityList" formatted="false">도시의 목록을 가져 오는 중 ...</string>
+<string name="locationFail" formatted="false">위치를 찾을 수 없습니다</string>
+<string name="locationFailVerbose" formatted="false">위치가 검색 기준과 일치하지</string>
+<string name="cityData" formatted="false">도시의 데이터를 가져 오는 중 ...</string>
+<string name="findCity" formatted="false">위치를 찾는 동안 오류가 발생했습니다. 도시를 입력하거나 아래 목록에서 선택하십시오.</string>
+<string name="selectCityTime" formatted="false">도시를 선택하세요</string>
+<string name="selectCityVerbose" formatted="false">계속하려면 목록에서 도시를 선택하십시오.</string>
+
+<!-- citydetails activity -->
+<string name="follow" formatted="false">따라</string>
+<string name="unfollow" formatted="false">관심 등록 해제</string>
+<string name="visitcityweb" formatted="false">시 웹 사이트를 방문하십시오</string>
+<string name="petitioncity" formatted="false">시 청원</string>
+<string name="petitionCityVerbose" formatted="false">PublicStuff를 사용하도록 도시를 청원하려면 로그인하세요</string>
+
+<!-- createaccount activity -->
+
+<string name="errorRequest" formatted="false">요청에 오류가 있습니다</string>
+<string name="citydescription" formatted="false">확인 %s 의 기본 도시</string>
+<string name="accountRequirement" formatted="false">모든 필드는 계정을 만들 필요합니다.</string>
+<string name="passwordCharacters" formatted="false">비밀번호 5 개 이상의 문자가 있어야합니다</string>
+
+<!-- customfields activity -->
+<string name="requiredField" formatted="false">%s 은 (는) 필수 입력란입니다</string>
+<string name="requestAddl" formatted="false">%1$s, %2$s 가 요청 유형 %3$s의 요청에 대해 추가 정보를 원하시면 %1$s.</string>
+<string name="submitrequestto" formatted="false">당신은 % s에 요청을 제출하려면 로그인해야합니다</string>
+<string name="submitRequest" formatted="false">요청을 제출 ...</string>
+<string name="loadingRequest" formatted="false">요청을로드 중 ...</string>
+
+<!-- Drafts activity -->
+<string name="myDrafts" formatted="false">내 임시 보관함</string>
+<string name="delDraft" formatted="false">초안 삭제</string>
+
+<!-- forgot password activity -->
+<string name="enterEmail" formatted="false">귀하의 이메일을 입력 해주십시오.</string>
+<string name="passReset" formatted="false">비밀번호를 재설정 ...</string>
+
+<!-- main activity -->
+<string name="unableCity" formatted="false">도시를 식별 할 수 없습니다</string>
+<string name="refreshps" formatted="false">새로 고침 위젯</string>
+<string name="widgetsUpdated" formatted="false">위젯은 업데이트</string>
+
+<!-- newrequest activity -->
+<string name="takePhoto" formatted="false">새로운 사진을보세요</string>
+<string name="selectPhoto" formatted="false">사진을 선택</string>
+<string name="deletePhoto" formatted="false">사진을 삭제</string>
+<string name="noCamera" formatted="false">장치에 감지 카메라가 없습니다</string>
+<string name="publicSelector" formatted="false">공공의</string>
+<string name="privateSelector" formatted="false">개인</string>
+<string name="setPrivacy" formatted="false">개인 정보 보호 정책 설정</string>
+<string name="publicComment" formatted="false">누구든지 보거나 댓글을 달 수 있습니다</string>
+<string name="privateComment" formatted="false">도시 이름 만 노동자 보거나 댓글을 달 수 있습니다</string>
+<string name="forcePrivate" formatted="false">선택한 요청 유형으로 새 요청은 개인이 될 수 있습니다.</string>
+
+<!-- newrequestmap activity -->
+<string name="addressUnavailable" formatted="false">사용할 수없는 주소입니다.</string>
+<string name="errorFindingLocation" formatted="false">위치를 찾는 동안 오류가 발생했습니다</string>
+<string name="addressBlankError" formatted="false">주소가 비워 둘 수 없습니다 하나를 입력하거나지도에서 위치를 선택하십시오</string>
+<string name="findingAddress" formatted="false">찾는 주소 ...</string>
+<string name="errorGeocodingLoc" formatted="false">오류 지오 코딩은 선택한 위치가 발생했습니다. 다시 시도하십시오.</string>
+<string name="addressVerify" formatted="false">확인 주소 ...</string>
+
+<!-- requestdetails activity -->
+<string name="pending" formatted="false">보류 중</string>
+<string name="anonymous" formatted="false">익명</string>
+<string name="followers" formatted="false">관심</string>
+<string name="comments" formatted="false">의견</string>
+<string name="requestResolved" formatted="false">요청이 해결되었습니다</string>
+<string name="requestError" formatted="false">원래 요청에 오류가 발생했습니다</string>
+<string name="requestNA" formatted="false">요청은 해당 더 이상 사용할 수 없습니다</string>
+<string name="makePubliclyVisible" formatted="false">이 정보가 공개합니다</string>
+<string name="reason" formatted="false">추리</string>
+<string name="elaborate" formatted="false">정교한</string>
+<string name="closeRequest" formatted="false">요청 닫기</string>
+<string name="submit" formatted="false">제출</string>
+<string name="makePrivate" formatted="false">요청을 비공개?</string>
+<string name="makePrivateMessage" formatted="false">당신은 개인에 서비스 요청을 설정 하시겠습니까? 이 작업은 실행 취소 할 수 없습니다.</string>
+
+<string name="statusSubmitted" formatted="false">제출</string>
+<string name="statusAcknowledged" formatted="false">승인</string>
+<string name="statusInProgress" formatted="false">진행 중</string>
+<string name="statusCompleted" formatted="false">완료</string>
+<string name="statusOther" formatted="false">다른</string>
+
+<string name="yes" formatted="false">예</string>
+<string name="no" formatted="false">아니</string>
+<string name="gettingComments" formatted="false">요청 댓글을 가져 오는 중 ...</string>
+<string name="loginToRequest" formatted="false">% s의 요청에 로그인하십시오</string>
+<string name="loginComment" formatted="false">당신은 코멘트하려면 로그인해야합니다</string>
+
+<string name="socialFacebook" formatted="false">페이스 북에 올리기</string>
+<string name="socialTwitter" formatted="false">트위터에 게시</string>
+<string name="socialEmail" formatted="false">이메일 보내기</string>
+<string name="shareRequest" formatted="false">공유 요청</string>
+<string name="addImage" formatted="false">이미지 추가</string>
+<string name="plsEnterComment" formatted="false">댓글을 입력하십시오.</string>
+
+<!-- RequestListFilter Activity -->
+<string name="sortRecent" formatted="false">최근</string>
+<string name="sortPopular" formatted="false">인기있는</string>
+<string name="statusOpen" formatted="false">열기</string>
+<string name="statusClosed" formatted="false">닫은</string>
+<string name="statusAll" formatted="false">모든</string>
+<string name="filterNearby" formatted="false">가까이에</string>
+<string name="filterMyRequests" formatted="false">내 요청</string>
+<string name="filterFollowedRequests" formatted="false">다음 요청</string>
+<string name="filterCommentedRequests" formatted="false">요청을 댓글을 달았습니다</string>
+<string name="filterVotedRequests" formatted="false">선정 요청</string>
+
+<string name="myNotifications" formatted="false">내 알림</string>
+
+<string name="requestTypeSelect" formatted="false">요청 유형을 선택</string>
+
+<!--  UserDetails Activity -->
+<string name="requestRank" formatted="false">당신은 %2$s에 제출 된 요청에 #%1$s입니다</string>
+<string name="commentRank" formatted="false">당신은 %2$s (으)로 댓글에 #%1$s입니다</string>
+<string name="following" formatted="false">다음의</string>
+<string name="upvoted" formatted="false">Upvoted</string>
+<string name="drafts" formatted="false">체커</string>
+<string name="notificationsChoice" formatted="false">알림</string>
+
+<!-- UserSettings Activity -->
+<string name="typeChangeStatus" formatted="false">변경 상태</string>
+<string name="typeIsClosed" formatted="false">문을 닫습니다</string>
+<string name="typeEmailMe" formatted="false">저를 이메일을 보내하지 마십시오</string>
+<string name="emailMeRequest" formatted="false">제가 수행 할 때 요청 이메일로</string>
+<string name="logOutWarning" formatted="false">당신이 로그 아웃 하시겠습니까? 당신이 저장 한 모든 요청 초안을 잃게됩니다.</string>
+<string name="usernameWarning" formatted="false">사용자 이름은 비워 둘 수 없습니다.</string>
+<string name="emailWarning" formatted="false">이메일은 비워 둘 수 없습니다.</string>
+<string name="settingsSaved" formatted="false">설정이 저장되었습니다</string>
+<string name="changesStatus" formatted="false">변경 상태</string>
+<string name="currentLanguage" formatted="false">현재 언어</string>
+<string name="selectLanguage" formatted="false">언어를 선택</string>
+<string name="changeCity" formatted="false">시 변경</string>
+
+<!-- Supported Languages -->
+<string name="frenchLanguageCanadian" formatted="false">프랑스어 (캐나다)</string>
+<string name="spanishLanguange" formatted="false">스페인어</string>
+
+<string name="arabicLanguage" formatted="false">아라비아 말</string>
+<string name="germanLanguage" formatted="false">독일의</string>
+<string name="greekLanguage" formatted="false">그리스의</string>
+<string name="englishLanguage" formatted="false">영어</string>
+<string name="spanishLanguage" formatted="false">스페인의</string>
+<string name="frenchLanguage" formatted="false">프랑스의</string>
+<string name="hindiLanguage" formatted="false">힌디 어</string>
+<string name="italianLanguage" formatted="false">이탈리아의</string>
+<string name="japaneseLanguage" formatted="false">일본어</string>
+<string name="koreanLanguage" formatted="false">한국의</string>
+<string name="polishLanguage" formatted="false">폴란드의</string>
+<string name="portugueseLanguage" formatted="false">포르투갈의</string>
+<string name="russianLanguage" formatted="false">러시아의</string>
+<string name="serbianLanguage" formatted="false">세르비아의</string>
+<string name="turkishLanguage" formatted="false">터키의</string>
+<string name="vietnameseLanguage" formatted="false">베트남의</string>
+<string name="chineseLanguage" formatted="false">중국의</string>
+
+<string name="languageUnavailable" formatted="false">이 장치에서 사용할 수 없습니다 언어</string>
+<!-- Terms & Conditions -->
+<string name="ts" formatted="false">이용 약관</string>
+
+</resources>

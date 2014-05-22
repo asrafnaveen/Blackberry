@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/multiviewroot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dip" >
+
+    <!--  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" > -->
+
+            <TextView
+                android:id="@+id/customFieldIsRequired"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:text="@string/required"
+                android:textColor="@color/ORANGE"
+                android:textSize="14dip"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/customFieldTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/customFieldCheckbox"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:text="@string/loading"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/customFieldIsRequired"
+                android:textSize="18dip" />
+        <!-- </LinearLayout> -->
+
+        <CheckBox
+            android:id="@+id/customFieldCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="-8dip"
+            android:layout_marginTop="-8dip"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingRight="36dip" />
+    <!-- </LinearLayout> -->
+
+    <TextView
+        android:id="@+id/customDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/fieldIsPublic"
+        android:textColor="@color/ORANGE"
+        android:layout_toLeftOf="@+id/customFieldCheckbox"
+        android:layout_below="@+id/customFieldTitle"
+        android:textSize="11dip"
+        android:textStyle="normal" />
+
+</RelativeLayout>

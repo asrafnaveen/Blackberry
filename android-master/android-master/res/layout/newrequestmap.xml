@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@color/TOP_BAR_BACKGROUND" >
+
+        <Button
+            android:id="@+id/commitLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:clickable="true"
+            android:onClick="commit"
+            android:text="@string/done"
+            android:textColor="@color/WHITE"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/requestSubmitAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/commitLocation"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/holo_dark1_navigation_accept" />
+
+        <View
+            android:id="@+id/viewSeparator"
+            android:layout_width="2dip"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/requestSubmitAccept"
+            android:background="@color/TOP_BAR_SEPARATOR" />
+
+        <ImageView
+            android:id="@+id/clearField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/viewSeparator"
+            android:onClick="clearAddress"
+            android:scaleType="centerInside"
+            android:src="@drawable/holo_dark1_navigation_cancel" />
+
+        <EditText
+            android:id="@+id/editLocation"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/clearField"
+            android:background="@drawable/edit_text_holo_dark"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/enterAddress"
+            android:paddingLeft="8dip"
+            android:paddingRight="16dip"
+            android:singleLine="true"
+            android:textColor="@color/WHITE"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >      
+<WebView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+        <!--
+         <bundle.android.maps.PSMapView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:apiKey="@string/currmapskey"
+            android:clickable="true"
+            />
+        -->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/TOP_BAR_BACKGROUND_TRANSPARENT"
+            android:gravity="center"
+            android:padding="4dip"
+            android:text="@string/mapInstructions"
+            android:textColor="@color/WHITE"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/chosenLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:contentDescription="@string/findLocation"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_map_pin_gray_shadow" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="16dip" >
+
+            <TextView
+                android:id="@+id/latLonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/TOP_BAR_BACKGROUND_TRANSPARENT"
+                android:gravity="center_vertical"
+                android:padding="4dip"
+                android:text="-45.789089, 123.003744"
+                android:textColor="@color/WHITE"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

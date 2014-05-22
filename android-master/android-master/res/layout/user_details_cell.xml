@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="horizontal" android:paddingRight="16dip" android:paddingTop="8dip"
+              android:paddingBottom="8dip" android:paddingLeft="8dip">
+    <ImageView
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:id="@+id/userListIcon"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_light_new_request"
+            android:gravity="center_vertical" android:paddingRight="8dip"/>
+    <TextView android:id="@+id/userListTitle"
+              android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="14dip"
+              android:gravity="center_vertical" android:text="My Requests" android:textStyle="bold" android:layout_weight="1"/>
+    <TextView android:id="@+id/userListCount"
+              android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="12dip"
+              android:gravity="center_vertical|right" android:text="1" android:textStyle="bold" android:layout_weight="1"
+            />
+</LinearLayout>

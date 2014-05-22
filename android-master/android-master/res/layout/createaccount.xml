@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/WHITE"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@color/TOP_BAR_BACKGROUND"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip" >
+
+        <ImageView
+            android:id="@+id/cityIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingLeft="8dip"
+            android:paddingRight="16dip"
+            android:src="@drawable/ic_dark_publicstuff_icon" />
+
+        <TextView
+            android:id="@+id/createAccountTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/cityIcon"
+            android:gravity="center_vertical"
+            android:text="@string/createAccount"
+            android:textColor="@color/WHITE"
+            android:textSize="18dip"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true" >
+
+            <View
+                android:id="@+id/viewSeparator"
+                android:layout_width="2dip"
+                android:layout_height="fill_parent"
+                android:background="@color/TOP_BAR_SEPARATOR" />
+
+            <ImageView
+                android:id="@+id/createAccountAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/viewSeparator"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/holo_dark1_navigation_accept" />
+
+            <Button
+                android:id="@+id/createAccountSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/viewSeparator"
+                android:background="@null"
+                android:clickable="true"
+                android:onClick="clickSubmit"
+                android:paddingLeft="32dip"
+                android:paddingRight="16dip"
+                android:text="DONE"
+                android:textColor="@color/WHITE"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/bottomSection"
+            android:layout_alignParentTop="true" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="32dip" >
+
+                <TextView
+                    android:id="@+id/createAccountDescription"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/createAccountDesc"
+                    android:textColor="@color/DARK_TEXT" />
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:background="@drawable/edit_text_holo_light"
+                    android:ellipsize="end"
+                    android:hint="@string/username"
+                    android:inputType="textNoSuggestions"
+                    android:padding="8dip"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:background="@drawable/edit_text_holo_light"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="8dip"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:background="@drawable/edit_text_holo_light"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="8dip"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="top"
+                    android:orientation="horizontal"
+                    android:padding="8dip" >
+
+                    <TextView
+                        android:id="@+id/defaultCityDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:text="Make CityName, ST my default city"
+                        android:textColor="@color/DARK_TEXT"
+                        android:textSize="16dip"
+                        android:textStyle="normal" />
+
+                    <CheckBox
+                        android:id="@+id/useCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:gravity="center_vertical"
+                        android:paddingRight="36dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottomSection"
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/ORANGE" >
+
+            <Button
+                android:id="@+id/skip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:onClick="skip"
+                android:text="@string/skip"
+                android:textColor="@color/WHITE"
+                android:textSize="16dip"
+                android:textStyle="normal" />
+
+            <View
+                android:id="@+id/viewSeparator1"
+                android:layout_width="2dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="8dip"
+                android:layout_marginTop="8dip"
+                android:background="@color/WHITE" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="login"
+                android:text="@string/login"
+                android:textColor="@color/WHITE"
+                android:textSize="16dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

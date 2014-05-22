@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ######################### NO TRANSLATION NECESSARY ######################### -->
+<string name="currmapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="mapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="debugmapskey">0ewCooT_fkQ6fRF-XYaZaPNrR6jB_UQNvzPiDXg</string>
+<string name="copyright">2012 PublicStuff</string>
+<string name="app_name">PublicStuff</string>
+
+<!-- ######################### TRANSLATION NECESSARY ######################### -->
+
+<string name="cityName" formatted="false">Nome della città, ST</string>
+<string name="cityImageDescr" formatted="false">Città Immagine</string>
+<string name="arrowDescr" formatted="false">Freccia</string>
+<string name="stuffText" formatted="false">My Stuff Pagina</string>
+<string name="exitButtonText" formatted="false">Clicca qui per tornare</string>
+<string name="exitRequestScreenDescr" formatted="false">Esci da schermo Nuova richiesta</string>
+<string name="exitProfileScreenDescr" formatted="false">Uscite Screen profilo</string>
+<string name="middleButtonDescr" formatted="false">middleTabViewButton</string>
+<string name="select_request_type_title" formatted="false">Scegli un tipo di richiesta</string>
+
+<string name="main_no_items" formatted="false">Nessuna richiesta da visualizzare</string>
+<string name="detailsLabel" formatted="false">DETTAGLI</string>
+<string name="addressLabel" formatted="false">Indirizzo</string>
+<string name="addressPlaceholder"/>
+<string name="idLabel" formatted="false">ID</string>
+<string name="idPlaceholder">12345</string>
+<string name="backNavigation" formatted="false">Indietro</string>
+<string name="cityIcon" formatted="false">Città Icona</string>
+<string name="socialMedia" formatted="false">Condividi attraverso i social media</string>
+<string name="requestInfo" formatted="false">Info</string>
+<string name="commentsPlaceholder" formatted="false">Commenti</string>
+<string name="locationPlaceholder"/>
+<string name="statusLabel" formatted="false">Stato</string>
+<string name="statusPlaceholder"/>
+<string name="descriptionLabel" formatted="false">Descrizione</string>
+<string name="descriptionPlaceholder"/>
+<string name="priorityLabel" formatted="false">Priorità</string>
+<string name="priorityPlaceholder"/>
+<string name="categoryLabel" formatted="false">Categoria</string>
+<string name="categoryPlaceholder"/>
+<string name="submittedByLabel" formatted="false">Inviato da</string>
+<string name="submittedByPlaceholder"/>
+<string name="submittedOnLabel" formatted="false">Inviato il</string>
+<string name="submittedOnPlaceholder"/>
+
+<string name="fav_activity_title" formatted="false">Quota</string>
+<string name="allservice_activity_title" formatted="false">Cerca un servizio</string>
+
+<string name="nonetwork_msg" formatted="false">Nessuna rete disponibile</string>
+<string name="loading_please_wait_msg" formatted="false">Caricamento in corso, attendere prego ...</string>
+
+<string name="username" formatted="false">Nome utente</string>
+<string name="password" formatted="false">Password</string>
+<string name="login" formatted="false">Accesso</string>
+<string name="cancel" formatted="false">Annullare</string>
+<string name="loging_out" formatted="false">Disconnessione ...</string>
+<string name="confirm" formatted="false">Confermare</string>
+<string name="delete_msg" formatted="false">Eliminare questo preferito?</string>
+<string name="send_email" formatted="false">Inviare e-mail</string>
+<string name="editview_info_text" formatted="false">Aggiungere o rimuovere servizi in questo elenco. Toccare il segno più dalla barra delle azioni di cui sopra per aggiungere altri servizi. Premere a lungo un particolare servizio da eliminare. Toccare il pulsante Indietro per tornare alla visualizzazione normale.</string>
+
+<string name="external_memory_for_image" formatted="false">Scheda di memoria esterna dovrebbe essere presente per condividere l\'immagine tramite e-mail</string>
+<string name="an_error_occured" formatted="false">È verificato un errore, riprova più tardi</string>
+<string name="uploading_please_wait" formatted="false">Caricamento. Si prega di attendere ...</string>
+<string name="connecting_twitpic" formatted="false">Collegamento TwitPic ...</string>
+<string name="posting_the_tweet" formatted="false">Invio il messaggio ...</string>
+<string name="successfully_posted" formatted="false">Inviato con successo</string>
+<string name="title" formatted="false">Titolo</string>
+<string name="description" formatted="false">Descrizione</string>
+<string name="image_attached" formatted="false">Immagine allegata</string>
+<string name="passwordConfirmation" formatted="false">Nuova password \nConfirmation</string>
+<string name="titlePlaceholder" formatted="false">Titolo</string>
+<string name="notificationTextPlaceholder" formatted="false">Qualcuno ha risposto a un commento che hai fatto su richiesta</string>
+<string name="timeAgoPlaceholder" formatted="false">6 mesi fa</string>
+<string name="loading" formatted="false">Richiesta ...</string>
+ <string name="required">*</string>
+<string name="selectCity" formatted="false">SELEZIONA LA CITTA DI DEFAULT</string>
+<string name="attachImage" formatted="false">Allega un\'immagine</string>
+<string name="back" formatted="false">Indietro</string>
+<string name="createAccount" formatted="false">Crea un account</string>
+<string name="cancelButton" formatted="false">Annullare</string>
+<string name="cityIconDesc" formatted="false">Città Icona</string>
+<string name="filterRequests" formatted="false">Richieste Filtro</string>
+<string name="confirmButton" formatted="false">Confermare</string>
+<string name="findLocation" formatted="false">Trova la tua posizione</string>
+<string name="mySettings" formatted="false">Le mie impostazioni</string>
+<string name="save" formatted="false">Salvare</string>
+<string name="newRequest" formatted="false">Nuova richiesta</string>
+<string name="forgotPassword" formatted="false">Hai dimenticato la password</string>
+<string name="loginTitle" formatted="false">Accesso</string>
+<string name="aboutPublicStuff" formatted="false">Chi PublicStuff</string>
+<string name="myStuff" formatted="false">My Stuff</string>
+<string name="openSettings" formatted="false">Aprire Impostazioni</string>
+<string name="done" formatted="false">Fatto</string>
+<string name="fieldIsPublic" formatted="false">Le informazioni immesse qui saranno visibili al pubblico</string>
+<string name="enterAddress" formatted="false">Inserisci l\'indirizzo</string>
+<string name="post" formatted="false">POST</string>
+<string name="aboutPublicstuff" formatted="false">Stiamo lavorando per rendere i governi locali aperti, accessibili, e reattivo.</string>
+<string name="openMenu" formatted="false">Apri il menu</string>
+<string name="searchCity" formatted="false">Cerca una città</string>
+<string name="skip" formatted="false">Saltare</string>
+<string name="list" formatted="false">Elenco</string>
+<string name="gallery" formatted="false">Galleria</string>
+<string name="map" formatted="false">Mappa</string>
+<string name="termsConditions"><![CDATA[Terms & Conditions]]></string>
+<string name="email" formatted="false">E-mail</string>
+<string name="aboutForgotPassword" formatted="false">Quando si reimposta la password, si riceverà un e-mail da PublicStuff con le istruzioni su come creare una nuova password. Una volta che avete fatto questo, sentitevi liberi di effettuare il login con la nuova password.</string>
+<string name="enterCity" formatted="false">Inserisci la città</string>
+<string name="myProfile" formatted="false">Il mio profilo</string>
+<string name="firstName" formatted="false">Nome</string>
+<string name="lastName" formatted="false">Cognome</string>
+<string name="phone" formatted="false">Telefono</string>
+<string name="myLocations" formatted="false">Mie Posizioni</string>
+<string name="home" formatted="false">Casa</string>
+<string name="work" formatted="false">Lavoro</string>
+<string name="addressDefault" formatted="false">Questi indirizzi possono essere utilizzati come percorsi predefiniti</string>
+<string name="notifications" formatted="false">Notifiche</string>
+<string name="emailMeWhen" formatted="false">Inviami una email quando una richiesta seguo</string>
+<string name="emailReplies" formatted="false">Invia le risposte ai miei post</string>
+<string name="currentLocation" formatted="false">Posizione attuale</string>
+<string name="change" formatted="false">Cambiare</string>
+<string name="logOut" formatted="false">Esci</string>
+<string name="oldPassword" formatted="false">Vecchia password</string>
+<string name="newPassword" formatted="false">Nuova password</string>
+<string name="passwordLength" formatted="false">La password deve essere di almeno 6 caratteri</string>
+<string name="sorting" formatted="false">Ordinamento</string>
+<string name="recent" formatted="false">Recente</string>
+<string name="citySkyline" formatted="false">City Skyline</string>
+<string name="mapInstructions" formatted="false">Sposta la mappa a cambiare posizione (zoom avanti per la precisione)</string>
+<string name="createAccountDesc" formatted="false">Crea un account per tenere traccia, supporto, e commentare sulle richieste nella vostra comunità.</string>
+<string name="privacyPolicy" formatted="false">Informativa sulla privacy</string>
+<string name="aboutPublicstuffLong" formatted="false">Siamo un innovativo società di software CRM che consente di ottenere fisso roba! Con entrambe le piattaforme mobile e web, abbiamo creato un completo sistema di CRM che permette di backend comuni, le strutture e le università di ricevere le richieste di servizio dai loro residenti e clienti in tempo reale. Abbiamo aiutato i Comuni a risparmiare più di 360 mila dollari l\'anno con i canali di comunicazione migliori e maggiore soddisfazione del cliente.</string>
+<string name="forgotPasswordButton" formatted="false">Hai dimenticato la password?</string>
+<string name="questionsFeedback" formatted="false">Invia domande e commenti a</string>
+<string name="emailPublicStuff">tech@publicstuff.com</string>
+
+<string name="about" formatted="false">Circa</string>
+<string name="aboutPublicStuffMain" formatted="false">Questioni di richiesta e di sostegno nella vostra città e ricevere una notifica quando sono fissati!</string>
+<string name="status" formatted="false">Stato</string>
+<string name="open" formatted="false">Aperto</string>
+<string name="filterBy" formatted="false">Filtra per</string>
+<string name="sortBy" formatted="false">Ordina per</string>
+<string name="nearby" formatted="false">Nelle vicinanze</string>
+<string name="types" formatted="false">Tipi</string>
+<string name="allRequestTypes" formatted="false">Tutti i tipi di Richiesta</string>
+<string name="dateRange" formatted="false">Intervallo di date</string>
+<string name="startDate" formatted="false">Data di inizio</string>
+<string name="endDate" formatted="false">Data di fine</string>
+<string name="redoSearch" formatted="false">Ripeti cercare</string>
+<string name="titleCaps" formatted="false">Titolo</string>
+<string name="flag" formatted="false">Segnala come inappropriato</string>
+<string name="calculatingLocation" formatted="false">Calcolo Posizione</string>
+<string name="requestIsPrivate" formatted="false">La richiesta è stata contrassegnati come privati</string>
+<string name="descriptionHint" formatted="false">Descrizione (Opzionale)</string>
+<string name="addComment" formatted="false">Aggiungi un commento</string>
+<string name="send" formatted="false">Inviare</string>
+
+<!-- notifier widget -->
+<string name="notifier" formatted="false">Aggiornamento disponibile.</string>
+
+<!-- notification screen -->
+<string name="notificationComment" formatted="false">Qualcuno ha commentato su una richiesta che hai inviato</string>
+<string name="notificationReply" formatted="false">Qualcuno ha risposto a un commento che hai fatto su richiesta</string>
+<string name="notificationStatus" formatted="false">Lo stato della richiesta è stato aggiornato a %s</string>
+
+<!-- citydashboard activity -->
+<string name="aboutapp" formatted="false">Informazioni su %s</string>
+<string name="mystuff" formatted="false">My Stuff</string>
+<string name="aboutps" formatted="false">Chi PublicStuff</string>
+<string name="more" formatted="false">Di più</string>
+<string name="nearbyRequest" formatted="false">Richieste nelle vicinanze</string>
+
+<!-- dialogs -->
+<string name="findingLocation" formatted="false">Ricerca Location ...</string>
+<string name="getRequestList" formatted="false">Come elenco di richieste ...</string>
+<string name="ErrorPastTense" formatted="false">Si è verificato un errore</string>
+<string name="ErrorInternet" formatted="false">Verifica la tua connessione Internet e riprova</string>
+<string name="OkButton" formatted="false">Bene</string>
+<string name="CancelButton" formatted="false">Annullare</string>
+<string name="loadingDialog" formatted="false">Caricamento in corso ...</string>
+<string name="loginNow" formatted="false">Accesso</string>
+<string name="pleaseLogin" formatted="false">Effettua il login per seguire la tua città</string>
+<string name="creatingAccount" formatted="false">Creazione di account ...</string>
+<string name="getcustomFields" formatted="false">Come campi personalizzati ...</string>
+<string name="bothFields" formatted="false">Entrambi i campi sono obbligatori per effettuare il login.</string>
+<string name="loggingIn" formatted="false">Accesso in ...</string>
+<string name="locationFailGPS" formatted="false">Si è verificato un errore di individuare la propria posizione. Si prega di controllare il GPS e la connettività internet.</string>
+<string name="chooseLocation" formatted="false">Scegli una località</string>
+<string name="tryAgain" formatted="false">Riprovare</string>
+<string name="requestTypes" formatted="false">Come tipi di richiesta ...</string>
+<string name="geoError" formatted="false">Geolocalizzazione errore</string>
+<string name="googleGeoError" formatted="false">Il server di geolocalizzazione di Google restituito dati non validi sulla posizione scelta. Si prega di provare a scegliere la posizione di nuovo.</string>
+<string name="saveDraft" formatted="false">Salva bozza</string>
+<string name="deleteDraft" formatted="false">Elimina Progetto</string>
+<string name="exitSave" formatted="false">Esci senza salvare</string>
+<string name="resumeDraft" formatted="false">Torna a redigere</string>
+<string name="exitScreen" formatted="false">Uscita</string>
+<string name="loginDraft" formatted="false">Devi essere registrato per salvare bozze</string>
+<string name="titleRequired" formatted="false">Un titolo è richiesto.</string>
+<string name="requestTypeRequired" formatted="false">Un tipo di richiesta è necessario.</string>
+<string name="errorLocationConfirm" formatted="false">Si è verificato un errore che conferma la propria posizione. Si prega di selezionare una posizione, fare clic sul campo qui sotto.</string>
+<string name="loginRequired" formatted="false">Devi essere registrato per inviare una richiesta a %s</string>
+<string name="loadingProfile" formatted="false">Caricando il tuo profilo ...</string>
+<string name="requestDetails" formatted="false">Ottenere dettagli della richiesta ...</string>
+<string name="submitComment" formatted="false">Invio del commento ...</string>
+<string name="endDateError" formatted="false">La data di fine deve essere successiva alla data di inizio.</string>
+<string name="startDateSelect" formatted="false">Seleziona Data di inizio</string>
+<string name="endDateSelect" formatted="false">Seleziona Data di fine</string>
+
+<!-- password alerts -->
+<string name="passwordMatch" formatted="false">La nuova password e la conferma devono coincidere.</string>
+<string name="passwordFormat" formatted="false">La password deve essere di almeno sei caratteri.</string>
+<string name="passwordSecurity" formatted="false">È necessario immettere la vecchia password.</string>
+<string name="savingSettings" formatted="false">Salvataggio delle impostazioni ...</string>
+
+<string name="thankyou" formatted="false">Grazie</string>
+<string name="passwordUpdated" formatted="false">La tua password è stata aggiornata</string>
+<string name="oldpasswordbad" formatted="false">Vecchia password inseriti in modo errato</string>
+
+<!-- citieslist activity -->
+<string name="cityList" formatted="false">Ottenere la lista La città ...</string>
+<string name="locationFail" formatted="false">Impossibile trovare la posizione</string>
+<string name="locationFailVerbose" formatted="false">Non ci sono luoghi corrisponde ai tuoi criteri di ricerca</string>
+<string name="cityData" formatted="false">Ottenere i dati della città ...</string>
+<string name="findCity" formatted="false">Si è verificato un errore di individuare la propria posizione. Inserisci una città o seleziona dalla lista qui sotto.</string>
+<string name="selectCityTime" formatted="false">Seleziona una città</string>
+<string name="selectCityVerbose" formatted="false">Si prega di selezionare una città nella lista per continuare.</string>
+
+<!-- citydetails activity -->
+<string name="follow" formatted="false">Seguire</string>
+<string name="unfollow" formatted="false">Unfollow</string>
+<string name="visitcityweb" formatted="false">Visita il sito web della città</string>
+<string name="petitioncity" formatted="false">Petizione Città</string>
+<string name="petitionCityVerbose" formatted="false">Effettua il login per presentare una petizione tua città per utilizzare PublicStuff</string>
+
+<!-- createaccount activity -->
+
+<string name="errorRequest" formatted="false">Errore nella richiesta</string>
+<string name="citydescription" formatted="false">Fai %s mia città predefinita</string>
+<string name="accountRequirement" formatted="false">Tutti i campi sono necessari per creare un account.</string>
+<string name="passwordCharacters" formatted="false">La password deve avere più di 5 caratteri</string>
+
+<!-- customfields activity -->
+<string name="requiredField" formatted="false">%s è un campo obbligatorio</string>
+<string name="requestAddl" formatted="false">%1$s, %2$s desiderate ulteriori informazioni per le richieste con il tipo di richiesta %3$s.</string>
+<string name="submitrequestto" formatted="false">Devi essere registrato per inviare una richiesta a %s</string>
+<string name="submitRequest" formatted="false">Invio richiesta in corso ...</string>
+<string name="loadingRequest" formatted="false">La richiesta di caricamento ...</string>
+
+<!-- Drafts activity -->
+<string name="myDrafts" formatted="false">Le mie Bozze</string>
+<string name="delDraft" formatted="false">Elimina Progetto</string>
+
+<!-- forgot password activity -->
+<string name="enterEmail" formatted="false">Inserisci il tuo indirizzo email.</string>
+<string name="passReset" formatted="false">Reimpostazione password ...</string>
+
+<!-- main activity -->
+<string name="unableCity" formatted="false">Impossibile identificare città</string>
+<string name="refreshps" formatted="false">Aggiorna Widgets</string>
+<string name="widgetsUpdated" formatted="false">Widget Aggiornato</string>
+
+<!-- newrequest activity -->
+<string name="takePhoto" formatted="false">Prendere nuova foto</string>
+<string name="selectPhoto" formatted="false">Selezionare Foto</string>
+<string name="deletePhoto" formatted="false">Elimina foto</string>
+<string name="noCamera" formatted="false">Non ci sono telecamere rilevate sul dispositivo</string>
+<string name="publicSelector" formatted="false">Pubblico</string>
+<string name="privateSelector" formatted="false">Privato</string>
+<string name="setPrivacy" formatted="false">Imposta sulla privacy</string>
+<string name="publicComment" formatted="false">Chiunque può visualizzare o commento</string>
+<string name="privateComment" formatted="false">Lavoratori unica città possono visualizzare o commentare</string>
+<string name="forcePrivate" formatted="false">Nuove richieste con il tipo di richiesta scelto può essere solo privata.</string>
+
+<!-- newrequestmap activity -->
+<string name="addressUnavailable" formatted="false">Indirizzo non disponibile.</string>
+<string name="errorFindingLocation" formatted="false">Errore di individuare la propria posizione</string>
+<string name="addressBlankError" formatted="false">Indirizzo non può essere vuoto, inserite una o scegliere una località sulla mappa</string>
+<string name="findingAddress" formatted="false">Indirizzo Ricerca di ...</string>
+<string name="errorGeocodingLoc" formatted="false">Si è verificato un errore geocodifica posizione desiderata. Si prega di riprovare.</string>
+<string name="addressVerify" formatted="false">Indirizzo Verifica ...</string>
+
+<!-- requestdetails activity -->
+<string name="pending" formatted="false">In attesa di</string>
+<string name="anonymous" formatted="false">Anonimo</string>
+<string name="followers" formatted="false">Seguito</string>
+<string name="comments" formatted="false">COMMENTI</string>
+<string name="requestResolved" formatted="false">La richiesta è stata risolta</string>
+<string name="requestError" formatted="false">C\'è stato un errore nella richiesta originale</string>
+<string name="requestNA" formatted="false">La richiesta non è più applicabile</string>
+<string name="makePubliclyVisible" formatted="false">Affinché tali informazioni siano visibili</string>
+<string name="reason" formatted="false">Ragionamento</string>
+<string name="elaborate" formatted="false">Elaborare</string>
+<string name="closeRequest" formatted="false">Chiudere Richiesta</string>
+<string name="submit" formatted="false">Presentare</string>
+<string name="makePrivate" formatted="false">Fai la richiesta privata?</string>
+<string name="makePrivateMessage" formatted="false">Vuoi impostare la richiesta di servizio a privati? Questo non può essere annullata.</string>
+
+<string name="statusSubmitted" formatted="false">Inviato</string>
+<string name="statusAcknowledged" formatted="false">Riconosciuto</string>
+<string name="statusInProgress" formatted="false">In Progress</string>
+<string name="statusCompleted" formatted="false">Completato</string>
+<string name="statusOther" formatted="false">Altro</string>
+
+<string name="yes" formatted="false">Sì</string>
+<string name="no" formatted="false">No</string>
+<string name="gettingComments" formatted="false">Come commenti richiesta ...</string>
+<string name="loginToRequest" formatted="false">Effettua il login per %s una richiesta</string>
+<string name="loginComment" formatted="false">Devi essere loggato per commentare</string>
+
+<string name="socialFacebook" formatted="false">Condividi con Facebook</string>
+<string name="socialTwitter" formatted="false">Pubblica su Twitter</string>
+<string name="socialEmail" formatted="false">Invia una e-mail</string>
+<string name="shareRequest" formatted="false">Richiesta parti</string>
+<string name="addImage" formatted="false">Aggiungi immagine</string>
+<string name="plsEnterComment" formatted="false">Inserisci un commento.</string>
+
+<!-- RequestListFilter Activity -->
+<string name="sortRecent" formatted="false">Recente</string>
+<string name="sortPopular" formatted="false">Popolare</string>
+<string name="statusOpen" formatted="false">Aperto</string>
+<string name="statusClosed" formatted="false">Chiuso</string>
+<string name="statusAll" formatted="false">Tutti</string>
+<string name="filterNearby" formatted="false">Nelle vicinanze</string>
+<string name="filterMyRequests" formatted="false">Richieste</string>
+<string name="filterFollowedRequests" formatted="false">Richieste che segui</string>
+<string name="filterCommentedRequests" formatted="false">Commentato Richieste</string>
+<string name="filterVotedRequests" formatted="false">Richieste Voted</string>
+
+<string name="myNotifications" formatted="false">Le mie notifiche</string>
+
+<string name="requestTypeSelect" formatted="false">Selezionare un tipo di richiesta</string>
+
+<!--  UserDetails Activity -->
+<string name="requestRank" formatted="false">Siete #%1$s nelle richieste presentate a%2$s</string>
+<string name="commentRank" formatted="false">Siete #%1$s in osservazioni presentate a %2$s</string>
+<string name="following" formatted="false">Seguito</string>
+<string name="upvoted" formatted="false">Upvoted</string>
+<string name="drafts" formatted="false">Dama</string>
+<string name="notificationsChoice" formatted="false">Notifiche</string>
+
+<!-- UserSettings Activity -->
+<string name="typeChangeStatus" formatted="false">Cambiamenti di stato</string>
+<string name="typeIsClosed" formatted="false">È chiusa</string>
+<string name="typeEmailMe" formatted="false">Non mi e-mail</string>
+<string name="emailMeRequest" formatted="false">Inviami una email quando una richiesta seguo</string>
+<string name="logOutWarning" formatted="false">Sei sicuro di voler uscire? Si perderà qualsiasi bozze richiesta è stata salvata.</string>
+<string name="usernameWarning" formatted="false">Nome utente non può essere vuoto.</string>
+<string name="emailWarning" formatted="false">E-mail non può essere vuoto.</string>
+<string name="settingsSaved" formatted="false">Le impostazioni sono state salvate</string>
+<string name="changesStatus" formatted="false">Cambiamenti di stato</string>
+<string name="currentLanguage" formatted="false">LINGUA CORRENTE</string>
+<string name="selectLanguage" formatted="false">Scegli la lingua</string>
+<string name="changeCity" formatted="false">Cambia Città</string>
+
+<!-- Supported Languages -->
+<string name="frenchLanguageCanadian" formatted="false">Francese (Canada)</string>
+<string name="spanishLanguange" formatted="false">Español</string>
+
+<string name="arabicLanguage" formatted="false">Arabo</string>
+<string name="germanLanguage" formatted="false">Tedesco</string>
+<string name="greekLanguage" formatted="false">Greco</string>
+<string name="englishLanguage" formatted="false">Inglese</string>
+<string name="spanishLanguage" formatted="false">Spagnolo</string>
+<string name="frenchLanguage" formatted="false">Francese</string>
+<string name="hindiLanguage" formatted="false">Hindi</string>
+<string name="italianLanguage" formatted="false">Italiano</string>
+<string name="japaneseLanguage" formatted="false">Giapponese</string>
+<string name="koreanLanguage" formatted="false">Coreano</string>
+<string name="polishLanguage" formatted="false">Polacco</string>
+<string name="portugueseLanguage" formatted="false">Portoghese</string>
+<string name="russianLanguage" formatted="false">Russo</string>
+<string name="serbianLanguage" formatted="false">Serbo</string>
+<string name="turkishLanguage" formatted="false">Turco</string>
+<string name="vietnameseLanguage" formatted="false">Vietnamita</string>
+<string name="chineseLanguage" formatted="false">Cinese</string>
+
+<string name="languageUnavailable" formatted="false">Lingua non disponibile su questo dispositivo</string>
+<!-- Terms & Conditions -->
+<string name="ts" formatted="false">Termini e condizioni</string>
+
+</resources>

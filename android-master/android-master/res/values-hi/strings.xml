@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ######################### NO TRANSLATION NECESSARY ######################### -->
+<string name="currmapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="mapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="debugmapskey">0ewCooT_fkQ6fRF-XYaZaPNrR6jB_UQNvzPiDXg</string>
+<string name="copyright">2012 PublicStuff</string>
+<string name="app_name">PublicStuff</string>
+
+<!-- ######################### TRANSLATION NECESSARY ######################### -->
+
+<string name="cityName" formatted="false">Cityname, अनुसूचित जनजाति</string>
+<string name="cityImageDescr" formatted="false">शहर छवि</string>
+<string name="arrowDescr" formatted="false">तीर</string>
+<string name="stuffText" formatted="false">मेरी सामग्री पृष्ठ</string>
+<string name="exitButtonText" formatted="false">पर लौटने के लिए क्लिक करें</string>
+<string name="exitRequestScreenDescr" formatted="false">नया अनुरोध स्क्रीन से बाहर निकलें</string>
+<string name="exitProfileScreenDescr" formatted="false">प्रोफ़ाइल स्क्रीन से बाहर निकलें</string>
+<string name="middleButtonDescr" formatted="false">middleTabViewButton</string>
+<string name="select_request_type_title" formatted="false">अनुरोध प्रकार चुनें</string>
+
+<string name="main_no_items" formatted="false">प्रदर्शन के लिए कोई अनुरोधों</string>
+<string name="detailsLabel" formatted="false">विवरण</string>
+<string name="addressLabel" formatted="false">पता</string>
+<string name="addressPlaceholder"/>
+<string name="idLabel" formatted="false">आईडी</string>
+<string name="idPlaceholder">12345</string>
+<string name="backNavigation" formatted="false">वापस</string>
+<string name="cityIcon" formatted="false">शहर आइकन</string>
+<string name="socialMedia" formatted="false">सामाजिक मीडिया के माध्यम से साझा करें</string>
+<string name="requestInfo" formatted="false">जानकारी</string>
+<string name="commentsPlaceholder" formatted="false">टिप्पणियां</string>
+<string name="locationPlaceholder"/>
+<string name="statusLabel" formatted="false">हैसियत</string>
+<string name="statusPlaceholder"/>
+<string name="descriptionLabel" formatted="false">विवरण</string>
+<string name="descriptionPlaceholder"/>
+<string name="priorityLabel" formatted="false">प्राथमिकता</string>
+<string name="priorityPlaceholder"/>
+<string name="categoryLabel" formatted="false">श्रेणी</string>
+<string name="categoryPlaceholder"/>
+<string name="submittedByLabel" formatted="false">द्वारा प्रस्तुत</string>
+<string name="submittedByPlaceholder"/>
+<string name="submittedOnLabel" formatted="false">पर पोस्ट किया गया</string>
+<string name="submittedOnPlaceholder"/>
+
+<string name="fav_activity_title" formatted="false">शेयर</string>
+<string name="allservice_activity_title" formatted="false">एक सेवा</string>
+
+<string name="nonetwork_msg" formatted="false">उपलब्ध नहीं नेटवर्क</string>
+<string name="loading_please_wait_msg" formatted="false">लोड हो रहा है, कृपया प्रतीक्षा करें ...</string>
+
+<string name="username" formatted="false">प्रयोक्ता नाम</string>
+<string name="password" formatted="false">पासवर्ड</string>
+<string name="login" formatted="false">लॉगिन</string>
+<string name="cancel" formatted="false">रद्द करें</string>
+<string name="loging_out" formatted="false">बाहर प्रवेश कर रहा है ...</string>
+<string name="confirm" formatted="false">की पुष्टि</string>
+<string name="delete_msg" formatted="false">इस पसंदीदा को हटाना चाहते हैं?</string>
+<string name="send_email" formatted="false">मेल भेजें</string>
+<string name="editview_info_text" formatted="false">इस सूची में जोड़ें या निकालें. कार्रवाई की पट्टी ऊपर से प्लस पर हस्ताक्षर ठोकर अधिक सेवाओं को जोड़ने के लिए. लंबे समय के लिए एक विशेष सेवा हटाएँ दबाएँ. वापस करने के लिए वापस सामान्य देखने के लिए जाने के बटन टैप.</string>
+
+<string name="external_memory_for_image" formatted="false">बाहरी मेमोरी कार्ड ईमेल के माध्यम से छवि को साझा करने के लिए उपस्थित होना चाहिए</string>
+<string name="an_error_occured" formatted="false">एक त्रुटि हुई है, कृपया बाद में पुन: प्रयास करें</string>
+<string name="uploading_please_wait" formatted="false">अपलोड. कृपया प्रतीक्षा करें ...</string>
+<string name="connecting_twitpic" formatted="false">TwitPic कनेक्ट कर रहा है ...</string>
+<string name="posting_the_tweet" formatted="false">संदेश पोस्ट किया जा रहा है ...</string>
+<string name="successfully_posted" formatted="false">सफलतापूर्वक पोस्ट</string>
+<string name="title" formatted="false">शीर्षक</string>
+<string name="description" formatted="false">विवरण</string>
+<string name="image_attached" formatted="false">संलग्न छवि</string>
+<string name="passwordConfirmation" formatted="false">नया पासवर्ड \nपुष्टि</string>
+<string name="titlePlaceholder" formatted="false">शीर्षक</string>
+<string name="notificationTextPlaceholder" formatted="false">किसी एक अनुरोध पर एक टिप्पणी करने के लिए कहा</string>
+<string name="timeAgoPlaceholder" formatted="false">6 माह पहले</string>
+<string name="loading" formatted="false">अनुरोध कर रहा है ...</string>
+ <string name="required">*</string>
+<string name="selectCity" formatted="false">एक डिफ़ॉल्ट नगर चुनें</string>
+<string name="attachImage" formatted="false">एक छवि संलग्न</string>
+<string name="back" formatted="false">वापस</string>
+<string name="createAccount" formatted="false">खाता बनाएँ</string>
+<string name="cancelButton" formatted="false">रद्द करें</string>
+<string name="cityIconDesc" formatted="false">शहर आइकन</string>
+<string name="filterRequests" formatted="false">फ़िल्टर अनुरोध</string>
+<string name="confirmButton" formatted="false">की पुष्टि</string>
+<string name="findLocation" formatted="false">अपने स्थान का पता लगाने</string>
+<string name="mySettings" formatted="false">मेरी सेटिंग्स</string>
+<string name="save" formatted="false">बचाना</string>
+<string name="newRequest" formatted="false">नए अनुरोध</string>
+<string name="forgotPassword" formatted="false">पासवर्ड भूल गये</string>
+<string name="loginTitle" formatted="false">लॉगिन</string>
+<string name="aboutPublicStuff" formatted="false">PublicStuff के बारे में</string>
+<string name="myStuff" formatted="false">मेरी सामग्री</string>
+<string name="openSettings" formatted="false">ओपन सेटिंग्स</string>
+<string name="done" formatted="false">करेंकिया गया</string>
+<string name="fieldIsPublic" formatted="false">यहां दाखिल किए गए सूचना जनता को दिखाई होगा</string>
+<string name="enterAddress" formatted="false">पता दर्ज</string>
+<string name="post" formatted="false">POST</string>
+<string name="aboutPublicstuff" formatted="false">हम स्थानीय सरकारों खुला, सुलभ, और उत्तरदायी बनाने के लिए काम कर रहे हैं.</string>
+<string name="openMenu" formatted="false">मेनू खोलें</string>
+<string name="searchCity" formatted="false">एक शहर के लिए खोजें</string>
+<string name="skip" formatted="false">स्किप</string>
+<string name="list" formatted="false">सूची</string>
+<string name="gallery" formatted="false">गैलरी</string>
+<string name="map" formatted="false">नक्शा</string>
+<string name="termsConditions"><![CDATA[Terms & Conditions]]></string>
+<string name="email" formatted="false">ईमेल</string>
+<string name="aboutForgotPassword" formatted="false">जब आप अपने पासवर्ड को रीसेट आप PublicStuff से एक ईमेल प्राप्त आप कैसे एक नया पासवर्ड बनाने के लिए पर निर्देश दे. एक बार जब आप किया है कि, अपने नए पासवर्ड के साथ प्रवेश करने के लिए स्वतंत्र महसूस.</string>
+<string name="enterCity" formatted="false">शहर का नाम लिखें</string>
+<string name="myProfile" formatted="false">मेरा प्रोफ़ाइल</string>
+<string name="firstName" formatted="false">प्रथम नाम</string>
+<string name="lastName" formatted="false">सरनेम</string>
+<string name="phone" formatted="false">फ़ोन</string>
+<string name="myLocations" formatted="false">मेरा स्थान</string>
+<string name="home" formatted="false">घर</string>
+<string name="work" formatted="false">काम</string>
+<string name="addressDefault" formatted="false">इन पतों डिफ़ॉल्ट स्थानों के रूप में इस्तेमाल किया जा सकता है</string>
+<string name="notifications" formatted="false">अधिसूचनाएं</string>
+<string name="emailMeWhen" formatted="false">मुझे ईमेल एक अनुरोध जब मैं पालन</string>
+<string name="emailReplies" formatted="false">मेरे पदों के लिए जवाब ईमेल</string>
+<string name="currentLocation" formatted="false">वर्तमान स्थान</string>
+<string name="change" formatted="false">परिवर्तन</string>
+<string name="logOut" formatted="false">लॉग आउट</string>
+<string name="oldPassword" formatted="false">पुराना पासवर्ड</string>
+<string name="newPassword" formatted="false">नया पासवर्ड</string>
+<string name="passwordLength" formatted="false">पासवर्डों को कम से कम 6 अक्षरों का होना चाहिए</string>
+<string name="sorting" formatted="false">छँटाई</string>
+<string name="recent" formatted="false">हाल ही में</string>
+<string name="citySkyline" formatted="false">शहर के क्षितिज</string>
+<string name="mapInstructions" formatted="false">स्थिति को बदलने के नक्शे कदम (परिशुद्धता के लिए ज़ूम)</string>
+<string name="createAccountDesc" formatted="false">ट्रैक करने के लिए एक खाता बनाएँ, समर्थन, और अपने समुदाय के अनुरोध पर टिप्पणी.</string>
+<string name="privacyPolicy" formatted="false">गोपनीयता नीति</string>
+<string name="aboutPublicstuffLong" formatted="false">हम एक नए सीआरएम सॉफ्टवेयर कंपनी में मदद करता है कि आप सामान तय हो रहे हैं! दोनों मोबाइल और वेब प्लेटफार्मों का उपयोग करना, हम एक व्यापक बैकेंड सीआरएम प्रणाली है कि नगर पालिकाओं, सुविधाओं, और विश्वविद्यालयों को वास्तविक समय में अपने निवासियों और ग्राहकों से सेवा अनुरोध प्राप्त करने के लिए अनुमति देता है बनाया है. हम मदद की है नगर पालिकाओं से अधिक 360.000 डॉलर बेहतर संचार चैनल और ग्राहकों की संतुष्टि में वृद्धि के साथ सालाना बचा.</string>
+<string name="forgotPasswordButton" formatted="false">पासवर्ड भूल गए?</string>
+<string name="questionsFeedback" formatted="false">प्रश्न करने के लिए और प्रतिक्रिया भेजें</string>
+<string name="emailPublicStuff">tech@publicstuff.com</string>
+
+<string name="about" formatted="false">के बारे में</string>
+<string name="aboutPublicStuffMain" formatted="false">अपने शहर में अनुरोध और समर्थन के मुद्दों और अधिसूचित जब वे तय कर रहे हैं!</string>
+<string name="status" formatted="false">हैसियत</string>
+<string name="open" formatted="false">खुला</string>
+<string name="filterBy" formatted="false">द्वारा फ़िल्टर करें</string>
+<string name="sortBy" formatted="false">द्वारा क्रमबद्ध करें</string>
+<string name="nearby" formatted="false">समीप</string>
+<string name="types" formatted="false">प्रकार</string>
+<string name="allRequestTypes" formatted="false">सभी अनुरोध प्रकार</string>
+<string name="dateRange" formatted="false">तिथि सीमा</string>
+<string name="startDate" formatted="false">प्रारंभ दिनांक</string>
+<string name="endDate" formatted="false">समाप्ति तिथि</string>
+<string name="redoSearch" formatted="false">यहाँ खोज फिर से करें</string>
+<string name="titleCaps" formatted="false">शीर्षक</string>
+<string name="flag" formatted="false">अनुपयुक्त के रूप में चिह्नित करें</string>
+<string name="calculatingLocation" formatted="false">स्थान गिना जा रहा है</string>
+<string name="requestIsPrivate" formatted="false">इस अनुरोध को निजी के रूप में चिह्नित किया गया है</string>
+<string name="descriptionHint" formatted="false">विवरण (वैकल्पिक)</string>
+<string name="addComment" formatted="false">एक टिप्पणी जोड़ें</string>
+<string name="send" formatted="false">भेजें</string>
+
+<!-- notifier widget -->
+<string name="notifier" formatted="false">उपलब्ध अपडेट करें.</string>
+
+<!-- notification screen -->
+<string name="notificationComment" formatted="false">किसी एक अनुरोध है कि आप प्रस्तुत पर टिप्पणी की</string>
+<string name="notificationReply" formatted="false">किसी एक अनुरोध पर एक टिप्पणी करने के लिए कहा</string>
+<string name="notificationStatus" formatted="false">अपने अनुरोध की स्थिति %s को अद्यतन किया गया था</string>
+
+<!-- citydashboard activity -->
+<string name="aboutapp" formatted="false">% के बारे में</string>
+<string name="mystuff" formatted="false">मेरी सामग्री</string>
+<string name="aboutps" formatted="false">PublicStuff के बारे में</string>
+<string name="more" formatted="false">अधिक</string>
+<string name="nearbyRequest" formatted="false">आसपास के अनुरोध</string>
+
+<!-- dialogs -->
+<string name="findingLocation" formatted="false">स्थान ढूंढ रहा है ...</string>
+<string name="getRequestList" formatted="false">अनुरोध सूची प्राप्त कर रहा है ...</string>
+<string name="ErrorPastTense" formatted="false">कोई त्रुटि हुई थी</string>
+<string name="ErrorInternet" formatted="false">अपने इंटरनेट कनेक्शन की जाँच करें और फिर कोशिश करें</string>
+<string name="OkButton" formatted="false">अच्छा</string>
+<string name="CancelButton" formatted="false">रद्द करें</string>
+<string name="loadingDialog" formatted="false">लोड हो रहा है ...</string>
+<string name="loginNow" formatted="false">लॉगिन</string>
+<string name="pleaseLogin" formatted="false">अपने शहर का पालन करने के लिए लॉग इन करें</string>
+<string name="creatingAccount" formatted="false">खाता बना रहा है ...</string>
+<string name="getcustomFields" formatted="false">कस्टम फ़ील्ड्स हो रही है ...</string>
+<string name="bothFields" formatted="false">दोनों क्षेत्रों के लिए लॉगिन करने के लिए आवश्यक हैं.</string>
+<string name="loggingIn" formatted="false">Logging में किया जा रहा है ...</string>
+<string name="locationFailGPS" formatted="false">अपने स्थान पाने में त्रुटि थी. अपने जीपीएस और इंटरनेट कनेक्टिविटी की जाँच करें.</string>
+<string name="chooseLocation" formatted="false">स्थान चुनें</string>
+<string name="tryAgain" formatted="false">फिर कोशिश</string>
+<string name="requestTypes" formatted="false">अनुरोध प्रकार हो रही है ...</string>
+<string name="geoError" formatted="false">जियोलोकेशन त्रुटि</string>
+<string name="googleGeoError" formatted="false">Google जियोलोकेशन सर्वर अपने चुने हुए स्थान के बारे में बुरा डेटा लौटे. कृपया अपने स्थान को फिर से चुनने की कोशिश करें.</string>
+<string name="saveDraft" formatted="false">ड्राफ़्ट सहेजें</string>
+<string name="deleteDraft" formatted="false">ड्राफ्ट हटाएँ</string>
+<string name="exitSave" formatted="false">बचाने के बिना बाहर निकलें</string>
+<string name="resumeDraft" formatted="false">वापस मसौदा तैयार करने के लिए</string>
+<string name="exitScreen" formatted="false">निकास</string>
+<string name="loginDraft" formatted="false">ड्राफ्ट को बचाने के लिए आप में लॉग इन होना चाहिए</string>
+<string name="titleRequired" formatted="false">एक शीर्षक की आवश्यकता है.</string>
+<string name="requestTypeRequired" formatted="false">अनुरोध प्रकार की आवश्यकता है.</string>
+<string name="errorLocationConfirm" formatted="false">आपके स्थान की पुष्टि करने में त्रुटि थी. पता क्षेत्र पर नीचे क्लिक करके एक स्थान का चयन करें.</string>
+<string name="loginRequired" formatted="false">तुम में लॉग इन होना चाहिए %s को अनुरोध भेजें</string>
+<string name="loadingProfile" formatted="false">अपने प्रोफ़ाइल लोड हो रहा है ...</string>
+<string name="requestDetails" formatted="false">अनुरोध विवरण प्राप्त किया जा रहा है ...</string>
+<string name="submitComment" formatted="false">टिप्पणी सबमिट कर रहा है ...</string>
+<string name="endDateError" formatted="false">अंतिम तिथि प्रारंभ तिथि के बाद आना चाहिए.</string>
+<string name="startDateSelect" formatted="false">प्रारंभ तिथि का चयन करें</string>
+<string name="endDateSelect" formatted="false">समाप्ति तिथि का चयन करें</string>
+
+<!-- password alerts -->
+<string name="passwordMatch" formatted="false">नया पासवर्ड और पुष्टि से मेल खाना चाहिए.</string>
+<string name="passwordFormat" formatted="false">पासवर्ड कम से कम छह अक्षरों का होना चाहिए.</string>
+<string name="passwordSecurity" formatted="false">आप अपना पुराना पासवर्ड दर्ज करना होगा.</string>
+<string name="savingSettings" formatted="false">सेटिंग सहेजी जा रही हैं ...</string>
+
+<string name="thankyou" formatted="false">शुक्रिया</string>
+<string name="passwordUpdated" formatted="false">आपका पासवर्ड अद्यतन किया गया है</string>
+<string name="oldpasswordbad" formatted="false">पुराना पासवर्ड गलत तरीके से प्रवेश</string>
+
+<!-- citieslist activity -->
+<string name="cityList" formatted="false">शहर सूची हो रही है ...</string>
+<string name="locationFail" formatted="false">स्थान नहीं मिल सका</string>
+<string name="locationFailVerbose" formatted="false">कोई भी स्थान आपके खोज मानदंडों का मिलान नहीं हुआ</string>
+<string name="cityData" formatted="false">शहर के डेटा प्राप्त कर रहा है ...</string>
+<string name="findCity" formatted="false">अपने स्थान पाने में त्रुटि थी. एक शहर में प्रवेश या सूची से नीचे चुनें.</string>
+<string name="selectCityTime" formatted="false">कृपया एक शहर का चयन करें</string>
+<string name="selectCityVerbose" formatted="false">सूची में जारी रखने के लिए एक शहर का चयन करें.</string>
+
+<!-- citydetails activity -->
+<string name="follow" formatted="false">का पालन करें</string>
+<string name="unfollow" formatted="false">अनुसरण न करें</string>
+<string name="visitcityweb" formatted="false">सिटी वेबसाइट देखें</string>
+<string name="petitioncity" formatted="false">शहर याचिका</string>
+<string name="petitionCityVerbose" formatted="false">कृपया अपने शहर याचिका PublicStuff का उपयोग लॉगिन</string>
+
+<!-- createaccount activity -->
+
+<string name="errorRequest" formatted="false">अनुरोध में त्रुटि</string>
+<string name="citydescription" formatted="false">बनाओ%s मेरे डिफ़ॉल्ट शहर</string>
+<string name="accountRequirement" formatted="false">सभी क्षेत्रों के लिए एक खाता बनाने के लिए आवश्यक हैं.</string>
+<string name="passwordCharacters" formatted="false">पासवर्ड अधिक से अधिक 5 वर्ण होने चाहिए</string>
+
+<!-- customfields activity -->
+<string name="requiredField" formatted="false">%s क्षेत्र जरूरी है</string>
+<string name="requestAddl" formatted="false">%1$s,%2$s अनुरोध प्रकार %3$s के साथ अनुरोध के लिए अतिरिक्त जानकारी चाहते हैं.</string>
+<string name="submitrequestto" formatted="false">तुम में लॉग इन होना चाहिए% s को अनुरोध भेजें</string>
+<string name="submitRequest" formatted="false">अनुरोध सबमिट कर रहा है ...</string>
+<string name="loadingRequest" formatted="false">अनुरोध लोड हो रहा है ...</string>
+
+<!-- Drafts activity -->
+<string name="myDrafts" formatted="false">मेरा ड्राफ्ट</string>
+<string name="delDraft" formatted="false">ड्राफ्ट हटाएँ</string>
+
+<!-- forgot password activity -->
+<string name="enterEmail" formatted="false">कृपया अपना ईमेल दर्ज करें.</string>
+<string name="passReset" formatted="false">पासवर्ड Resetting ...</string>
+
+<!-- main activity -->
+<string name="unableCity" formatted="false">शहर की पहचान करने में असमर्थ</string>
+<string name="refreshps" formatted="false">ताज़ा विजेट</string>
+<string name="widgetsUpdated" formatted="false">विजेट नवीनीकृत</string>
+
+<!-- newrequest activity -->
+<string name="takePhoto" formatted="false">नई फोटो ले लो</string>
+<string name="selectPhoto" formatted="false">फ़ोटो चुनें</string>
+<string name="deletePhoto" formatted="false">फ़ोटो हटाएं</string>
+<string name="noCamera" formatted="false">वहाँ कोई आपके डिवाइस पर पाया कैमरों रहे हैं</string>
+<string name="publicSelector" formatted="false">सार्वजनिक</string>
+<string name="privateSelector" formatted="false">निजी</string>
+<string name="setPrivacy" formatted="false">गोपनीयता सेट</string>
+<string name="publicComment" formatted="false">कोई भी देख या टिप्पणी कर सकते हैं</string>
+<string name="privateComment" formatted="false">केवल शहर के श्रमिकों को देखने या टिप्पणी कर सकते हैं</string>
+<string name="forcePrivate" formatted="false">चुना अनुरोध प्रकार के साथ नई अनुरोध केवल निजी हो सकता है.</string>
+
+<!-- newrequestmap activity -->
+<string name="addressUnavailable" formatted="false">पता अनुपलब्ध है.</string>
+<string name="errorFindingLocation" formatted="false">अपने स्थान पाने में त्रुटि</string>
+<string name="addressBlankError" formatted="false">पता खाली नहीं हो सकता, एक दर्ज करें या नक्शे पर एक स्थान का चयन करें</string>
+<string name="findingAddress" formatted="false">ढूँढना पता ...</string>
+<string name="errorGeocodingLoc" formatted="false">वहाँ एक त्रुटि जियोकोडिंग अपने चयनित स्थान था. फिर कोशिश करें.</string>
+<string name="addressVerify" formatted="false">सत्यापित कर रहा है पता ...</string>
+
+<!-- requestdetails activity -->
+<string name="pending" formatted="false">अपूर्ण</string>
+<string name="anonymous" formatted="false">गुमनाम</string>
+<string name="followers" formatted="false">अनुयायी</string>
+<string name="comments" formatted="false">टिप्पणियाँ</string>
+<string name="requestResolved" formatted="false">अनुरोध को हल कर दिया गया है</string>
+<string name="requestError" formatted="false">मूल अनुरोध में एक त्रुटि थी</string>
+<string name="requestNA" formatted="false">अनुरोध अब लागू नहीं है</string>
+<string name="makePubliclyVisible" formatted="false">इस जानकारी को सार्वजनिक रूप से दिखाई</string>
+<string name="reason" formatted="false">तर्क</string>
+<string name="elaborate" formatted="false">विस्तृत</string>
+<string name="closeRequest" formatted="false">अनुरोध बंद</string>
+<string name="submit" formatted="false">प्रस्तुत करना</string>
+<string name="makePrivate" formatted="false">अनुरोध निजी?</string>
+<string name="makePrivateMessage" formatted="false">क्या आप निजी करने के लिए अपने सेवा अनुरोध निर्धारित करने के लिए करना चाहते हैं? इसे पूर्ववत नहीं किया जा सकता.</string>
+
+<string name="statusSubmitted" formatted="false">पेश</string>
+<string name="statusAcknowledged" formatted="false">स्वीकृत</string>
+<string name="statusInProgress" formatted="false">प्रगति में</string>
+<string name="statusCompleted" formatted="false">पूरा</string>
+<string name="statusOther" formatted="false">अन्य</string>
+
+<string name="yes" formatted="false">हां</string>
+<string name="no" formatted="false">नहीं</string>
+<string name="gettingComments" formatted="false">अनुरोध टिप्पणी हो रही है ...</string>
+<string name="loginToRequest" formatted="false">कृपया %s एक अनुरोध लॉगिन</string>
+<string name="loginComment" formatted="false">आप टिप्पणी करने के लिए लॉग इन होना चाहिए</string>
+
+<string name="socialFacebook" formatted="false">फेसबुक के लिए पोस्ट</string>
+<string name="socialTwitter" formatted="false">पोस्ट चहचहाना करने के लिए</string>
+<string name="socialEmail" formatted="false">एक ईमेल भेजें</string>
+<string name="shareRequest" formatted="false">शेयर अनुरोध</string>
+<string name="addImage" formatted="false">छवि जोड़ें</string>
+<string name="plsEnterComment" formatted="false">कृपया एक टिप्पणी दर्ज करें.</string>
+
+<!-- RequestListFilter Activity -->
+<string name="sortRecent" formatted="false">हाल ही में</string>
+<string name="sortPopular" formatted="false">प्रचलित</string>
+<string name="statusOpen" formatted="false">खुला</string>
+<string name="statusClosed" formatted="false">बंद</string>
+<string name="statusAll" formatted="false">सब</string>
+<string name="filterNearby" formatted="false">समीप</string>
+<string name="filterMyRequests" formatted="false">मेरा अनुरोध</string>
+<string name="filterFollowedRequests" formatted="false">पीछा अनुरोध</string>
+<string name="filterCommentedRequests" formatted="false">अनुरोध टिप्पणी</string>
+<string name="filterVotedRequests" formatted="false">वोट दिया अनुरोध</string>
+
+<string name="myNotifications" formatted="false">मेरा अधिसूचनाएं</string>
+
+<string name="requestTypeSelect" formatted="false">अनुरोध प्रकार का चयन करें</string>
+
+<!--  UserDetails Activity -->
+<string name="requestRank" formatted="false">आप 2$s% प्रस्तुत अनुरोधों में #%1$s</string>
+<string name="commentRank" formatted="false">आप #%1$s %2$s प्रस्तुत टिप्पणी में है</string>
+<string name="following" formatted="false">निम्नलिखित</string>
+<string name="upvoted" formatted="false">Upvoted</string>
+<string name="drafts" formatted="false">ड्राफ्ट्स</string>
+<string name="notificationsChoice" formatted="false">अधिसूचनाएं</string>
+
+<!-- UserSettings Activity -->
+<string name="typeChangeStatus" formatted="false">परिवर्तन स्थिति</string>
+<string name="typeIsClosed" formatted="false">बंद कर दिया</string>
+<string name="typeEmailMe" formatted="false">मुझे ईमेल नहीं</string>
+<string name="emailMeRequest" formatted="false">मुझे ईमेल एक अनुरोध जब मैं पालन</string>
+<string name="logOutWarning" formatted="false">क्या आप सुनिश्चित करें कि आप लॉग आउट करना चाहते हैं? आप किसी भी अनुरोध ड्राफ्ट आप को बचाया है खो देंगे.</string>
+<string name="usernameWarning" formatted="false">प्रयोक्ता नाम खाली नहीं हो सकता.</string>
+<string name="emailWarning" formatted="false">ईमेल खाली नहीं हो सकता.</string>
+<string name="settingsSaved" formatted="false">आपकी सेटिंग्स सहेज दी है</string>
+<string name="changesStatus" formatted="false">परिवर्तन स्थिति</string>
+<string name="currentLanguage" formatted="false">वर्तमान भाषा</string>
+<string name="selectLanguage" formatted="false">भाषा चुनें</string>
+<string name="changeCity" formatted="false">शहर बदलें</string>
+
+<!-- Supported Languages -->
+<string name="frenchLanguageCanadian" formatted="false">फ़्रांसीसी (कनाडा)</string>
+<string name="spanishLanguange" formatted="false">Español</string>
+
+<string name="arabicLanguage" formatted="false">अरबी भाषा</string>
+<string name="germanLanguage" formatted="false">जर्मन</string>
+<string name="greekLanguage" formatted="false">ग्रीक</string>
+<string name="englishLanguage" formatted="false">अंग्रेज़ी</string>
+<string name="spanishLanguage" formatted="false">स्पेनिश</string>
+<string name="frenchLanguage" formatted="false">फ्रेंच</string>
+<string name="hindiLanguage" formatted="false">हिंदी</string>
+<string name="italianLanguage" formatted="false">इतालवी</string>
+<string name="japaneseLanguage" formatted="false">जापानी</string>
+<string name="koreanLanguage" formatted="false">कोरियाई</string>
+<string name="polishLanguage" formatted="false">पोलिश</string>
+<string name="portugueseLanguage" formatted="false">पुर्तगाली</string>
+<string name="russianLanguage" formatted="false">रूसी</string>
+<string name="serbianLanguage" formatted="false">सर्बियाई</string>
+<string name="turkishLanguage" formatted="false">तुर्की</string>
+<string name="vietnameseLanguage" formatted="false">वियतनामी</string>
+<string name="chineseLanguage" formatted="false">चीनी</string>
+
+<string name="languageUnavailable" formatted="false">इस डिवाइस पर उपलब्ध नहीं भाषा</string>
+<!-- Terms & Conditions -->
+<string name="ts" formatted="false">नियम एवं शर्तें</string>
+
+</resources>

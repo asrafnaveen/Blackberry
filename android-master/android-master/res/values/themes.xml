@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MainTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+        <item name="android:spinnerDropDownItemStyle">@style/spinnerDropDownItemStyle</item>
+    </style>
+    
+    <style name="spinnerDropDownItemStyle" parent="android:style/Widget.Spinner">
+        <item name="android:clickable">true</item>
+    </style>
+
+</resources>

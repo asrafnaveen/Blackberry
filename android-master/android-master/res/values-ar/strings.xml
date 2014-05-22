@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ######################### NO TRANSLATION NECESSARY ######################### -->
+<string name="currmapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="mapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="debugmapskey">0ewCooT_fkQ6fRF-XYaZaPNrR6jB_UQNvzPiDXg</string>
+<string name="copyright">2012 PublicStuff</string>
+<string name="app_name">PublicStuff</string>
+
+<!-- ######################### TRANSLATION NECESSARY ######################### -->
+
+<string name="cityName" formatted="false">Cityname، ST</string>
+<string name="cityImageDescr" formatted="false">مدينة الصور</string>
+<string name="arrowDescr" formatted="false">سهم</string>
+<string name="stuffText" formatted="false">صفحة أشيائي</string>
+<string name="exitButtonText" formatted="false">انقر للعودة</string>
+<string name="exitRequestScreenDescr" formatted="false">خروج جديد طلب الشاشة</string>
+<string name="exitProfileScreenDescr" formatted="false">إنهاء وضع الشاشة الشاشة</string>
+<string name="middleButtonDescr" formatted="false">middleTabViewButton</string>
+<string name="select_request_type_title" formatted="false">اختيار نوع الطلب</string>
+
+<string name="main_no_items" formatted="false">أي طلبات لعرض</string>
+<string name="detailsLabel" formatted="false">DETAILS</string>
+<string name="addressLabel" formatted="false">عنوان</string>
+<string name="addressPlaceholder"/>
+<string name="idLabel" formatted="false">ID</string>
+<string name="idPlaceholder">12345</string>
+<string name="backNavigation" formatted="false">ظهر</string>
+<string name="cityIcon" formatted="false">مدينة أيقونة</string>
+<string name="socialMedia" formatted="false">شارك من خلال وسائل الاعلام الاجتماعية</string>
+<string name="requestInfo" formatted="false">معلومات</string>
+<string name="commentsPlaceholder" formatted="false">تعليقات</string>
+<string name="locationPlaceholder"/>
+<string name="statusLabel" formatted="false">حالة</string>
+<string name="statusPlaceholder"/>
+<string name="descriptionLabel" formatted="false">وصف</string>
+<string name="descriptionPlaceholder"/>
+<string name="priorityLabel" formatted="false">أفضلية</string>
+<string name="priorityPlaceholder"/>
+<string name="categoryLabel" formatted="false">فئة</string>
+<string name="categoryPlaceholder"/>
+<string name="submittedByLabel" formatted="false">المقدمة من</string>
+<string name="submittedByPlaceholder"/>
+<string name="submittedOnLabel" formatted="false">قدم على</string>
+<string name="submittedOnPlaceholder"/>
+
+<string name="fav_activity_title" formatted="false">حصة</string>
+<string name="allservice_activity_title" formatted="false">العثور على خدمة</string>
+
+<string name="nonetwork_msg" formatted="false">لا تتوفر شبكة</string>
+<string name="loading_please_wait_msg" formatted="false">التحميل، يرجى الانتظار ...</string>
+
+<string name="username" formatted="false">اسم المستخدم</string>
+<string name="password" formatted="false">كلمة السر</string>
+<string name="login" formatted="false">دخول</string>
+<string name="cancel" formatted="false">إلغاء</string>
+<string name="loging_out" formatted="false">تسجيل الخروج ...</string>
+<string name="confirm" formatted="false">أكد</string>
+<string name="delete_msg" formatted="false">حذف هذا المفضلة لديك؟</string>
+<string name="send_email" formatted="false">إرسال البريد</string>
+<string name="editview_info_text" formatted="false">إضافة أو إزالة الخدمات في هذه القائمة. انقر فوق علامة الجمع من شريط العمل أعلاه لإضافة المزيد من الخدمات. اضغط لفترة طويلة لحذف خدمة معينة. اضغط على زر العودة للعودة إلى العرض العادي.</string>
+
+<string name="external_memory_for_image" formatted="false">يجب أن بطاقة الذاكرة الخارجية تكون موجودة لتقاسم الصور عن طريق البريد الإلكتروني</string>
+<string name="an_error_occured" formatted="false">حدث خطأ، يرجى المحاولة مرة أخرى في وقت لاحق</string>
+<string name="uploading_please_wait" formatted="false">تحميل. يرجى الانتظار ...</string>
+<string name="connecting_twitpic" formatted="false">ربط TwitPic ...</string>
+<string name="posting_the_tweet" formatted="false">نشر الرسالة ...</string>
+<string name="successfully_posted" formatted="false">نشر بنجاح</string>
+<string name="title" formatted="false">لقب</string>
+<string name="description" formatted="false">وصف</string>
+<string name="image_attached" formatted="false">صورة مرفقة</string>
+<string name="passwordConfirmation" formatted="false">كلمة السر الجديدة \nتأكيد</string>
+<string name="titlePlaceholder" formatted="false">لقب</string>
+<string name="notificationTextPlaceholder" formatted="false">رد على تعليق شخص ما أجريتها على طلب</string>
+<string name="timeAgoPlaceholder" formatted="false">6 منذ أشهر</string>
+<string name="loading" formatted="false">طلب ...</string>
+ <string name="required">*</string>
+<string name="selectCity" formatted="false">اختر مدينة DEFAULT</string>
+<string name="attachImage" formatted="false">إرفاق صورة</string>
+<string name="back" formatted="false">ظهر</string>
+<string name="createAccount" formatted="false">إنشاء حساب</string>
+<string name="cancelButton" formatted="false">إلغاء</string>
+<string name="cityIconDesc" formatted="false">مدينة أيقونة</string>
+<string name="filterRequests" formatted="false">تصفية الطلبات</string>
+<string name="confirmButton" formatted="false">أكد</string>
+<string name="findLocation" formatted="false">العثور على موقعك</string>
+<string name="mySettings" formatted="false">الإعدادات</string>
+<string name="save" formatted="false">حفظ</string>
+<string name="newRequest" formatted="false">طلب جديد</string>
+<string name="forgotPassword" formatted="false">نسيت كلمة المرور</string>
+<string name="loginTitle" formatted="false">دخول</string>
+<string name="aboutPublicStuff" formatted="false">حول PublicStuff</string>
+<string name="myStuff" formatted="false">أشيائي</string>
+<string name="openSettings" formatted="false">فتح الإعدادات</string>
+<string name="done" formatted="false">القيام به</string>
+<string name="fieldIsPublic" formatted="false">والمعلومات التي تم إدخالها هنا تكون واضحة للجمهور</string>
+<string name="enterAddress" formatted="false">أدخل العنوان</string>
+<string name="post" formatted="false">سأعين</string>
+<string name="aboutPublicstuff" formatted="false">ونحن نعمل على جعل الحكومات المحلية المفتوحة، يمكن الوصول إليها، واستجابة.</string>
+<string name="openMenu" formatted="false">افتح قائمة</string>
+<string name="searchCity" formatted="false">البحث عن مدينة</string>
+<string name="skip" formatted="false">تخطى</string>
+<string name="list" formatted="false">قائمة</string>
+<string name="gallery" formatted="false">رواق</string>
+<string name="map" formatted="false">خريطة</string>
+<string name="termsConditions"><![CDATA[Terms & Conditions]]></string>
+<string name="email" formatted="false">البريد الإلكتروني</string>
+<string name="aboutForgotPassword" formatted="false">عند إعادة تعيين كلمة السر الخاصة بك، سوف تحصل على بريد إلكتروني من PublicStuff مما يتيح لك التعليمات حول كيفية إنشاء كلمة مرور جديدة. مرة كنت قد فعلت ذلك، لا تتردد في الدخول مع كلمة المرور الجديدة.</string>
+<string name="enterCity" formatted="false">أدخل المدينة</string>
+<string name="myProfile" formatted="false">بلدي الشخصي</string>
+<string name="firstName" formatted="false">الاسم الأول</string>
+<string name="lastName" formatted="false">اسم العائلة</string>
+<string name="phone" formatted="false">هاتف</string>
+<string name="myLocations" formatted="false">بلدي المواقع</string>
+<string name="home" formatted="false">منزل</string>
+<string name="work" formatted="false">عمل</string>
+<string name="addressDefault" formatted="false">ويمكن استخدام هذه العناوين والمواقع الافتراضية</string>
+<string name="notifications" formatted="false">الإخطارات</string>
+<string name="emailMeWhen" formatted="false">البريد الالكتروني لي عندما طلب أتابع</string>
+<string name="emailReplies" formatted="false">إرسال الردود على مشاركاتي</string>
+<string name="currentLocation" formatted="false">الموقع الحالي</string>
+<string name="change" formatted="false">تغيير</string>
+<string name="logOut" formatted="false">تسجيل الخروج</string>
+<string name="oldPassword" formatted="false">كلمة المرور القديمة</string>
+<string name="newPassword" formatted="false">كلمة مرور جديدة</string>
+<string name="passwordLength" formatted="false">يجب أن تكون كلمات المرور 6 أحرف على الأقل</string>
+<string name="sorting" formatted="false">فرز</string>
+<string name="recent" formatted="false">الأخيرة</string>
+<string name="citySkyline" formatted="false">أفق المدينة</string>
+<string name="mapInstructions" formatted="false">نقل الخريطة إلى تغيير الموقف (لتكبير الدقة)</string>
+<string name="createAccountDesc" formatted="false">إنشاء حساب لتعقب والدعم والتعليق على الطلبات في مجتمعك.</string>
+<string name="privacyPolicy" formatted="false">سياسة الخصوصية</string>
+<string name="aboutPublicstuffLong" formatted="false">ونحن على برمجيات إدارة علاقات العملاء المبتكرة التي تساعد الشركة تحصل الثابتة الاشياء! باستخدام كل من منصات متحركة على شبكة الإنترنت، وقد انشأنا CRM الخلفية نظام شامل يسمح البلديات والمرافق والجامعات لاستقبال طلبات الخدمة من العملاء وسكانها في الوقت الحقيقي. لقد ساعدنا البلديات انقاذ اكثر من 360،000 $ سنويا مع قنوات الاتصال وتحسين وزيادة رضا العملاء.</string>
+<string name="forgotPasswordButton" formatted="false">نسيت كلمة المرور؟</string>
+<string name="questionsFeedback" formatted="false">إرسال الأسئلة والتغذية الراجعة لل</string>
+<string name="emailPublicStuff">tech@publicstuff.com</string>
+
+<string name="about" formatted="false">حول</string>
+<string name="aboutPublicStuffMain" formatted="false">طلب والدعم القضايا في مدينتك وتلقي تنبيه عندما كنت إصلاحها!</string>
+<string name="status" formatted="false">حالة</string>
+<string name="open" formatted="false">فتح</string>
+<string name="filterBy" formatted="false">التصفية حسب</string>
+<string name="sortBy" formatted="false">فرز حسب</string>
+<string name="nearby" formatted="false">قريب</string>
+<string name="types" formatted="false">أنواع</string>
+<string name="allRequestTypes" formatted="false">جميع أنواع طلب</string>
+<string name="dateRange" formatted="false">نطاق التاريخ</string>
+<string name="startDate" formatted="false">تاريخ البدء</string>
+<string name="endDate" formatted="false">نهاية التاريخ</string>
+<string name="redoSearch" formatted="false">إعادة البحث هنا</string>
+<string name="titleCaps" formatted="false">لقب</string>
+<string name="flag" formatted="false">العلم عن صورة غير ملائمة</string>
+<string name="calculatingLocation" formatted="false">حساب الموقع</string>
+<string name="requestIsPrivate" formatted="false">تم وضع علامة على هذا الطلب وخاصة</string>
+<string name="descriptionHint" formatted="false">الوصف (اختياري)</string>
+<string name="addComment" formatted="false">إضافة تعليق</string>
+<string name="send" formatted="false">إرسال</string>
+
+<!-- notifier widget -->
+<string name="notifier" formatted="false">تحديث المتاحة.</string>
+
+<!-- notification screen -->
+<string name="notificationComment" formatted="false">وعلق أحدهم على طلب الذي تقدم</string>
+<string name="notificationReply" formatted="false">رد على تعليق شخص ما أجريتها على طلب</string>
+<string name="notificationStatus" formatted="false">تم تحديث حالة طلبك إلى%s</string>
+
+<!-- citydashboard activity -->
+<string name="aboutapp" formatted="false">عن٪ S</string>
+<string name="mystuff" formatted="false">أشيائي</string>
+<string name="aboutps" formatted="false">حول PublicStuff</string>
+<string name="more" formatted="false">أكثر</string>
+<string name="nearbyRequest" formatted="false">تطلب قريب</string>
+
+<!-- dialogs -->
+<string name="findingLocation" formatted="false">العثور على الموقع ...</string>
+<string name="getRequestList" formatted="false">الحصول على قائمة طلبات ...</string>
+<string name="ErrorPastTense" formatted="false">كان هناك خطأ</string>
+<string name="ErrorInternet" formatted="false">يرجى التحقق من اتصالك بالإنترنت وحاول مرة أخرى</string>
+<string name="OkButton" formatted="false">حسنا</string>
+<string name="CancelButton" formatted="false">إلغاء</string>
+<string name="loadingDialog" formatted="false">تحميل ...</string>
+<string name="loginNow" formatted="false">دخول</string>
+<string name="pleaseLogin" formatted="false">يرجى الدخول لمتابعة مدينتك</string>
+<string name="creatingAccount" formatted="false">إنشاء حساب ...</string>
+<string name="getcustomFields" formatted="false">الحصول على حقول مخصصة ...</string>
+<string name="bothFields" formatted="false">كلاهما مطلوب للدخول حقول.</string>
+<string name="loggingIn" formatted="false">تسجيل الدخول ...</string>
+<string name="locationFailGPS" formatted="false">كان هناك خطأ العثور على الموقع الخاص بك. يرجى التحقق GPS الخاص بك والاتصال بالإنترنت.</string>
+<string name="chooseLocation" formatted="false">اختيار الموقع</string>
+<string name="tryAgain" formatted="false">حاول مرة أخرى</string>
+<string name="requestTypes" formatted="false">الحصول على أنواع الطلب ...</string>
+<string name="geoError" formatted="false">تحديد الموقع الجغرافي الخطأ</string>
+<string name="googleGeoError" formatted="false">عاد الخادم تحديد الموقع الجغرافي بيانات Google سيئة عن الموقع الذي تختاره. يرجى المحاولة مرة أخرى اختيار الموقع الخاص بك.</string>
+<string name="saveDraft" formatted="false">حفظ مشروع</string>
+<string name="deleteDraft" formatted="false">حذف مشروع</string>
+<string name="exitSave" formatted="false">خروج دون حفظ</string>
+<string name="resumeDraft" formatted="false">عودة إلى صياغة</string>
+<string name="exitScreen" formatted="false">خروج</string>
+<string name="loginDraft" formatted="false">يجب أن تكون مسجلا لحفظ المسودات</string>
+<string name="titleRequired" formatted="false">مطلوب عنوان.</string>
+<string name="requestTypeRequired" formatted="false">مطلوب نوع الطلب.</string>
+<string name="errorLocationConfirm" formatted="false">كان هناك خطأ مؤكدا موقعك. الرجاء اختيار موقع من خلال النقر على حقل العنوان أدناه.</string>
+<string name="loginRequired" formatted="false">يجب أن تكون مسجلا لتقديم طلب إلى٪ s</string>
+<string name="loadingProfile" formatted="false">تحميل ملفك الشخصي ...</string>
+<string name="requestDetails" formatted="false">الحصول على تفاصيل الطلب ...</string>
+<string name="submitComment" formatted="false">تقديم تعليق ...</string>
+<string name="endDateError" formatted="false">يجب أن يكون تاريخ نهاية يأتي بعد تاريخ البدء.</string>
+<string name="startDateSelect" formatted="false">حدد تاريخ البدء</string>
+<string name="endDateSelect" formatted="false">حدد تاريخ الإنتهاء</string>
+
+<!-- password alerts -->
+<string name="passwordMatch" formatted="false">يجب تأكيد كلمة المرور الجديدة والمباراة.</string>
+<string name="passwordFormat" formatted="false">يجب أن تكون كلمة المرور على الأقل ستة أحرف.</string>
+<string name="passwordSecurity" formatted="false">يجب عليك إدخال كلمة المرور القديمة.</string>
+<string name="savingSettings" formatted="false">حفظ الإعدادات ...</string>
+
+<string name="thankyou" formatted="false">شكرا</string>
+<string name="passwordUpdated" formatted="false">تم تحديث كلمة السر الخاصة بك</string>
+<string name="oldpasswordbad" formatted="false">دخلت كلمة المرور القديمة غير صحيح</string>
+
+<!-- citieslist activity -->
+<string name="cityList" formatted="false">الحصول على قائمة مدينة ...</string>
+<string name="locationFail" formatted="false">لا يمكن العثور على الموقع</string>
+<string name="locationFailVerbose" formatted="false">لم تتطابق أية مواقع معايير البحث الخاصة بك</string>
+<string name="cityData" formatted="false">الحصول على البيانات المدينة ...</string>
+<string name="findCity" formatted="false">كان هناك خطأ العثور على الموقع الخاص بك. يرجى إدخال مدينة أو اختر من القائمة أدناه.</string>
+<string name="selectCityTime" formatted="false">الرجاء اختيار مدينة</string>
+<string name="selectCityVerbose" formatted="false">الرجاء اختيار مدينة في لائحة للمتابعة.</string>
+
+<!-- citydetails activity -->
+<string name="follow" formatted="false">اتبع</string>
+<string name="unfollow" formatted="false">فولو</string>
+<string name="visitcityweb" formatted="false">زيارة موقع مدينة</string>
+<string name="petitioncity" formatted="false">التماس مدينة</string>
+<string name="petitionCityVerbose" formatted="false">يرجى الدخول إلى المدينة التماس لاستخدام PublicStuff</string>
+
+<!-- createaccount activity -->
+
+<string name="errorRequest" formatted="false">خطأ في الطلب</string>
+<string name="citydescription" formatted="false">جعل مدينتي%s الافتراضي</string>
+<string name="accountRequirement" formatted="false">جميع الحقول مطلوبة لإنشاء حساب.</string>
+<string name="passwordCharacters" formatted="false">كلمة السر يجب ان لديها أكثر من 5 أحرف</string>
+
+<!-- customfields activity -->
+<string name="requiredField" formatted="false">%s هو حقل مطلوب</string>
+<string name="requestAddl" formatted="false">%1$s, %2$s  تود الحصول على معلومات إضافية عن طلبات للطلب اكتب%3$s</string>
+<string name="submitrequestto" formatted="false">يجب أن تكون مسجلا لتقديم طلب إلى٪ s</string>
+<string name="submitRequest" formatted="false">تقديم طلب ...</string>
+<string name="loadingRequest" formatted="false">تحميل طلب ...</string>
+
+<!-- Drafts activity -->
+<string name="myDrafts" formatted="false">بلدي المسودات</string>
+<string name="delDraft" formatted="false">حذف مشروع</string>
+
+<!-- forgot password activity -->
+<string name="enterEmail" formatted="false">من فضلك ادخل بريدك الإلكتروني.</string>
+<string name="passReset" formatted="false">إعادة تعيين كلمة المرور ...</string>
+
+<!-- main activity -->
+<string name="unableCity" formatted="false">غير قادر على تحديد المدينة</string>
+<string name="refreshps" formatted="false">تحديث القطع</string>
+<string name="widgetsUpdated" formatted="false">تحديث الحاجيات</string>
+
+<!-- newrequest activity -->
+<string name="takePhoto" formatted="false">تأخذ الصورة الجديدة</string>
+<string name="selectPhoto" formatted="false">حدد الصور</string>
+<string name="deletePhoto" formatted="false">حذف الصور</string>
+<string name="noCamera" formatted="false">لا توجد كاميرات الكشف على جهازك</string>
+<string name="publicSelector" formatted="false">جمهور</string>
+<string name="privateSelector" formatted="false">خاص</string>
+<string name="setPrivacy" formatted="false">تعيين الخصوصية</string>
+<string name="publicComment" formatted="false">يمكن لأي شخص عرض أو التعليق</string>
+<string name="privateComment" formatted="false">يمكن للعمال المدينة الوحيدة أو عرض التعليق</string>
+<string name="forcePrivate" formatted="false">يمكن الطلبات الجديدة مع نوع الطلب يكون اختيار الخاصة فقط.</string>
+
+<!-- newrequestmap activity -->
+<string name="addressUnavailable" formatted="false">العنوان غير متوفر.</string>
+<string name="errorFindingLocation" formatted="false">إيجاد خطأ موقعك</string>
+<string name="addressBlankError" formatted="false">لا يمكن أن يكون عنوان فارغة يرجى إدخال واحد أو اختيار موقع على الخريطة</string>
+<string name="findingAddress" formatted="false">العثور على العنوان ...</string>
+<string name="errorGeocodingLoc" formatted="false">كان هناك خطأ الترميز الجغرافي موقعك المحددة. يرجى المحاولة مرة أخرى.</string>
+<string name="addressVerify" formatted="false">التحقق من العنوان ...</string>
+
+<!-- requestdetails activity -->
+<string name="pending" formatted="false">ريثما</string>
+<string name="anonymous" formatted="false">مجهول</string>
+<string name="followers" formatted="false">أتباع</string>
+<string name="comments" formatted="false">تعليقات</string>
+<string name="requestResolved" formatted="false">تم حل الطلب</string>
+<string name="requestError" formatted="false">كان هناك خطأ في الطلب الأصلي</string>
+<string name="requestNA" formatted="false">طلب لم يعد ينطبق</string>
+<string name="makePubliclyVisible" formatted="false">جعل هذه المعلومات مرئية علنا</string>
+<string name="reason" formatted="false">منطق</string>
+<string name="elaborate" formatted="false">وضع</string>
+<string name="closeRequest" formatted="false">إغلاق طلب</string>
+<string name="submit" formatted="false">عرض</string>
+<string name="makePrivate" formatted="false">جعل طلب خاص؟</string>
+<string name="makePrivateMessage" formatted="false">هل تريد تعيين طلب الخدمة من القطاع الخاص؟ هذا لا يمكن التراجع عنها.</string>
+
+<string name="statusSubmitted" formatted="false">المقدمة</string>
+<string name="statusAcknowledged" formatted="false">اعترف</string>
+<string name="statusInProgress" formatted="false">في التقدم</string>
+<string name="statusCompleted" formatted="false">الانتهاء</string>
+<string name="statusOther" formatted="false">آخر</string>
+
+<string name="yes" formatted="false">نعم</string>
+<string name="no" formatted="false">لا</string>
+<string name="gettingComments" formatted="false">الحصول على تعليق طلب ...</string>
+<string name="loginToRequest" formatted="false">يرجى الدخول إلى٪ s طلب</string>
+<string name="loginComment" formatted="false">يجب تسجيل الدخول إلى تعليق</string>
+
+<string name="socialFacebook" formatted="false">أضف إلى الفيسبوك</string>
+<string name="socialTwitter" formatted="false">بوست على التغريد</string>
+<string name="socialEmail" formatted="false">إرسال بريد إلكتروني</string>
+<string name="shareRequest" formatted="false">شارك طلب</string>
+<string name="addImage" formatted="false">إضافة صورة</string>
+<string name="plsEnterComment" formatted="false">الرجاء إدخال تعليق.</string>
+
+<!-- RequestListFilter Activity -->
+<string name="sortRecent" formatted="false">الأخيرة</string>
+<string name="sortPopular" formatted="false">شعبي</string>
+<string name="statusOpen" formatted="false">فتح</string>
+<string name="statusClosed" formatted="false">مغلق</string>
+<string name="statusAll" formatted="false">جميع</string>
+<string name="filterNearby" formatted="false">قريب</string>
+<string name="filterMyRequests" formatted="false">بلدي تطلب</string>
+<string name="filterFollowedRequests" formatted="false">ثم يطلب</string>
+<string name="filterCommentedRequests" formatted="false">علق تطلب</string>
+<string name="filterVotedRequests" formatted="false">صوت تطلب</string>
+
+<string name="myNotifications" formatted="false">بلدي التبليغات</string>
+
+<string name="requestTypeSelect" formatted="false">تحديد نوع الطلب</string>
+
+<!--  UserDetails Activity -->
+<string name="requestRank" formatted="false">كنت #٪1$S في الطلبات المقدمة إلى٪2$S</string>
+<string name="commentRank" formatted="false">كنت #٪1$S في التعليقات المقدمة إلى٪2$S</string>
+<string name="following" formatted="false">بعد</string>
+<string name="upvoted" formatted="false">Upvoted</string>
+<string name="drafts" formatted="false">الداما</string>
+<string name="notificationsChoice" formatted="false">الإخطارات</string>
+
+<!-- UserSettings Activity -->
+<string name="typeChangeStatus" formatted="false">التغييرات الحالة</string>
+<string name="typeIsClosed" formatted="false">مغلق</string>
+<string name="typeEmailMe" formatted="false">لا بريد إلكتروني ي</string>
+<string name="emailMeRequest" formatted="false">البريد الالكتروني لي عندما طلب أتابع</string>
+<string name="logOutWarning" formatted="false">هل أنت متأكد أنك تريد تسجيل الخروج؟ سوف تفقد أي طلب المسودات التي قمت بحفظها.</string>
+<string name="usernameWarning" formatted="false">يمكن المستخدم لا يكون فارغا.</string>
+<string name="emailWarning" formatted="false">يمكن أن تكون فارغة البريد الإلكتروني.</string>
+<string name="settingsSaved" formatted="false">تم حفظ إعدادات</string>
+<string name="changesStatus" formatted="false">التغييرات الحالة</string>
+<string name="currentLanguage" formatted="false">CURRENT LANGUAGE</string>
+<string name="selectLanguage" formatted="false">اختر اللغة</string>
+<string name="changeCity" formatted="false">تغيير المدينة</string>
+
+<!-- Supported Languages -->
+<string name="frenchLanguageCanadian" formatted="false">الفرنسية (كندا)</string>
+<string name="spanishLanguange" formatted="false">الجملة</string>
+
+<string name="arabicLanguage" formatted="false">العربية</string>
+<string name="germanLanguage" formatted="false">ألماني</string>
+<string name="greekLanguage" formatted="false">يوناني</string>
+<string name="englishLanguage" formatted="false">الإنجليزية</string>
+<string name="spanishLanguage" formatted="false">الأسبانية</string>
+<string name="frenchLanguage" formatted="false">فرنسي</string>
+<string name="hindiLanguage" formatted="false">هندي</string>
+<string name="italianLanguage" formatted="false">الإيطالي</string>
+<string name="japaneseLanguage" formatted="false">اليابانية</string>
+<string name="koreanLanguage" formatted="false">كوري</string>
+<string name="polishLanguage" formatted="false">بولندي</string>
+<string name="portugueseLanguage" formatted="false">البرتغالية</string>
+<string name="russianLanguage" formatted="false">الروسية</string>
+<string name="serbianLanguage" formatted="false">صربي</string>
+<string name="turkishLanguage" formatted="false">التركية</string>
+<string name="vietnameseLanguage" formatted="false">الفيتنامية</string>
+<string name="chineseLanguage" formatted="false">الصينية</string>
+
+<string name="languageUnavailable" formatted="false">لا تتوفر اللغة على هذا الجهاز</string>
+<!-- Terms & Conditions -->
+<string name="ts" formatted="false">الشروط والأحكام</string>
+
+</resources>

@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- Top Bar -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@color/TOP_BAR_BACKGROUND"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip" >
+
+        <Button
+            android:id="@+id/newRequestDone"
+            android:layout_width="48dip"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:clickable="true"
+            android:onClick="back"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/idBackChevron"
+            android:layout_width="16dip"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/backNavigation"
+            android:src="@drawable/holo_dark1_navigation_previous_item" />
+
+        <ImageView
+            android:id="@+id/cityIcon"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_toRightOf="@id/idBackChevron"
+            android:contentDescription="@string/cityIcon"
+            android:scaleType="fitXY" />
+        
+		<ImageButton
+            android:id="@+id/shareRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:clickable="true"
+            android:contentDescription="@string/socialMedia"
+            android:onClick="shareRequest"
+            android:padding="2dip"
+            android:src="@drawable/holo_dark6_social_share"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/closeRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/requestPrivacy"
+            android:onClick="closeRequest"
+            android:text="@string/closeRequest"
+            android:visibility="invisible"
+            android:textSize="11dip" />
+        
+        <!-- depends on is_private parameter -->
+        
+        <ImageButton
+            android:id="@+id/requestPrivacy"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/shareRequest"
+            android:contentDescription="@string/setPrivacy"
+            android:onClick="makePrivate"
+            android:scaleType="centerInside"
+            android:visibility="invisible"
+            android:src="@drawable/holo_light10_device_access_not_secure" />
+
+    </RelativeLayout>
+    <!-- Tab from info to request details -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@color/MED_GRAY_BKGROUND"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:padding="4dip" >
+
+            <Button
+                android:id="@+id/requestInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:onClick="showInfo"
+                android:text="@string/requestInfo"
+                android:textColor="@color/DARK_TEXT"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/viewSeparator2"
+                android:layout_width="2dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="4dip"
+                android:background="@color/TOP_BAR_SEPARATOR" />
+
+            <Button
+                android:id="@+id/requestComments"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical|center_horizontal"
+                android:onClick="showComments"
+                android:text="@string/commentsPlaceholder"
+                android:textColor="@color/DARK_TEXT"
+                android:textSize="12dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <View
+                android:id="@+id/infoHighlight"
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_weight="1"
+                android:background="@color/ORANGE" />
+
+            <View
+                android:id="@+id/commentHighlight"
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_weight="1"
+                android:background="@color/ORANGE"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- Details block... -->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/detailsLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- Mapview -->
+
+        <RelativeLayout
+            android:id="@+id/mapLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="120dip">           
+<WebView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="120dip" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="8dip" >
+
+                <TextView
+                    android:id="@+id/spaceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/TOP_BAR_BACKGROUND_TRANSPARENT"
+                    android:gravity="center_vertical"
+                    android:padding="4dip"
+                    android:text="@string/locationPlaceholder"
+                    android:textColor="@color/WHITE"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- Details -->
+
+        <ScrollView
+            android:id="@+id/detailsView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailsLinView"
+                android:orientation="vertical"
+                android:paddingLeft="8dip" >
+
+                <!-- title and dog ear -->
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/requestTitle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dip"
+                        android:text="@string/titleCaps"
+                        android:textSize="16dip" />
+
+                    <ImageView
+                        android:id="@+id/myRequestDogEar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+                <!-- followers, support, flag -->
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:paddingRight="8dip" >
+
+                    <Button
+                        android:id="@+id/followRequest"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-3dip"
+                        android:layout_marginRight="-3dip"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/ic_light_following"
+                        android:onClick="followRequest"
+                        android:textSize="11dip" />
+
+                    <LinearLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dip"
+                        android:layout_weight="1"
+                        android:paddingRight="8dip" >
+
+                        <Button
+                            android:id="@+id/support"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dip"
+                            android:layout_marginRight="-4dip"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/ic_light_upvote"
+                            android:onClick="supportRequest"
+                            android:textSize="11dip" />
+
+                        <ImageButton
+                            android:id="@+id/flag"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dip"
+                            android:layout_marginRight="-4dip"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/flag"
+                            android:onClick="flagRequest"
+                            android:src="@drawable/ic_light_flag"
+                            android:textSize="11dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- privacy -->
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/requestIsPrivate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="8dip"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/holo_light10_device_access_secure" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/requestIsPrivate"
+                        android:textColor="@color/ORANGE"
+                        android:textSize="10dip" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginRight="8dip"
+                    android:layout_weight="1"
+                    android:background="@color/MED_GRAY_BKGROUND" />
+                <!-- staus data -->
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingRight="8dip" >
+
+                    <LinearLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/requestStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:padding="8dip"
+                            android:text="@string/statusLabel"
+                            android:textAllCaps="true"
+                            android:textSize="12dip"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/requestStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center_vertical"
+                            android:padding="8dip"
+                            android:textSize="10dip" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/requestStatusImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/statusLabel"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="8dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_status_large_1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginRight="8dip"
+                    android:layout_weight="1"
+                    android:background="@color/MED_GRAY_BKGROUND" />
+                <!-- Description -->
+
+                <TextView
+                    android:id="@+id/requestDescriptionLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dip"
+                    android:paddingRight="8dip"
+                    android:text="@string/descriptionLabel"
+                    android:textAllCaps="true"
+                    android:textSize="12dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/requestDescription"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="16dip"
+                    android:text="@string/descriptionPlaceholder"
+                    android:textSize="12dip" />
+
+                <ImageView
+                    android:id="@+id/requestImage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/descriptionLabel"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="16dip"
+                    android:scaleType="fitStart" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginRight="8dip"
+                    android:layout_marginTop="8dip"
+                    android:layout_weight="1"
+                    android:background="@color/MED_GRAY_BKGROUND" />
+                <!-- Details -->
+
+                <TextView
+                    android:id="@+id/requestDetailsLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dip"
+                    android:text="@string/detailsLabel"
+                    android:textAllCaps="true"
+                    android:textSize="12dip"
+                    android:textStyle="bold" />
+                <!-- address -->
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="8dip" >
+
+                    <TextView
+                        android:id="@+id/requestAddressLabel"
+                        android:layout_width="96dip"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="8dip"
+                        android:text="@string/addressLabel"
+                        android:textSize="12dip" />
+
+                    <TextView
+                        android:id="@+id/requestAddress"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingRight="8dip"
+                        android:text="@string/addressPlaceholder"
+                        android:textSize="12dip" />
+                </LinearLayout>
+                <!-- ID -->
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="8dip" >
+
+                    <TextView
+                        android:id="@+id/requestIDLabel"
+                        android:layout_width="96dip"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="8dip"
+                        android:text="ID"
+                        android:textSize="12dip" />
+
+                    <TextView
+                        android:id="@+id/requestID"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingRight="8dip"
+                        android:text="@string/idPlaceholder"
+                        android:textSize="12dip" />
+                </LinearLayout>
+                <!-- Request Type -->
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingRight="8dip" >
+
+                    <TextView
+                        android:id="@+id/requestTypeLabel"
+                        android:layout_width="96dip"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="8dip"
+                        android:text="@string/categoryLabel"
+                        android:textSize="12dip" />
+
+                    <TextView
+                        android:id="@+id/requestType"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingRight="8dip"
+                        android:text="@string/categoryPlaceholder"
+                        android:textSize="12dip" />
+                </LinearLayout>
+                <!-- Submitted by -->
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingRight="8dip" >
+
+                    <TextView
+                        android:id="@+id/requestSubmittedByLabel"
+                        android:layout_width="96dip"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="8dip"
+                        android:text="@string/submittedByLabel"
+                        android:textSize="12dip" />
+
+                    <TextView
+                        android:id="@+id/requestSubmittedBy"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingRight="8dip"
+                        android:text="@string/submittedByPlaceholder"
+                        android:textSize="12dip" />
+                </LinearLayout>
+                <!-- Submitted ON -->
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/submittedLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingRight="8dip" >
+
+                    <TextView
+                        android:id="@+id/requestSubmittedOnLabel"
+                        android:layout_width="96dip"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="8dip"
+                        android:text="@string/submittedOnLabel"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/requestSubmittedOn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingRight="8dip"
+                        android:text="@string/submittedOnPlaceholder"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <!-- Priority -->
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/priorityLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingRight="8dip" >
+
+                    <TextView
+                        android:id="@+id/requestPriorityLabel"
+                        android:layout_width="96dip"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="8dip"
+                        android:text="@string/priorityLabel"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/requestPriority"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingRight="8dip"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/customFieldsLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingRight="8dip" >
+
+                    <TextView
+                        android:id="@+id/requestCustomFields"
+                        android:layout_width="96dip"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="8dip"
+                        android:layout_gravity="top"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/requestCustomFieldOptions"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dip"
+                        android:paddingRight="8dip"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Comment block... -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/commentView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/InnerRelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/WHITE"
+            android:paddingLeft="4dip" >
+
+            <ImageButton
+                android:id="@+id/commentImage"
+                android:layout_width="48dip"
+                android:layout_height="48dip"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:onClick="commentImage"
+                android:scaleType="center"
+                android:src="@drawable/holo_light5_content_new_picture" />
+
+            <EditText
+                android:id="@+id/commentText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_holo_light"
+                android:ellipsize="end"
+                android:hint="@string/addComment"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:minHeight="48dip"
+                android:minLines="1"
+                android:textColor="@color/DARK_TEXT"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/viewSeparator1"
+                android:layout_width="2dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="4dip"
+                android:layout_marginTop="4dip"
+                android:background="@color/TOP_BAR_SEPARATOR" />
+
+            <Button
+                android:id="@+id/postComment"
+                android:layout_width="64dip"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:onClick="postComment"
+                android:text="@string/send"
+                android:textColor="@color/GRAY_TEXT" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewSeparator"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_above="@id/InnerRelativeLayout"
+            android:background="@color/TOP_BAR_SEPARATOR" />
+
+        <ListView
+            android:id="@+id/comment_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/viewSeparator"
+            android:background="@color/WHITE" />
+    </RelativeLayout>
+
+</LinearLayout>

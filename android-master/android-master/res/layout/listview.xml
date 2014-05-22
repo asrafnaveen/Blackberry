@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:background="@color/WHITE">
+    <!--Top Bar-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:paddingTop="8dip"
+                    android:paddingBottom="8dip"
+                    android:background="@color/TOP_BAR_BACKGROUND"
+                    android:id="@+id/headerLayout"
+            >
+        <Button android:id="@+id/newRequestDone"
+                android:layout_width="48dip"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:clickable="true"
+                android:onClick="back"
+                android:scaleType="centerInside"/>
+        <ImageView  android:id="@+id/idBackChevron" android:layout_width="16dip" android:layout_height="fill_parent"
+                    android:src="@drawable/holo_dark1_navigation_previous_item"
+                    android:contentDescription="@string/backNavigation"/>
+        <ImageView  android:id="@+id/cityIcon" android:layout_width="32dip" android:layout_height="32dip" android:scaleType="fitXY"
+                    android:contentDescription="@string/cityIcon"
+                    android:layout_toRightOf="@id/idBackChevron"/>
+        <TextView android:id="@+id/listViewTitle"
+                  android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="18dip"
+                  android:textColor ="@color/WHITE" android:layout_toRightOf="@+id/cityIcon" android:paddingLeft="16dip"
+                  android:gravity="center_vertical" android:text="@string/titlePlaceholder" android:textStyle="normal"/>
+
+        <ImageView
+            android:id="@+id/clearField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/holo_dark1_navigation_cancel" />
+</RelativeLayout>
+	<ViewFlipper
+	    android:layout_margin="6dip"
+	    android:id="@+id/view_flipper"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent">
+        <ListView android:layout_height="fill_parent"
+                  android:layout_width="fill_parent"
+                  android:id="@+id/listViewList"/>
+        </ViewFlipper>
+
+</LinearLayout>

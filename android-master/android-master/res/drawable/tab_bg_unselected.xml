@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- This is the line -->
+<item android:top="-2dp" android:right="-2dp">
+    <shape>
+        <solid android:color="@color/TAB_BACKGROUND" />
+        <stroke android:width="2dp" android:color="@color/TAB_BACKGROUND_STROKE" />
+    </shape>
+</item>
+</layer-list>
+

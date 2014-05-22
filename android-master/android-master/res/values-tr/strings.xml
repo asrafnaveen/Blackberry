@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ######################### NO TRANSLATION NECESSARY ######################### -->
+<string name="currmapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="mapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+<string name="debugmapskey">0ewCooT_fkQ6fRF-XYaZaPNrR6jB_UQNvzPiDXg</string>
+<string name="copyright">2012 PublicStuff</string>
+<string name="app_name">PublicStuff</string>
+
+<!-- ######################### TRANSLATION NECESSARY ######################### -->
+
+<string name="cityName" formatted="false">Cityname, ST</string>
+<string name="cityImageDescr" formatted="false">City Görüntüsü</string>
+<string name="arrowDescr" formatted="false">Ok</string>
+<string name="stuffText" formatted="false">Benim sayfalar Sayfa</string>
+<string name="exitButtonText" formatted="false">Dönmek için Tıklayınız</string>
+<string name="exitRequestScreenDescr" formatted="false">Yeni İsteği Ekrandan Çık</string>
+<string name="exitProfileScreenDescr" formatted="false">Profil Ekran Ekran çıkın</string>
+<string name="middleButtonDescr" formatted="false">middleTabViewButton</string>
+<string name="select_request_type_title" formatted="false">Bir İsteği Türü Seçin</string>
+
+<string name="main_no_items" formatted="false">Görüntülemek için Hayır\'ı istekleri</string>
+<string name="detailsLabel" formatted="false">DETAYLAR</string>
+<string name="addressLabel" formatted="false">Adres</string>
+<string name="addressPlaceholder"/>
+<string name="idLabel" formatted="false">Kimlik</string>
+<string name="idPlaceholder">12345</string>
+<string name="backNavigation" formatted="false">Geri</string>
+<string name="cityIcon" formatted="false">Şehir Simge</string>
+<string name="socialMedia" formatted="false">Sosyal medya aracılığıyla paylaşın</string>
+<string name="requestInfo" formatted="false">Bilgi</string>
+<string name="commentsPlaceholder" formatted="false">Yorumlar</string>
+<string name="locationPlaceholder"/>
+<string name="statusLabel" formatted="false">Durum</string>
+<string name="statusPlaceholder"/>
+<string name="descriptionLabel" formatted="false">Tanım</string>
+<string name="descriptionPlaceholder"/>
+<string name="priorityLabel" formatted="false">Öncelik</string>
+<string name="priorityPlaceholder"/>
+<string name="categoryLabel" formatted="false">Kategori</string>
+<string name="categoryPlaceholder"/>
+<string name="submittedByLabel" formatted="false">Ekleyen</string>
+<string name="submittedByPlaceholder"/>
+<string name="submittedOnLabel" formatted="false">Ekleyen</string>
+<string name="submittedOnPlaceholder"/>
+
+<string name="fav_activity_title" formatted="false">Hisse</string>
+<string name="allservice_activity_title" formatted="false">Bir hizmet bulun</string>
+
+<string name="nonetwork_msg" formatted="false">Yok şebeke</string>
+<string name="loading_please_wait_msg" formatted="false">Yükleniyor, lütfen bekleyin ...</string>
+
+<string name="username" formatted="false">Kullanıcı Adı</string>
+<string name="password" formatted="false">Şifre</string>
+<string name="login" formatted="false">Giriş</string>
+<string name="cancel" formatted="false">Iptal</string>
+<string name="loging_out" formatted="false">Çıkış yapılıyor ...</string>
+<string name="confirm" formatted="false">Onaylamak</string>
+<string name="delete_msg" formatted="false">Bu favori silinsin mi?</string>
+<string name="send_email" formatted="false">Posta Gönder</string>
+<string name="editview_info_text" formatted="false">Bu listedeki hizmetler Ekle veya Kaldır. Daha fazla hizmet eklemek için yukarıdaki Eylem bardan artı işaretini dokunun. Uzun silmek için belirli bir servis basın. Normal görünüme geri dönmek için geri düğmesine dokunun.</string>
+
+<string name="external_memory_for_image" formatted="false">Harici hafıza kartı e-posta yoluyla görüntü paylaşımı için mevcut olmalıdır</string>
+<string name="an_error_occured" formatted="false">Bir hata oluştu, lütfen tekrar deneyin</string>
+<string name="uploading_please_wait" formatted="false">Yükleme. Lütfen bekleyin ...</string>
+<string name="connecting_twitpic" formatted="false">TwitPic bağlanıyor ...</string>
+<string name="posting_the_tweet" formatted="false">Mesaj Gönderme ...</string>
+<string name="successfully_posted" formatted="false">Başarıyla gönderdi</string>
+<string name="title" formatted="false">Başlık</string>
+<string name="description" formatted="false">Tanım</string>
+<string name="image_attached" formatted="false">Attached Image</string>
+<string name="passwordConfirmation" formatted="false">Yeni Şifre \n onay</string>
+<string name="titlePlaceholder" formatted="false">Başlık</string>
+<string name="notificationTextPlaceholder" formatted="false">Birisi bir istek üzerine yapılan bir yorumu yanıtladı</string>
+<string name="timeAgoPlaceholder" formatted="false">6 ay önce</string>
+<string name="loading" formatted="false">Isteme ...</string>
+ <string name="required">*</string>
+<string name="selectCity" formatted="false">Bir DEFAULT ŞEHİR SEÇİN</string>
+<string name="attachImage" formatted="false">Görüntü ekleme</string>
+<string name="back" formatted="false">Geri</string>
+<string name="createAccount" formatted="false">Hesap Oluştur</string>
+<string name="cancelButton" formatted="false">Iptal</string>
+<string name="cityIconDesc" formatted="false">Şehir Simge</string>
+<string name="filterRequests" formatted="false">Filtre İstekleri</string>
+<string name="confirmButton" formatted="false">Onaylamak</string>
+<string name="findLocation" formatted="false">Konumunuzu bulun</string>
+<string name="mySettings" formatted="false">Benim Ayarlarım</string>
+<string name="save" formatted="false">Kurtarmak</string>
+<string name="newRequest" formatted="false">Yeni Talep</string>
+<string name="forgotPassword" formatted="false">Şifremi Unuttum</string>
+<string name="loginTitle" formatted="false">Giriş</string>
+<string name="aboutPublicStuff" formatted="false">PublicStuff Hakkında</string>
+<string name="myStuff" formatted="false">Benim sayfalar</string>
+<string name="openSettings" formatted="false">Açık Ayarlar</string>
+<string name="done" formatted="false">Yapılmış</string>
+<string name="fieldIsPublic" formatted="false">Buraya girilen bilgiler halka görünür olacak</string>
+<string name="enterAddress" formatted="false">Adres girin</string>
+<string name="post" formatted="false">POST</string>
+<string name="aboutPublicstuff" formatted="false">Biz yerel yönetimler, açık erişilebilir ve duyarlı hale getirmek için çalışıyoruz.</string>
+<string name="openMenu" formatted="false">Menüyü aç</string>
+<string name="searchCity" formatted="false">Bir şehir arayın</string>
+<string name="skip" formatted="false">Atlamak</string>
+<string name="list" formatted="false">Liste</string>
+<string name="gallery" formatted="false">Galeri</string>
+<string name="map" formatted="false">Harita</string>
+<string name="termsConditions"><![CDATA[Terms & Conditions]]></string>
+<string name="email" formatted="false">E-posta</string>
+<string name="aboutForgotPassword" formatted="false">Şifrenizi sıfırladıktan sonra, size yeni bir parola oluşturmak için nasıl talimatlar vererek PublicStuff bir e-posta alacaksınız. Sonra, yeni şifreniz ile giriş çekinmeyin yapmış.</string>
+<string name="enterCity" formatted="false">Şehir girin</string>
+<string name="myProfile" formatted="false">Profilim</string>
+<string name="firstName" formatted="false">Ad</string>
+<string name="lastName" formatted="false">Soyadı</string>
+<string name="phone" formatted="false">Telefon</string>
+<string name="myLocations" formatted="false">Benim Mekanlar</string>
+<string name="home" formatted="false">Ev</string>
+<string name="work" formatted="false">Çalışmak</string>
+<string name="addressDefault" formatted="false">Bu adresler varsayılan konumları olarak kullanılabilir</string>
+<string name="notifications" formatted="false">Bildirimler</string>
+<string name="emailMeWhen" formatted="false">Ben izlediğinizde bir istek bana e-posta</string>
+<string name="emailReplies" formatted="false">Benim mesaj yanıtları e-posta</string>
+<string name="currentLocation" formatted="false">Bulunduğu Yer</string>
+<string name="change" formatted="false">Değiştirmek</string>
+<string name="logOut" formatted="false">Log Out</string>
+<string name="oldPassword" formatted="false">Eski Şifre</string>
+<string name="newPassword" formatted="false">Yeni Şifre</string>
+<string name="passwordLength" formatted="false">Şifreler en az 6 karakter olmalıdır</string>
+<string name="sorting" formatted="false">Sınıflandırma</string>
+<string name="recent" formatted="false">Son</string>
+<string name="citySkyline" formatted="false">Şehir Skyline</string>
+<string name="mapInstructions" formatted="false">Konumunu değiştirmek için harita Taşı (hassasiyet için yakınlaştırma)</string>
+<string name="createAccountDesc" formatted="false">, Izlemek için destek bir hesap oluşturun, ve toplum içinde istekleri üzerine yorum.</string>
+<string name="privacyPolicy" formatted="false">Gizlilik Politikası</string>
+<string name="aboutPublicstuffLong" formatted="false">Sizlere şeyler sabit olsun yardımcı yenilikçi bir CRM yazılım şirketi vardır! Hem mobil ve web platformları kullanarak, belediyeler, tesisler ve üniversiteler gerçek zamanlı olarak kendi sakinleri ve müşterilerin hizmet taleplerini almaya olanak sağlayan kapsamlı bir arka uç CRM sistemi oluşturduk. Biz belediyeler gelişmiş iletişim kanalları ve artan müşteri memnuniyeti ile yılda fazla 360.000 $ tasarruf sağladı.</string>
+<string name="forgotPasswordButton" formatted="false">Şifrenizi mi unuttunuz?</string>
+<string name="questionsFeedback" formatted="false">Soru ve geri bildirim gönder</string>
+<string name="emailPublicStuff">tech@publicstuff.com</string>
+
+<string name="about" formatted="false">Hakkında</string>
+<string name="aboutPublicStuffMain" formatted="false">İstek ve destek şehirde sorunlar ve onlar sabit konum haberdar olsun!</string>
+<string name="status" formatted="false">Durum</string>
+<string name="open" formatted="false">Açık</string>
+<string name="filterBy" formatted="false">Göre filtreleme</string>
+<string name="sortBy" formatted="false">Sırala</string>
+<string name="nearby" formatted="false">Yakında</string>
+<string name="types" formatted="false">Türleri</string>
+<string name="allRequestTypes" formatted="false">Tüm İstek Türleri</string>
+<string name="dateRange" formatted="false">Tarih Aralığı</string>
+<string name="startDate" formatted="false">Başlangıç ​​Tarihi</string>
+<string name="endDate" formatted="false">Bitiş Tarihi</string>
+<string name="redoSearch" formatted="false">Burada arama Yinele</string>
+<string name="titleCaps" formatted="false">Başlık</string>
+<string name="flag" formatted="false">Uygunsuz olarak işaretle</string>
+<string name="calculatingLocation" formatted="false">Yer Hesaplanması</string>
+<string name="requestIsPrivate" formatted="false">Bu istek özel olarak işaretlendi</string>
+<string name="descriptionHint" formatted="false">Açıklama (isteğe bağlı)</string>
+<string name="addComment" formatted="false">Yorum ekle</string>
+<string name="send" formatted="false">Göndermek</string>
+
+<!-- notifier widget -->
+<string name="notifier" formatted="false">Güncelleme mevcut.</string>
+
+<!-- notification screen -->
+<string name="notificationComment" formatted="false">Biri sana gönderilen bir istek üzerine yorumladı</string>
+<string name="notificationReply" formatted="false">Birisi bir istek üzerine yapılan bir yorumu yanıtladı</string>
+<string name="notificationStatus" formatted="false">İsteğinizin durumu %s güncellendi</string>
+
+<!-- citydashboard activity -->
+<string name="aboutapp" formatted="false">Yaklaşık %s</string>
+<string name="mystuff" formatted="false">Benim sayfalar</string>
+<string name="aboutps" formatted="false">PublicStuff Hakkında</string>
+<string name="more" formatted="false">Daha fazla</string>
+<string name="nearbyRequest" formatted="false">Yakınlardaki İstekleri</string>
+
+<!-- dialogs -->
+<string name="findingLocation" formatted="false">Yer bulma ...</string>
+<string name="getRequestList" formatted="false">Istek listesi alınıyor ...</string>
+<string name="ErrorPastTense" formatted="false">Bir hata oluştu</string>
+<string name="ErrorInternet" formatted="false">Lütfen internet bağlantınızı kontrol edip tekrar deneyin</string>
+<string name="OkButton" formatted="false">Tamam</string>
+<string name="CancelButton" formatted="false">Iptal</string>
+<string name="loadingDialog" formatted="false">Yükleniyor ...</string>
+<string name="loginNow" formatted="false">Giriş</string>
+<string name="pleaseLogin" formatted="false">Şehrinizi takip için lütfen giriş yapın</string>
+<string name="creatingAccount" formatted="false">Hesap oluşturuluyor ...</string>
+<string name="getcustomFields" formatted="false">Özel alanlar alınıyor ...</string>
+<string name="bothFields" formatted="false">Her iki alan da giriş için gereklidir.</string>
+<string name="loggingIn" formatted="false">Günlüğü ...</string>
+<string name="locationFailGPS" formatted="false">Konumunuzu bulmak bir hata oluştu. GPS ve internet bağlantısı kontrol edin.</string>
+<string name="chooseLocation" formatted="false">Konum seç</string>
+<string name="tryAgain" formatted="false">Tekrar Dene</string>
+<string name="requestTypes" formatted="false">Istek tipleri alınıyor ...</string>
+<string name="geoError" formatted="false">Geolocation hatası</string>
+<string name="googleGeoError" formatted="false">Google\'ın konum belirleme sunucusu seçtiğiniz konumu hakkında kötü veri döndürdü. Tekrar yer seçerek deneyin.</string>
+<string name="saveDraft" formatted="false">Taslak olarak kaydet</string>
+<string name="deleteDraft" formatted="false">Taslak sil</string>
+<string name="exitSave" formatted="false">Kaydetmeden çıkmak</string>
+<string name="resumeDraft" formatted="false">Taslağını geri dön</string>
+<string name="exitScreen" formatted="false">Çıkış</string>
+<string name="loginDraft" formatted="false">Sen taslaklar kaydetmek için giriş yapmalısınız</string>
+<string name="titleRequired" formatted="false">Bir Başlık gereklidir.</string>
+<string name="requestTypeRequired" formatted="false">Bir istek türü gereklidir.</string>
+<string name="errorLocationConfirm" formatted="false">Konumunuzu onaylayan bir hata oluştu. Aşağıdaki adres alanına tıklayarak bir konum seçiniz.</string>
+<string name="loginRequired" formatted="false">%S için bir istek göndermek için giriş yapmalısınız</string>
+<string name="loadingProfile" formatted="false">Profil yükleniyor ...</string>
+<string name="requestDetails" formatted="false">Talep ayrıntıları alınıyor ...</string>
+<string name="submitComment" formatted="false">Yorum Gönderiliyor ...</string>
+<string name="endDateError" formatted="false">Bitiş tarihi başlangıç ​​tarihinden sonra gelmelidir.</string>
+<string name="startDateSelect" formatted="false">Başlangıç ​​Tarihi Seçin</string>
+<string name="endDateSelect" formatted="false">Bitiş Tarihi seçin</string>
+
+<!-- password alerts -->
+<string name="passwordMatch" formatted="false">Yeni parola ve onay eşleşmelidir.</string>
+<string name="passwordFormat" formatted="false">Parola en az altı karakter olmalıdır.</string>
+<string name="passwordSecurity" formatted="false">Eski şifrenizi girmeniz gerekir.</string>
+<string name="savingSettings" formatted="false">Ayarlar kaydediliyor ...</string>
+
+<string name="thankyou" formatted="false">Teşekkür ederim</string>
+<string name="passwordUpdated" formatted="false">Şifreniz güncellendi</string>
+<string name="oldpasswordbad" formatted="false">Eski şifre yanlış girilmiş</string>
+
+<!-- citieslist activity -->
+<string name="cityList" formatted="false">Şehir listesi alınıyor ...</string>
+<string name="locationFail" formatted="false">Yerini bulamadı</string>
+<string name="locationFailVerbose" formatted="false">Hiçbir yerle Arama kriterinize uygun</string>
+<string name="cityData" formatted="false">Şehir veri alınıyor ...</string>
+<string name="findCity" formatted="false">Konumunuzu bulmak bir hata oluştu. Bir şehir girin veya aşağıdaki listeden seçiniz.</string>
+<string name="selectCityTime" formatted="false">Bir şehir seçiniz</string>
+<string name="selectCityVerbose" formatted="false">Devam etmek listesinde bir şehir seçiniz.</string>
+
+<!-- citydetails activity -->
+<string name="follow" formatted="false">Takip etmek</string>
+<string name="unfollow" formatted="false">İzlemekten vazgeç</string>
+<string name="visitcityweb" formatted="false">Şehir Web Sitesini ziyaret edin</string>
+<string name="petitioncity" formatted="false">Şehir Dilekçe</string>
+<string name="petitionCityVerbose" formatted="false">PublicStuff kullanmak için şehir dilekçe giriş yapınız</string>
+
+<!-- createaccount activity -->
+
+<string name="errorRequest" formatted="false">Isteği hata</string>
+<string name="citydescription" formatted="false">Make %s benim varsayılan şehir</string>
+<string name="accountRequirement" formatted="false">Tüm alanlar bir hesap oluşturmak için gereklidir.</string>
+<string name="passwordCharacters" formatted="false">Şifre fazla 5 karakter olmalıdır</string>
+
+<!-- customfields activity -->
+<string name="requiredField" formatted="false">%s gerekli bir alandır</string>
+<string name="requestAddl" formatted="false">%1$s, %2$s  istek türü ile istekleri için ek bilgi istiyorum %3$s.</string>
+<string name="submitrequestto" formatted="false">% S için bir istek göndermek için giriş yapmalısınız</string>
+<string name="submitRequest" formatted="false">İstek gönderiliyor ...</string>
+<string name="loadingRequest" formatted="false">Isteği yükleniyor ...</string>
+
+<!-- Drafts activity -->
+<string name="myDrafts" formatted="false">Benim Taslaklar</string>
+<string name="delDraft" formatted="false">Taslak sil</string>
+
+<!-- forgot password activity -->
+<string name="enterEmail" formatted="false">E-postanızı girin.</string>
+<string name="passReset" formatted="false">Parola sıfırlama ...</string>
+
+<!-- main activity -->
+<string name="unableCity" formatted="false">Şehir tespit edilemiyor</string>
+<string name="refreshps" formatted="false">Yenile Widgets</string>
+<string name="widgetsUpdated" formatted="false">Widgets Güncelleme</string>
+
+<!-- newrequest activity -->
+<string name="takePhoto" formatted="false">Yeni Fotoğraf atın</string>
+<string name="selectPhoto" formatted="false">Fotoğraf Seç</string>
+<string name="deletePhoto" formatted="false">Fotoğraf sil</string>
+<string name="noCamera" formatted="false">Cihazınızda saptanmadı kameralar vardır</string>
+<string name="publicSelector" formatted="false">Kamu</string>
+<string name="privateSelector" formatted="false">Özel</string>
+<string name="setPrivacy" formatted="false">Gizlilik ayarla</string>
+<string name="publicComment" formatted="false">Herkes görüntülemek veya yorumda bulunabilirsiniz</string>
+<string name="privateComment" formatted="false">Sadece kent işçileri görüntülemek veya yorumda bulunabilirsiniz</string>
+<string name="forcePrivate" formatted="false">Seçilen istek türü ile yeni istekleri sadece özel olabilir.</string>
+
+<!-- newrequestmap activity -->
+<string name="addressUnavailable" formatted="false">Kullanılamaz Adres.</string>
+<string name="errorFindingLocation" formatted="false">Konumunuzu bulmak Hatası</string>
+<string name="addressBlankError" formatted="false">Adres boş olamaz, birini girmek veya haritada bir konumu seçiniz</string>
+<string name="findingAddress" formatted="false">Bulma Adres ...</string>
+<string name="errorGeocodingLoc" formatted="false">Bir hata Geocoding seçilen yer yoktu. Lütfen tekrar deneyin.</string>
+<string name="addressVerify" formatted="false">Doğrulanıyor Adres ...</string>
+
+<!-- requestdetails activity -->
+<string name="pending" formatted="false">Kadar</string>
+<string name="anonymous" formatted="false">Anonim</string>
+<string name="followers" formatted="false">İzleyiciler</string>
+<string name="comments" formatted="false">YORUMLAR</string>
+<string name="requestResolved" formatted="false">Isteği çözüldü</string>
+<string name="requestError" formatted="false">Özgün istek bir hata oluştu</string>
+<string name="requestNA" formatted="false">Isteğe uygulanabilir artık</string>
+<string name="makePubliclyVisible" formatted="false">Bu bilgi herkese görünür olun</string>
+<string name="reason" formatted="false">Muhakeme</string>
+<string name="elaborate" formatted="false">Ayrıntılı</string>
+<string name="closeRequest" formatted="false">İsteği Kapat</string>
+<string name="submit" formatted="false">Sunmak</string>
+<string name="makePrivate" formatted="false">İstek Özel Yap?</string>
+<string name="makePrivateMessage" formatted="false">Eğer özel için servis talebi ayarlamak istiyor musunuz? Bu işlem geri alınamaz.</string>
+
+<string name="statusSubmitted" formatted="false">Ekleyen</string>
+<string name="statusAcknowledged" formatted="false">Kabul edilen</string>
+<string name="statusInProgress" formatted="false">Sürüyor</string>
+<string name="statusCompleted" formatted="false">Tamamlandı</string>
+<string name="statusOther" formatted="false">Diğer</string>
+
+<string name="yes" formatted="false">Evet</string>
+<string name="no" formatted="false">Hayır</string>
+<string name="gettingComments" formatted="false">İstek comments alınıyor ...</string>
+<string name="loginToRequest" formatted="false">%S bir istek için giriş yapın</string>
+<string name="loginComment" formatted="false">Siz Yorumlamak için giriş yapmalısınız</string>
+
+<string name="socialFacebook" formatted="false">Facebook post</string>
+<string name="socialTwitter" formatted="false">Post heyecan için</string>
+<string name="socialEmail" formatted="false">Bir email gönder</string>
+<string name="shareRequest" formatted="false">payı İsteği</string>
+<string name="addImage" formatted="false">Resim Ekle</string>
+<string name="plsEnterComment" formatted="false">Lütfen bir yorum girin.</string>
+
+<!-- RequestListFilter Activity -->
+<string name="sortRecent" formatted="false">Son</string>
+<string name="sortPopular" formatted="false">Popüler</string>
+<string name="statusOpen" formatted="false">Açık</string>
+<string name="statusClosed" formatted="false">Kapalı</string>
+<string name="statusAll" formatted="false">Tüm</string>
+<string name="filterNearby" formatted="false">Yakında</string>
+<string name="filterMyRequests" formatted="false">Benim İstekleri</string>
+<string name="filterFollowedRequests" formatted="false">Takip İstekleri</string>
+<string name="filterCommentedRequests" formatted="false">İstekleri Yorumlanan</string>
+<string name="filterVotedRequests" formatted="false">Voted İstekleri</string>
+
+<string name="myNotifications" formatted="false">Bildirimlerim</string>
+
+<string name="requestTypeSelect" formatted="false">Bir istek türü seçin</string>
+
+<!--  UserDetails Activity -->
+<string name="requestRank" formatted="false">Siz%2$s sunulan talepleri içerisinde%1$s vardır</string>
+<string name="commentRank" formatted="false">Siz%2$s gönderilen yorumlara içerisinde%1$s vardır</string>
+<string name="following" formatted="false">Izleyen</string>
+<string name="upvoted" formatted="false">Upvoted</string>
+<string name="drafts" formatted="false">Taslaklar</string>
+<string name="notificationsChoice" formatted="false">Bildirimler</string>
+
+<!-- UserSettings Activity -->
+<string name="typeChangeStatus" formatted="false">Değişiklikler Durum</string>
+<string name="typeIsClosed" formatted="false">Kapalı mi</string>
+<string name="typeEmailMe" formatted="false">Bana e-posta etmeyin</string>
+<string name="emailMeRequest" formatted="false">Ben izlediğinizde bir istek bana e-posta</string>
+<string name="logOutWarning" formatted="false">Eğer çıkış yapmak istediğinizden emin misiniz? Kaydettiğiniz herhangi bir isteği taslaklar kaybedersiniz.</string>
+<string name="usernameWarning" formatted="false">Adı boş olamaz.</string>
+<string name="emailWarning" formatted="false">E-posta boş olamaz.</string>
+<string name="settingsSaved" formatted="false">Ayarlarınız kaydedildi</string>
+<string name="changesStatus" formatted="false">Değişiklikler Durum</string>
+<string name="currentLanguage" formatted="false">MEVCUT DİL</string>
+<string name="selectLanguage" formatted="false">Dil Seçin</string>
+<string name="changeCity" formatted="false">Şehir değiştir</string>
+
+<!-- Supported Languages -->
+<string name="frenchLanguageCanadian" formatted="false">Fransızca (Kanada)</string>
+<string name="spanishLanguange" formatted="false">Español</string>
+
+<string name="arabicLanguage" formatted="false">Arapça</string>
+<string name="germanLanguage" formatted="false">Alman</string>
+<string name="greekLanguage" formatted="false">Yunan</string>
+<string name="englishLanguage" formatted="false">İngilizce</string>
+<string name="spanishLanguage" formatted="false">İspanyolca</string>
+<string name="frenchLanguage" formatted="false">Fransız</string>
+<string name="hindiLanguage" formatted="false">Hintçe</string>
+<string name="italianLanguage" formatted="false">İtalyan</string>
+<string name="japaneseLanguage" formatted="false">Japon</string>
+<string name="koreanLanguage" formatted="false">Kore</string>
+<string name="polishLanguage" formatted="false">Polonyalı</string>
+<string name="portugueseLanguage" formatted="false">Portekizce</string>
+<string name="russianLanguage" formatted="false">Rusça</string>
+<string name="serbianLanguage" formatted="false">Sırp</string>
+<string name="turkishLanguage" formatted="false">Türk</string>
+<string name="vietnameseLanguage" formatted="false">Vietnam</string>
+<string name="chineseLanguage" formatted="false">Çince</string>
+
+<string name="languageUnavailable" formatted="false">Bu Cihaz mevcut değil Dil</string>
+<!-- Terms & Conditions -->
+<string name="ts" formatted="false">Şartlar ve Koşullar</string>
+
+</resources>

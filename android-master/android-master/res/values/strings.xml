@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- ######################### NO TRANSLATION NECESSARY ######################### -->
+    <string name="currmapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+    <string name="mapskey">00QBbEmEdARzUcH8V6T_tu6dAyySsfVNOxBlGpg</string>
+    <!-- <string name="debugmapskey">04g0uC1CrjMa5IlMkMcKPty5-CIhx-UuLnVSp7A</string> not Eric's Mac Mini -->
+    <string name="debugmapskey">0Z7VvIallZD53dwv1U0ALMKzB1oAnUWIboA0GXw</string>
+    <string name="copyright">2012 PublicStuff</string>
+    <string name="app_name">PublicStuff</string>    
+    
+    <!-- ######################### TRANSLATION NECESSARY ######################### -->
+    
+	<string name="cityName">Cityname, ST</string>
+	<string name="cityImageDescr">City Image</string>
+	<string name="arrowDescr">Arrow</string>
+    <string name="stuffText">My Stuff Page</string>
+    <string name="exitButtonText">Click To Return</string>
+    <string name="exitRequestScreenDescr">Exit New Request Screen</string>
+    <string name="exitProfileScreenDescr">Exit Profile Screen Screen</string>
+	<string name="middleButtonDescr">middleTabViewButton</string>
+    <string name="select_request_type_title">Choose a Request Type</string>
+   
+    <string name="main_no_items">No requests to display</string>
+    <string name="detailsLabel">DETAILS</string>
+    <string name="addressLabel">Address</string>
+    <string name="addressPlaceholder"/>
+    <string name="idLabel">ID</string>
+    <string name="idPlaceholder">12345</string>
+    <string name="backNavigation">Back</string>
+    <string name="cityIcon">City Icon</string>
+    <string name="socialMedia">Share through social media</string>
+    <string name="requestInfo">INFO</string>
+    <string name="commentsPlaceholder">COMMENTS</string>
+    <string name="locationPlaceholder"/>
+    <string name="statusLabel">STATUS</string>
+    <string name="statusPlaceholder"/>
+    <string name="descriptionLabel">DESCRIPTION</string>
+    <string name="descriptionPlaceholder"/>
+    <string name="priorityLabel">Priority</string>
+    <string name="priorityPlaceholder"/>
+    <string name="categoryLabel">Category</string>
+    <string name="categoryPlaceholder"/>
+    <string name="submittedByLabel">Submitted By</string>
+    <string name="submittedByPlaceholder"/>
+    <string name="submittedOnLabel">Submitted On</string>
+    <string name="submittedOnPlaceholder"/>
+
+    <string name="fav_activity_title">Share</string>
+    <string name="allservice_activity_title">Find a service</string>
+
+    <string name="nonetwork_msg">No network available</string>
+    <string name="loading_please_wait_msg">Loading, please wait …</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="cancel">Cancel</string>
+    <string name="loging_out">Logging out…</string>
+    <string name="confirm">Confirm</string>
+    <string name="delete_msg">Delete this favorite?</string>
+    <string name="send_email">Send Mail</string>
+    <string name="editview_info_text">Add or Remove services in this list. Tap the plus sign from the Action bar above to add more services. Long press a particular service to delete. Tap the back button to go back to the normal view.</string>
+
+    <string name="external_memory_for_image">External memory card should be present for sharing the image through email</string>
+    <string name="an_error_occured">An error occurred, please try again later</string>
+    <string name="uploading_please_wait">Uploading. Please wait…</string>
+    <string name="connecting_twitpic">Connecting TwitPic…</string>
+    <string name="posting_the_tweet">Posting the message…</string>
+    <string name="successfully_posted">Successfully posted</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="image_attached">Image Attached</string>
+    <string name="passwordConfirmation">New Password\nConfirmation</string> <!-- "New Password\nConfirmation , make sure \n is retained -->
+    <string name="titlePlaceholder">Title</string>
+    <string name="notificationTextPlaceholder">Someone replied to a comment you made on a request</string>
+    <string name="timeAgoPlaceholder">6 months ago</string>
+    <string name="loading">Requesting&#8230;</string>
+    <string name="required">*</string>
+    <string name="selectCity">SELECT A DEFAULT CITY</string>
+    <string name="attachImage">Attach an Image</string>
+    <string name="back">Back</string>
+    <string name="createAccount">Create Account</string>
+    <string name="cancelButton">Cancel</string>
+    <string name="cityIconDesc">City Icon</string>
+    <string name="filterRequests">Filter Requests</string>
+    <string name="confirmButton">Confirm</string>
+    <string name="findLocation">Find your Location</string>
+    <string name="mySettings">My Settings</string>
+    <string name="save">SAVE</string>
+    <string name="newRequest">New Request</string>
+    <string name="forgotPassword">Forgot Password</string>
+    <string name="loginTitle">Login</string>
+    <string name="aboutPublicStuff">About PublicStuff</string>
+    <string name="myStuff">My Stuff</string>
+    <string name="openSettings">Open Settings</string>
+    <string name="done">DONE</string>
+    <string name="fieldIsPublic">Information entered here will be visible to the public</string>
+    <string name="enterAddress">Enter Address</string>
+    <string name="post">POST</string>
+    <string name="aboutPublicstuff">We’re working to make local governments
+        open, accessible, and responsive.
+    </string>
+    <string name="openMenu">Open Menu</string>
+    <string name="searchCity">Search for a city</string>
+    <string name="skip">Skip</string>
+    <string name="list">LIST</string>
+    <string name="gallery">GALLERY</string>
+    <string name="map">MAP</string>
+    <string name="termsConditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="email">Email</string>
+    <string name="aboutForgotPassword">When you reset your password, you
+        will get an email from PublicStuff giving
+        you instructions on how to create a new
+        password. Once you have done that, feel
+        free to login with your new password.
+    </string>
+    <string name="enterCity">Enter city</string>
+    <string name="myProfile">MY PROFILE</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="phone">Phone</string>
+    <string name="myLocations">MY LOCATIONS</string>
+    <string name="home">Home</string>
+    <string name="work">Work</string>
+    <string name="addressDefault">These addresses can be used as default locations</string>
+    <string name="notifications">EMAIL NOTIFICATIONS</string>
+    <string name="emailMeWhen">Email me when a request I follow</string>
+    <string name="emailReplies">Email replies to my posts</string>
+    <string name="pushnotifications">PUSH NOTIFICATIONS</string>
+    <string name="pushMeWhen">Notify me when a request I follow</string>
+    <string name="pushReplies">Notify me when someone replies to my posts</string>
+    <string name="currentLocation">CURRENT LOCATION</string>
+    <string name="change">Change</string>
+    <string name="logOut">Log Out</string>
+    <string name="oldPassword">Old Password</string>
+    <string name="newPassword">New Password</string>
+    <string name="passwordLength">Passwords must be at least 6 characters</string>
+    <string name="sorting">Sorting</string>
+    <string name="recent">Recent</string>
+    <string name="citySkyline">City Skyline</string>
+    <string name="mapInstructions">Move map to change position (zoom in for precision)</string>
+    <string name="createAccountDesc">Create an account to track, support, and comment on requests in your community.
+    </string>
+    <string name="privacyPolicy">Privacy Policy</string>
+    <string name="aboutPublicstuffLong">We are an innovative CRM software company that helps you get stuff fixed! Using
+        both mobile and web platforms, we have created a comprehensive backend CRM system that allows municipalities,
+        facilities and universities to receive service requests from their residents and customers in real time. We have
+        helped municipalities save over $360,000 annually with improved communication channels and increased customer
+        satisfaction.
+    </string>
+    <string name="forgotPasswordButton">Forgot Password?</string>
+    <string name="questionsFeedback">Send questions and feedback to</string>
+    <string name="emailPublicStuff">tech@publicstuff.com</string>
+    
+    <string name="about">ABOUT</string>
+    <string name="aboutPublicStuffMain">Request and support issues in your city and get notified when they\'re fixed!
+    </string>
+    <string name="status">Status</string>
+    <string name="open">Open</string>
+    <string name="filterBy">Filter by</string>
+    <string name="sortBy">Sort By</string>
+    <string name="nearby">Nearby</string>
+    <string name="types">Types</string>
+    <string name="allRequestTypes">All Request Types</string>
+    <string name="dateRange">Date Range</string>
+    <string name="startDate">Start Date</string>
+    <string name="endDate">End Date</string>
+    <string name="redoSearch">Redo search here</string>
+    <string name="titleCaps">TITLE</string>
+    <string name="flag">Flag as inappropriate</string>
+    <string name="calculatingLocation">Calculating Location</string>
+    <string name="requestIsPrivate">This request has been marked as private</string>
+    <string name="descriptionHint">Description (Optional)</string>
+    <string name="addComment">Add a comment</string>
+    <string name="send">Send</string>
+    
+    <!-- notifier widget -->
+    <string name="notifier">Update available.</string>
+    
+    <!-- notification screen -->
+    <string name="notificationComment">Someone commented on a request that you submitted</string>
+    <string name="notificationReply">Someone replied to a comment you made on a request</string>
+    <!--  ## SEE NOTE AT THE END OF THIS TAG ## --><string name="notificationStatus">The status of your request was updated to %s</string><!-- %s is a past tense verb such as "updated" or "completed", move it to the proper place of the translated sentence -->
+    
+    <!-- citydashboard activity -->
+    <string name="aboutapp">About %s</string>
+    <string name="mystuff">My Stuff</string>
+    <string name="aboutps">About PublicStuff</string>
+    <string name="more">More</string>
+    <string name="nearbyRequest">Nearby Requests</string>
+    
+    <!-- dialogs -->
+    <string name="findingLocation">Finding Location&#8230;</string>
+    <string name="getRequestList">Getting request list&#8230;</string>
+    <string name="ErrorPastTense">There was an error</string>
+    <string name="ErrorInternet">Please check your internet connection and try again</string>
+    <string name="OkButton">OK</string>
+    <string name="CancelButton">Cancel</string>
+    <string name="loadingDialog">Loading&#8230;</string>
+    <string name="loginNow">Login</string>
+    <string name="pleaseLogin">Please login to follow your city</string>
+    <string name="creatingAccount">Creating account&#8230;</string>
+    <string name="getcustomFields">Getting custom fields&#8230;</string>
+    <string name="bothFields">Both fields are required to login.</string>
+    <string name="loggingIn">Logging in&#8230;</string>
+    <string name="locationFailGPS">There was an error finding your location. Please check your GPS and internet connectivity.</string>
+    <string name="chooseLocation">Choose Location</string>
+    <string name="tryAgain">Try Again</string>
+    <string name="requestTypes">Getting request types&#8230;</string>
+    <string name="geoError">Geolocation error</string>
+    <string name="googleGeoError">The Google geolocation server returned bad data about your chosen location. Please try choosing your location again.</string>
+    <string name="saveDraft">Save draft</string>
+    <string name="deleteDraft">Delete Draft</string>
+    <string name="exitSave">Exit without saving</string>
+    <string name="resumeDraft">Back to draft</string>
+    <string name="exitScreen">Exit</string>
+    <string name="loginDraft">You must be logged in to save drafts</string>
+    <string name="titleRequired">A Title is required. </string>
+    <string name="requestTypeRequired">A request type is required. </string>
+    <string name="errorLocationConfirm">There was an error confirming your location. Please select a location by clicking on the address field below.</string>
+    <!-- ## SEE NOTE ## --><string name="loginRequired">You must be logged in to submit a request to %s</string> <!-- NOTE: %s is a noun, name of a city. Put %s in the proper place of the translated sentence. -->
+    <string name="loadingProfile">Loading your profile&#8230;</string>
+    <string name="requestDetails">Getting request details&#8230;</string>
+    <string name="submitComment">Submitting comment&#8230;</string>
+    <string name="endDateError">The end date must come after the start date.</string>
+    <string name="startDateSelect">Select Start Date</string>
+    <string name="endDateSelect">Select End Date</string>
+    
+    <!-- password alerts -->
+    <string name="passwordMatch">New password and confirmation must match.</string>
+    <string name="passwordFormat">Password must be at least six characters.</string>
+    <string name="passwordSecurity">You must enter your old password.</string>
+	<string name="savingSettings">Saving settings&#8230;</string>    
+    
+	<string name="thankyou">Thank you</string>
+	<string name="passwordUpdated">Your password has been updated</string>
+	<string name="oldpasswordbad">Old password entered incorrectly</string>
+    
+	<!-- citieslist activity -->
+	<string name="cityList">Getting city list&#8230;</string>
+	<string name="locationFail">Could not find location</string>
+	<string name="locationFailVerbose">No locations matched your search criteria</string>
+	<string name="cityData">Getting city data&#8230;</string>
+	<string name="findCity">There was an error finding your location. Please enter a city or select from the list below.</string>
+	<string name="selectCityTime">Please select a city</string>
+	<string name="selectCityVerbose">Please select a city in the list to continue.</string>
+	
+	<!-- citydetails activity -->
+	<string name="follow">Follow</string>
+	<string name="unfollow">Unfollow</string>
+	<string name="visitcityweb">Visit City Website</string>
+	<string name="petitioncity">Petition City</string>
+	<string name="petitionCityVerbose">Please login to petition your city to use PublicStuff</string>
+	
+	<!-- createaccount activity -->
+	
+	<string name="errorRequest">Error in request</string>
+	<!--  ## SEE NOTE ## --><string name="citydescription">Make %s my default city</string> <!-- #### translate this one differently. %s represents a proper noun. Move the %s (a proper noun) to the correct place in the translated sentence -->
+	<string name="accountRequirement">All fields are required to create an account.</string>
+	<string name="passwordCharacters">Password must have more than 5 characters</string>
+	
+	<!-- customfields activity -->
+	
+	<!--  ## SEE NOTE ## --><string name="requiredField">%s is a required field</string> <!-- %s is a proper noun, move this to the correct place in the translated sentence -->
+	<!--  ## SEE NOTE ## --><string name="requestAddl">%1$s, %2$s would like additional information for requests with the request type %3$s.</string><!-- ie.  City, State would like additional information for requests with the request type RequestTypeName. -->
+	<!--  ## SEE NOTE ## --><string name="submitrequestto">You must be logged in to submit a request to %s</string> <!-- %s is a proper noun, move this to the correct place in the translated sentence -->
+	<string name="submitRequest">Submitting request&#8230;</string>
+	<string name="loadingRequest">Loading request&#8230;</string>
+	
+	<!-- Drafts activity -->
+	<string name="myDrafts">My Drafts</string>
+	<string name="delDraft">Delete Draft</string>
+	
+	<!-- forgot password activity -->
+	<string name="enterEmail">Please enter your email.</string>
+	<string name="passReset">Resetting password&#8230;</string>
+	
+	<!-- main activity -->
+	<string name="unableCity">Unable to identify city</string>
+	<string name="refreshps">Refresh Widgets</string>
+	<string name="widgetsUpdated">Widgets Updated</string>
+	
+	<!-- newrequest activity -->
+	<string name="newMedia">Add New Media</string>
+	<string name="browseMedia">Browse Existing Media</string>
+	
+	<string name="takePhoto">Add New Photo</string>
+	<string name="takeVideo">Add New Video</string>
+	<string name="takeAudio">Add New Audio</string>
+	
+	<string name="selectPhoto">Select Photo</string>
+	<string name="selectVideo">Select Video</string>
+	<string name="selectAudio">Select Audio</string>
+	
+	<string name="deleteMedia">Delete Media</string>
+	
+	<string name="noCamera">There are no cameras detected on your device</string>
+	<string name="publicSelector">Public</string>
+	<string name="privateSelector">Private</string>
+	<string name="setPrivacy">Set Privacy</string>
+	<string name="publicComment">Anyone can view or comment</string>
+	<string name="privateComment">Only city workers can view or comment</string>
+	<string name="forcePrivate">New requests with the chosen request type can only be private.</string>
+	<string name="unsuccessful">Post Unsuccessful.</string>
+	
+	<!-- newrequestmap activity -->
+	<string name="addressUnavailable">Address Unavailable.</string>
+	<string name="errorFindingLocation">Error finding your location</string>
+	<string name="addressBlankError">Address cannot be blank, please enter one or choose a location on the map</string>
+	<string name="findingAddress">Finding Address&#8230;</string>
+	<string name="errorGeocodingLoc">There was an error geocoding your selected location. Please try again.</string>
+	<string name="addressVerify">Verifying Address&#8230;</string>
+	<string name="draftSaved">Request saved as draft. Access drafts in \"My Stuff\"</string>
+	
+	<!-- requestdetails activity -->
+	<string name="pending">Pending</string>
+	<string name="anonymous">Anonymous</string>
+	<string name="followers"> Followers</string>
+	<string name="comments">COMMENTS</string>
+	
+	<string name="makePrivate">Make Request Private?</string>
+	<string name="makePrivateMessage">Do you want to set your service request to private?</string>
+	<string name="statusSubmitted">Submitted</string>
+	<string name="statusAcknowledged">Acknowledged</string>
+	<string name="statusInProgress">In Progress</string>
+	<string name="statusCompleted">Completed</string>
+	<string name="statusOther">Other</string>
+	
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	<string name="gettingComments">Getting request comments&#8230;</string>
+	<!-- ## FIX NOUN (%s) POSITION ## --><string name="loginToRequest">Please login to %s a request</string>
+	<string name="loginComment">You must be logged in to comment</string>
+	
+	<string name="socialFacebook">Post to Facebook</string>
+	<string name="socialTwitter">Post to Twitter</string>
+	<string name="socialEmail">Send an email</string>
+	<string name="shareRequest">share Request</string>
+	<string name="addAttachment">Add Media Attachment</string>
+	<string name="plsEnterComment">Please enter a comment.</string>
+	
+	<string name="closeRequest">Close Request</string>
+	<string name="closeRequestResolved">The request has been resolved</string>
+	<string name="closeRequestError">There was an error in the original request</string>
+	<string name="closeRequestApplicable">The request is no longer applicable</string>
+	
+	<!-- RequestListFilter Activity -->
+	<string name="sortRecent">Recent</string>
+	<string name="sortPopular">Popular</string>
+	<string name="statusOpen">Open</string>
+	<string name="statusClosed">Closed</string>	
+	<string name="statusAll">All</string>
+	<string name="filterNearby">Nearby</string>
+	<string name="filterMyRequests">My Requests</string>
+	<string name="filterFollowedRequests">Followed Requests</string>
+	<string name="filterCommentedRequests">Commented Requests</string>
+	<string name="filterVotedRequests">Voted Requests</string>
+	
+	<string name="myNotifications">My Notifications</string>
+	
+	<string name="requestTypeSelect">Select a request type</string>
+	
+	<!--  UserDetails Activity -->
+	<!-- ## SEE NOTE --><string name="requestRank">You are #%1$s in requests submitted to %2$s</string><!-- "#%1$s" is a number, "%2$s" is the name of a city (noun). Put these in the correct place in the translated sentence ##-->
+	<!-- ## SEE NOTE --><string name="commentRank">You are #%1$s in comments submitted to %2$s</string><!-- "#%1$s" is a number, "%2$s" is the name of a city (noun). Put these in the correct place in the translated sentence ##-->
+	<string name="following">Following</string>
+	<string name="upvoted">Upvoted</string>
+	<string name="drafts">Drafts</string>
+	<string name="notificationsChoice">Notifications</string>
+	
+	<!-- UserSettings Activity -->
+	<string name="typeChangeStatus">Changes Status</string>
+	<string name="typeIsClosed">Is Closed</string>
+	<string name="typeEmailMe">Don\'t email me</string>
+	<string name="typePushMe">Don\'t notify me</string>
+	<string name="logOutWarning">Are you sure you want to log out? You will lose any request drafts you have saved.</string>
+	<string name="usernameWarning">Username cannot be empty.</string>
+	<string name="emailWarning">Email cannot be empty.</string>
+	<string name="settingsSaved">Your settings have been saved</string>
+	<string name="changesStatus">Changes Status</string>
+	<string name="changeCity">Change City</string>
+	<string name="currentLanguage">CURRENT LANGUAGE</string>
+	<string name="selectLanguage">Select Language</string>
+	
+	<!-- Supported Languages -->
+	<string name="arabicLanguage">Arabic</string>
+	<string name="germanLanguage">German</string>
+	<string name="greekLanguage">Greek</string>
+	<string name="englishLanguage">English</string>
+	<string name="spanishLanguange">Español</string>
+	<string name="frenchLanguage">French</string>
+	<string name="hindiLanguage">Hindi</string>
+	<string name="italianLanguage">Italian</string>
+	<string name="japaneseLanguage">Japanese</string>
+	<string name="koreanLanguage">Korean</string>
+	<string name="polishLanguage">Polish</string>
+	<string name="portugueseLanguage">Portuguese</string>
+	<string name="russianLanguage">Russian</string>
+	<string name="serbianLanguage">Serbian</string>
+	<string name="turkishLanguage">Turkish</string>
+	<string name="vietnameseLanguage">Vietnamese</string>
+	<string name="chineseLanguage">Chinese</string>
+	
+	<string name="languageUnavailable">Language Not Available on this Device</string>
+		
+	<!-- Terms & Conditions -->
+	<string name="ts">Terms &#38; Conditions</string>
+	
+	<string name="playLicense">Google Play License</string>
+	
+</resources>

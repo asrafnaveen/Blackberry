@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/WHITE" android:padding="8dip">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+        <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="10dip"
+                  android:layout_weight="1" android:padding="8dip"
+                android:id="@+id/commentUser" android:gravity="left|center_vertical" />
+        <TextView
+                android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="10dip"
+                android:text="@string/timeAgoPlaceholder" android:layout_weight="1"  android:textStyle="italic"
+                android:id="@+id/commentDate" android:gravity="right|center_vertical" android:padding="8dip"/>
+    </LinearLayout>
+    <TextView
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:paddingLeft="8dip" android:paddingRight="16dip" android:paddingBottom="8dip" android:textSize="12dip"
+            android:text="@string/descriptionPlaceholder"
+            android:id="@+id/commentText" />
+    <ImageView
+            android:id="@+id/commentImage" android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:contentDescription="@string/descriptionLabel"
+            android:gravity="left|center_vertical"    android:scaleType="fitStart"
+            android:paddingLeft="8dip" android:paddingRight="8dip"/>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical" android:padding="16dip">
+    <TextView android:id="@+id/notificationText"
+              android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="14dip"
+              android:gravity="center_vertical" android:text="@string/notificationTextPlaceholder" android:textStyle="bold" android:layout_weight="1"/>
+    <TextView android:id="@+id/notificationDate"
+              android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="10dip"
+              android:gravity="center_vertical" android:text="@string/timeAgoPlaceholder" android:textStyle="bold" android:layout_weight="1"
+              android:paddingTop="8dip"
+            />
+</LinearLayout>

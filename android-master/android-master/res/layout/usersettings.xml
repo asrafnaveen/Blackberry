@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/headerLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@color/TOP_BAR_BACKGROUND"
+        android:paddingBottom="8dip"
+        android:paddingTop="8dip" >
+
+        <Button
+            android:id="@+id/done"
+            android:layout_width="48dip"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:clickable="true"
+            android:onClick="back"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/idBackChevron"
+            android:layout_width="16dip"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/back"
+            android:src="@drawable/holo_dark1_navigation_previous_item" />
+
+        <ImageView
+            android:id="@+id/cityIcon"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_toRightOf="@id/idBackChevron"
+            android:contentDescription="@string/cityIcon"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/requestSubmitTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/cityIcon"
+            android:layout_toLeftOf="@+id/rightSide"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dip"
+            android:text="@string/mySettings"
+            android:textColor="@color/WHITE"
+            android:textSize="18dip"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/rightSide"
+            android:layout_alignParentRight="true">
+
+            <View
+                android:id="@+id/viewSeparator"
+                android:layout_width="2dip"
+                android:layout_height="fill_parent"
+                android:background="@color/TOP_BAR_SEPARATOR" />
+
+            <ImageView
+                android:id="@+id/settingsSubmitAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/viewSeparator"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/holo_dark1_navigation_accept" />
+
+            <Button
+                android:id="@+id/settingsSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/viewSeparator"
+                android:background="@null"
+                android:clickable="true"
+                android:onClick="clickSubmit"
+                android:paddingLeft="32dip"
+                android:paddingRight="16dip"
+                android:text="@string/save"
+                android:textColor="@color/WHITE"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dip" >
+
+            <!-- My Profile -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/myProfile"
+                android:textColor="@color/ORANGE"
+                android:textSize="14dip" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@color/ORANGE" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/username"
+                android:textSize="10dip" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="fill_parent"
+                android:layout_height="32dip"
+                android:background="@drawable/edit_text_holo_light"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/firstName"
+                android:textSize="10dip" />
+
+            <EditText
+                android:id="@+id/firstname"
+                android:layout_width="fill_parent"
+                android:layout_height="32dip"
+                android:background="@drawable/edit_text_holo_light"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/lastName"
+                android:textSize="10dip" />
+
+            <EditText
+                android:id="@+id/lastname"
+                android:layout_width="fill_parent"
+                android:layout_height="32dip"
+                android:background="@drawable/edit_text_holo_light"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/email"
+                android:textSize="10dip" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="fill_parent"
+                android:layout_height="32dip"
+                android:background="@drawable/edit_text_holo_light"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/phone"
+                android:textSize="10dip" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="fill_parent"
+                android:layout_height="32dip"
+                android:layout_marginBottom="8dip"
+                android:background="@drawable/edit_text_holo_light"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/password"
+                android:textSize="10dip" />
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="fill_parent"
+                android:layout_height="32dip"
+                android:layout_marginBottom="16dip"
+                android:background="@drawable/spinner_default_holo_light"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:onClick="changePassword"
+                android:paddingLeft="8dip"
+                android:singleLine="true"
+                android:text="**********"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/myLocations"
+                android:textColor="@color/ORANGE"
+                android:textSize="14dip" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/home"
+                android:textSize="10dip" />
+
+            <EditText
+                android:id="@+id/homeAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="32dip"
+                android:background="@drawable/edit_text_holo_light"
+                android:ellipsize="end"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textSize="14sp" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/work"
+                android:textSize="10dip" />
+
+            <EditText
+                android:id="@+id/workAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="32dip"
+                android:layout_marginBottom="8dip"
+                android:background="@drawable/edit_text_holo_light"
+                android:ellipsize="end"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dip"
+                android:paddingLeft="4dip"
+                android:text="@string/addressDefault"
+                android:textSize="9dip" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/pushnotifications"
+                android:textColor="@color/ORANGE"
+                android:textSize="14dip" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@color/ORANGE" />
+
+            <!-- push notifications -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/pushMeWhen"
+                android:textSize="10dip" />
+
+            <TextView
+                android:id="@+id/pushUpdatesSent"
+                android:layout_width="fill_parent"
+                android:layout_height="32dip"
+                android:layout_marginBottom="4dip"
+                android:background="@drawable/spinner_default_holo_light"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:onClick="changePushUpdates"
+                android:paddingLeft="8dip"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dip"
+                    android:text="@string/pushReplies" />
+
+                <ToggleButton
+                    android:id="@+id/pushReplies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+            </LinearLayout>
+            <!-- email notifications -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/notifications"
+                android:textColor="@color/ORANGE"
+                android:textSize="14dip" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="@color/ORANGE" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dip"
+                android:text="@string/emailMeWhen"
+                android:textSize="10dip" />
+
+            <TextView
+                android:id="@+id/updatesSent"
+                android:layout_width="fill_parent"
+                android:layout_height="32dip"
+                android:layout_marginBottom="4dip"
+                android:background="@drawable/spinner_default_holo_light"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:onClick="changeUpdates"
+                android:paddingLeft="8dip"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dip"
+                    android:text="@string/emailReplies" />
+
+                <ToggleButton
+                    android:id="@+id/emailReplies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+            </LinearLayout>
+           
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginBottom="16dip"
+                android:background="@color/MED_GRAY_BKGROUND" />
+            <!-- City -->
+
+            <LinearLayout
+                android:id="@+id/changeLocationLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dip"
+                    android:text="@string/currentLocation"
+                    android:textColor="@color/ORANGE"
+                    android:textSize="14dip" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/ORANGE" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:layout_marginBottom="32dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/currCity"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_holo_light"
+                        android:ellipsize="end"
+                        android:paddingTop="16dip"
+                        android:singleLine="true"
+                        android:text="CityName, ST" />
+
+                    <Button
+                        android:id="@+id/changeCities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:onClick="changeCities"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="32dip"
+                        android:paddingRight="32dip"
+                        android:paddingTop="8dip"
+                        android:text="@string/change"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Language -->
+
+            <LinearLayout
+                android:id="@+id/changeLanguage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dip"
+                    android:text="@string/currentLanguage"
+                    android:textColor="@color/ORANGE"
+                    android:textSize="14dip" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:background="@color/ORANGE" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:layout_marginBottom="32dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/currLanguage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_holo_light"
+                        android:ellipsize="end"
+                        android:paddingTop="16dip"
+                        android:singleLine="true"
+                        android:text="Language" />
+
+                    <Button
+                        android:id="@+id/changeCities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:onClick="changeLanguage"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="32dip"
+                        android:paddingRight="32dip"
+                        android:paddingTop="8dip"
+                        android:text="@string/change"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- log out -->
+
+            <Button
+                android:id="@+id/logOut"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64dip"
+                android:layout_marginRight="64dip"
+                android:background="@color/ORANGE"
+                android:onClick="logOut"
+                android:padding="16dip"
+                android:text="@string/logOut"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

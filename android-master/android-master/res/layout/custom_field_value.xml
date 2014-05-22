@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" android:id="@+id/customFieldLayout"
+              android:orientation="horizontal" android:paddingRight="8dip" android:paddingLeft="8dip">
+    <TextView
+            android:layout_width="96dip" android:layout_height="wrap_content"
+            android:paddingBottom="8dip" android:paddingLeft="8dip" android:textSize="12sp"
+            android:text="@string/submittedOnLabel"
+            android:id="@+id/customFieldLabel"/>
+    <TextView
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:paddingBottom="8dip" android:paddingRight="8dip" android:textSize="12sp"
+            android:text="@string/submittedOnPlaceholder" android:id="@+id/customFieldValue"/>
+</LinearLayout>

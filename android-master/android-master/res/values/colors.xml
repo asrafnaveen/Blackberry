@@ -1,0 +1,42 @@
+<resources>
+	<color name="WHITE">#FFFFFF</color>
+	<color name="BLACK">#000000</color>
+	<color name="BLUE_BKGROUND">#d9ebfd</color>
+	<color name="GRAY_BKGROUND">#f7f7f7</color>
+    <color name="MED_GRAY_BKGROUND">#E0DBD7</color>
+	<color name="BLUE_TEXT">#001357</color>
+	<color name="GRAY_TEXT">#787878</color>
+    <color name="ORANGE">#F24C24</color>
+    <color name="ORANGEOLD">#FF8237</color>
+    <color name="HIGHLIGHT_ORANGE">#FF7C46</color>
+    <color name="TAB_BACKGROUND">#faf7f2</color>
+    <color name="TAB_BACKGROUND_STROKE">#b2aba5</color>
+    <color name="TAB_SELECTOR_TEXT_COLOR">#77655b</color>
+    <color name="TOP_BAR_BACKGROUND">#232323</color>
+    <color name="TOP_BAR_BACKGROUND_TRANSPARENT">#cc232323</color>
+    <color name="REQUEST_LISTMAP">#00232323</color>
+    <color name="TOP_BAR_SEPARATOR">#636363</color>
+    <color name="SWITCH_BACKGROUND">#E6E6E6</color>
+    <color name="SWITCH_SEPARATOR">#C7C7C7</color>
+    <color name="NEARBY_REQUEST_TEXT_COLOR">#AAAAAA</color>
+    <color name="DARK_TEXT">#343434</color>
+    <color name="BLUE">#0000ff</color>
+
+    <!-- List view color values -->
+    <color name = "cell_active_state">#FE6D4C</color>
+    <color name = "cell_inactive_state">#FFFFFF</color>
+    <color name = "cell_divider">#000000</color>
+    <color name = "list_item_font_color">#000000</color>
+
+    <!-- General color values -->
+    <color name = "background_color">#FFFFFF</color>
+    <color name = "info_bg_color">#F8E370</color>
+    <color name = "info_text_color">#000000</color>
+
+    <!--  Action bar color values -->
+    <color name = "actionbar_background_color">#000000</color>
+    <color name = "actionbar_title_color">#FFFFFF</color>
+    
+    <!-- Transparent color values -->
+    <color name = "TRANS_GRAY">#AF000000</color>
+</resources>

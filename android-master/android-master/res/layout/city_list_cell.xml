@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" android:layout_height="48dip"
+        android:padding="8dip"  android:orientation="horizontal"
+        android:background="@color/WHITE">
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:layout_weight="1">
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Cityname, ST"
+            android:layout_gravity="center"
+            android:id="@+id/cityName"
+        />
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="fill_parent"
+               android:layout_gravity="center"
+                android:id="@+id/isClient"
+                android:layout_marginLeft="8dip"
+            android:src="@drawable/ic_dark_publicstuff_icon"
+            android:contentDescription="Is PublicStuff city"
+           android:scaleType="centerInside"/>
+</LinearLayout>
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="fill_parent"
+               android:layout_gravity="center"
+               android:id="@+id/isSelected"
+               android:src="@drawable/holo_light1_navigation_accept"
+               android:layout_weight="1"
+               android:scaleType="center"
+               />
+
+</LinearLayout>
