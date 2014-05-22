@@ -1351,11 +1351,54 @@ public class NewRequestMapActivity extends
 		super.onResume();
 		setUpMap();
 	}
+	public class WebAppInterface {
+	    Context mContext;
 
+	    /** Instantiate the interface and set the context */
+	    WebAppInterface(Context c) {
+	        mContext = c;
+	    }
+
+	    /** Show a toast from the web page */
+	    @JavascriptInterface
+	    public void showToast(String lat,String lng) {
+	    	LocationVO locationVO = new LocationVO(Double.parseDouble(lat),
+	    			Double.parseDouble(lng), mContext);
+	    	String zipcode = locationVO.getZipcode();
+			latitude = locationVO.getLatitude();
+			longitude = locationVO.getLongitude();
+			String address = locationVO.getAddress();
+			String state = locationVO.getStateAbbrev();
+			 city = locationVO.getCityName();
+			locationString = "";
+			locationString += (address != null) ? String.format("%s, ", address)
+					: "";
+			locationString += (city != null) ? String.format("%s, ", city) : "";
+			locationString += (state != null) ? String.format("%s ", state) : "";
+			locationString += (zipcode != null) ? zipcode : "";
+			if (locationString.equals(""))
+				locationString = mContext
+						.getString(R.string.addressUnavailable);
+			((Activity) mContext).runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			    	enterLocation.setText(locationString);
+					latLonText.setText((new BigDecimal(latitude).round(new MathContext(6,
+							RoundingMode.HALF_UP)).toString())
+							+ ", "
+							+ (new BigDecimal(longitude).round(new MathContext(6,
+									RoundingMode.HALF_UP)).toString()));
+			      
+			    }
+			});
+			  
+	    }
+	}
 	private void setUpMap() {
 		WebView mapView = (WebView) findViewById(R.id.map);
 		mapView.loadUrl("file:///android_asset/simplemap.html");
-		mapView.getSettings().setJavaScriptEnabled(true);		
+		mapView.getSettings().setJavaScriptEnabled(true);	
+		mapView.addJavascriptInterface(new WebAppInterface(this), "Android");
 		/*
 		 * 
 		 * LatLng passedLatLng = new LatLng(latitude, longitude); Location
